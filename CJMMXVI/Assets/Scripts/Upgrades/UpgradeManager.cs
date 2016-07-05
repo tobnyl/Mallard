@@ -31,6 +31,11 @@ public class UpgradeManager : MonoBehaviour
 	public void Setup(Upgrade[] upgrades)
 	{
 		this.upgrades = upgrades;
+		upgradeQueue = new List<Upgrade>();
+		appliedUpgrades = new List<Upgrade>();
+
+		activeUpgrade = null;
+		activeUpgradeRoutine = null;
 	}
 
 	public bool Researchable(Upgrade upgrade)
