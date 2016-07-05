@@ -11,11 +11,15 @@ public struct GameData
 	[Serializable]
 	public struct ManData
 	{
+		[SerializeField]
+		public float throwCooldown;
 	}
 
 	[Serializable]
 	public struct MallardData
 	{
+		[SerializeField]
+		public float eatDuration;
 	}
 
 	[Serializable]
@@ -25,6 +29,8 @@ public struct GameData
 	#endregion
 
 	#region Fields
+	[SerializeField]
+	public int points;
 	[SerializeField]
 	public ManData man;
 	[SerializeField]

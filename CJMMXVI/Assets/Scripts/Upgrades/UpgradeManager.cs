@@ -6,7 +6,13 @@ using System.Collections.Generic;
 
 public class UpgradeManager : MonoBehaviour
 {
+	#region Types
+	public delegate void UpgradeFinishedHandler(Upgrade upgrade);
+	#endregion
+
 	#region Fields
+	public event UpgradeFinishedHandler onUpgradeFinished;
+
 	Upgrade[] upgrades;
 
 	// Upgrades waiting to be applied
@@ -92,9 +98,10 @@ public class UpgradeManager : MonoBehaviour
 		ApplyUpgrade(upgrade);
 	}
 
+	// Actual callback
 	void ApplyUpgrade(Upgrade upgrade)
 	{
-		// TODO: Actual sideeffects, event?
+		if(onUpgradeFinished != null) { onUpgradeFinished(upgrade); }
 	}
 	#endregion
 }

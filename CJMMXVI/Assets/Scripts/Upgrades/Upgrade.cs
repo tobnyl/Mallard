@@ -11,11 +11,15 @@ public class Upgrade
 	[Serializable]
 	public class ManData
 	{
+		[SerializeField]
+		public float throwCooldown;
 	}
 
 	[Serializable]
 	public class MallardData
 	{
+		[SerializeField]
+		public float eatDuration;
 	}
 
 	[Serializable]
@@ -51,5 +55,15 @@ public class Upgrade
 
 	[SerializeField]
 	public SceneData scene;
+	#endregion
+
+	#region Methods
+	public GameData ApplyOn(GameData data)
+	{
+		data.man.throwCooldown += man.throwCooldown;
+		data.mallard.eatDuration += mallard.eatDuration;
+		
+		return data;
+	}
 	#endregion
 }
