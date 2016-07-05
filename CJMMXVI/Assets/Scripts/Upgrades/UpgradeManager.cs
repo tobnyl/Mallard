@@ -46,14 +46,14 @@ public class UpgradeManager : MonoBehaviour
 	{
 		if(activeUpgrade == null && upgradeQueue.Count > 0)
 		{
-			Upgrade upgrade = upgradeQueue[0];
-			upgradeQueue.RemoveAt(0);
-			StartApplyingUpgrade(upgrade);
+			StartNextUpgrade();
 		}
 	}
 
-	void StartApplyingUpgrade(Upgrade upgrade)
+	void StartNextUpgrade()
 	{
+		Upgrade upgrade = upgradeQueue[0];
+		upgradeQueue.RemoveAt(0);
 		activeUpgrade = upgrade;
 		activeUpgradeRoutine = StartCoroutine(ApplyRoutine(upgrade));
 	}
@@ -67,6 +67,16 @@ public class UpgradeManager : MonoBehaviour
 		// TODO: Some fun animation or something
 
 		activeUpgradeRoutine = null;
+
+		FinalizeApplyingUpgrade(upgrade);
+	}
+
+	void FinalizeApplyingUpgrade(Upgrade upgrade)
+	{
+		activeUpgradeRoutine = null;
+		activeUpgrade = null;
+
+		appliedUpgrades.Add(upgrade);
 
 		ApplyUpgrade(upgrade);
 	}
