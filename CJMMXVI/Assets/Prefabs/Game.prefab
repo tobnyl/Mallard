@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SourceMap: {fileID: 2800000, guid: b4626ed91c302ff47a3442e91f77b537, type: 3}
-  GrassPrefab: {fileID: 187218, guid: 1e9513c3fe972a54b9d2ac947543f049, type: 2}
+  GrassPrefab: {fileID: 179240, guid: d6fab1dcaa754684186c2577e38162fa, type: 2}
   WaterPrefab: {fileID: 124524, guid: 8cb52f94eafab9446924a01e29ebbd6f, type: 2}
   GrassColor: {r: 0, g: 1, b: 0, a: 1}
   WaterColor: {r: 0, g: 0, b: 1, a: 1}

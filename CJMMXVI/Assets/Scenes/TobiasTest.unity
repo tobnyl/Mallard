@@ -337,14 +337,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11453130, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: WaterFallHeight
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 11453130, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: GrassPrefab
-      value: 
-      objectReference: {fileID: 179240, guid: 673e56a5bb81dd141ab348bfefabd19a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
   m_IsPrefabParent: 0
