@@ -38,11 +38,22 @@ public class Game : MonoBehaviour
 
 		upgradeMan = GetComponent<UpgradeManager>();
 		upgradeMan.Setup(upgrades);
+		upgradeMan.onUpgradeFinished += OnUpgradeFinished;
+	}
+
+	void OnDisable()
+	{
+		upgradeMan.onUpgradeFinished -= OnUpgradeFinished;
 	}
 	
 	void Update()
 	{
 		upgradeMan.DoUpdate();
+	}
+
+	void OnUpgradeFinished(Upgrade upgrade)
+	{
+		currentGameData = upgrade.ApplyOn(currentGameData);
 	}
 	#endregion
 }
