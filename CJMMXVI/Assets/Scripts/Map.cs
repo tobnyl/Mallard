@@ -23,8 +23,7 @@ public class Map : MonoBehaviour
 	[SerializeField]
     public Color WaterColor;
 
-    private int _gridSize = 1;
-    private GameObject _cube;
+    private int _gridSize;
     private int _width;
     private int _height;
     private float _waterfallOffset;
@@ -38,6 +37,7 @@ public class Map : MonoBehaviour
 
     public void Setup()
     {
+        _gridSize = 1;
         _waterfallOffset = 0.51f;
 
 	    if (SourceMap != null)
@@ -53,9 +53,9 @@ public class Map : MonoBehaviour
             {
                 if (pixel == WaterColor)
                 {
-                    InstansiateCube(WaterPrefab, cubePosition);
+                    var cube = InstansiateCube(WaterPrefab, cubePosition);
 
-                    AddWaterfallParticleSystem(currentOffset);
+                    AddWaterfallParticleSystem(currentOffset, cube);
                 }
                 else if (pixel == GrassColor)
                 {
@@ -75,42 +75,44 @@ public class Map : MonoBehaviour
 	    }
 	}
 
-    private void AddWaterfallParticleSystem(Vector3 currentOffset)
+    private void AddWaterfallParticleSystem(Vector3 currentOffset, GameObject cube)
     {
-        
-
+        // Left edge
         if (currentOffset.x == 0)
         {
-            Debug.Log("Left edge...");
-            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(-_waterfallOffset, 0, 0), Quaternion.Euler(0, 90, 180));
+            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(-_waterfallOffset, 0, 0), Quaternion.Euler(0, 90, 180), cube.transform);
         }
+        // Right edge
         else if (currentOffset.x == _width - 1)
         {
-            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(_waterfallOffset, 0, 0), Quaternion.Euler(0, 90, 180));
+            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(_waterfallOffset, 0, 0), Quaternion.Euler(0, 90, 180), cube.transform);
         }
+        // Bottom edge
         if (currentOffset.z == 0)
         {
-            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(0, 0, -_waterfallOffset), Quaternion.Euler(0, -180, -180));
+            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(0, 0, -_waterfallOffset), Quaternion.Euler(0, -180, -180), cube.transform);
 
         }
+        // Top edge
         else if (currentOffset.z == _height - 1)
         {
-            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(0, 0, _waterfallOffset), Quaternion.Euler(0, -180, -180));
+            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(0, 0, _waterfallOffset), Quaternion.Euler(0, -180, -180), cube.transform);
         }
     }
 
-    private void InstansiateWaterFall(GameObject prefab, Vector3 currentCubeOffset, Vector3 relativeWaterFalloffset, Quaternion rotation)
+    private void InstansiateWaterFall(GameObject prefab, Vector3 position, Vector3 relativeWaterFalloffset, Quaternion rotation, Transform parent)
     {
-        var waterFall = Instantiate(WaterFallPrefab, currentCubeOffset, Quaternion.identity) as GameObject;
-        waterFall.transform.rotation = rotation;
+        var waterFall = Instantiate(WaterFallPrefab, position, rotation) as GameObject;        
         waterFall.transform.position += relativeWaterFalloffset;
-        waterFall.transform.parent = _cube.transform;
+        waterFall.transform.parent = parent;
     }
 
-    private void InstansiateCube(GameObject prefab, Vector3 position)
+    private GameObject InstansiateCube(GameObject prefab, Vector3 position)
     {
-        _cube = Instantiate(prefab, position, Quaternion.identity) as GameObject;
-        _cube.transform.parent = transform;
+        var cube = Instantiate(prefab, position, Quaternion.identity) as GameObject;
+        cube.transform.parent = transform;
+
+        return cube;
     }
     #endregion
 }
