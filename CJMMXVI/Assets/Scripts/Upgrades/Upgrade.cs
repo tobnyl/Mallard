@@ -4,8 +4,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-[Serializable]
-public class Upgrade
+[CreateAssetMenu]
+public class Upgrade : ScriptableObject
 {
 	#region Types
 	[Serializable]
@@ -27,14 +27,14 @@ public class Upgrade
 	{
 	}
 
-	[Serializable]
-	public class SceneData
-	{
-		[SerializeField]
-		public Transform[] toEnable;
-		[SerializeField]
-		public Transform[] toDisable;
-	}
+	//[Serializable]
+	//public class SceneData
+	//{
+	//	[SerializeField]
+	//	public Transform[] toEnable;
+	//	[SerializeField]
+	//	public Transform[] toDisable;
+	//}
 	#endregion
 
 	#region Fields
@@ -45,6 +45,9 @@ public class Upgrade
 	public float researchTime;
 
 	[SerializeField]
+	public Upgrade[] dependencies;
+
+	[SerializeField]
 	public ManData man;
 
 	[SerializeField]
@@ -53,8 +56,8 @@ public class Upgrade
 	[SerializeField]
 	public EnvData environment;
 
-	[SerializeField]
-	public SceneData scene;
+	//[SerializeField]
+	//public SceneData scene;
 	#endregion
 
 	#region Methods
