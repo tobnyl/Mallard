@@ -33,24 +33,16 @@ public class Map : MonoBehaviour
 
 	        var pixels = SourceMap.GetPixels(0, 0, width, height);
 
-            for (var i = 0; i < pixels.Length; i++)
+            foreach (Color pixel in pixels)
             {
-                Debug.Log(pixels[i]);
-
-                if (pixels[i] == WaterColor)
+                if (pixel == WaterColor)
                 {
                     InstansiateCube(WaterPrefab, cubePosition);
                 }
-                else if (pixels[i] == GrassColor)
+                else if (pixel == GrassColor)
                 {
                     InstansiateCube(GrassPrefab, cubePosition);
                 }
-                else
-                {
-                    InstansiateCube(NoPrefab, cubePosition);
-                }
-
-                
 
                 currentOffset.x += GridSize;
 
