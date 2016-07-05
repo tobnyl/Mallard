@@ -70,7 +70,7 @@ public class Map : MonoBehaviour
                 {
                     var cubeHeight = GetCubeHeight(pixel.g);
 
-                    Debug.Log("G: " + cubeHeight);
+                    Debug.Log("G: " + pixel.g + " | " + cubeHeight);
 
                     InstansiateCube(GrassPrefab, cubePosition, cubeHeight);
                 }
@@ -90,20 +90,7 @@ public class Map : MonoBehaviour
 
     private int GetCubeHeight(float range)
     {
-        if (range <= 0.25f)
-        {
-            return 4;
-        }
-        else if (range <= 0.5f)
-        {
-            return 3;
-        }
-        else if (range <= 0.75f)
-        {
-            return 2;
-        }
-
-        return 1;
+        return Convert.ToInt32(range*10);
     }
 
     private void AddWaterfallParticleSystem(Vector3 currentOffset, GameObject cube)
@@ -171,7 +158,7 @@ public class Map : MonoBehaviour
 
         if (height > 1)
         {
-            for (int i = 0; i < height; i++)
+            for (var i = 1; i < height; i++)
             {
                 position += new Vector3(0, 1, 0);
 
