@@ -33,6 +33,7 @@ public class Map : MonoBehaviour
     private int _width;
     private int _height;
     private float _waterfallOffset;
+    private float _waterfallPlaneOffset;
 
     #endregion
 
@@ -44,7 +45,9 @@ public class Map : MonoBehaviour
     public void Setup()
     {
         _gridSize = 1;
-        _waterfallOffset = 0.51f;
+        _waterfallOffset = 0.61f;
+        _waterfallPlaneOffset = 0.5f;
+        
 
 	    if (SourceMap != null)
 	    {
@@ -83,30 +86,34 @@ public class Map : MonoBehaviour
 
     private void AddWaterfallParticleSystem(Vector3 currentOffset, GameObject cube)
     {
+        var waterFallOffset = currentOffset + new Vector3(0, _gridSize/2f, 0);
+
+        // TODO: enable Left- and top-edge if we implement camera rotation
+
         // Left edge
-        if (currentOffset.x == 0)
-        {
-            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(-_waterfallOffset, 0, 0), Quaternion.Euler(0, 90, 180), cube.transform);
-            InstansiateWaterFallBackground(WaterFallBackgroundPrefab, currentOffset, new Vector3(-_waterfallOffset, -1, 0),  Quaternion.Euler(0, 0, 90), cube.transform);
-        }
+        //if (currentOffset.x == 0)
+        //{
+        //    InstansiateWaterFall(WaterFallPrefab, waterFallOffset, new Vector3(-_waterfallOffset, 0, 0), Quaternion.Euler(0, 90, 180), cube.transform);
+        //    InstansiateWaterFallBackground(WaterFallBackgroundPrefab, currentOffset, new Vector3(-_waterfallPlaneOffset, -1, 0),  Quaternion.Euler(0, 0, 90), cube.transform);
+        //}
         // Right edge
-        else if (currentOffset.x == _width - 1)
+        if (currentOffset.x == _width - 1)
         {
-            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(_waterfallOffset, 0, 0), Quaternion.Euler(0, 90, 180), cube.transform);
-            InstansiateWaterFallBackground(WaterFallBackgroundPrefab, currentOffset, new Vector3(_waterfallOffset, -1, 0), Quaternion.Euler(0, 0, -90), cube.transform);
+            InstansiateWaterFall(WaterFallPrefab, waterFallOffset, new Vector3(_waterfallOffset, 0, 0), Quaternion.Euler(0, 90, 180), cube.transform);
+            InstansiateWaterFallBackground(WaterFallBackgroundPrefab, currentOffset, new Vector3(_waterfallPlaneOffset, -1, 0), Quaternion.Euler(0, 0, -90), cube.transform);
         }
         // Bottom edge
-        if (currentOffset.z == 0)
+        else if (currentOffset.z == 0)
         {
-            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(0, 0, -_waterfallOffset), Quaternion.Euler(0, -180, -180), cube.transform);
-            InstansiateWaterFallBackground(WaterFallBackgroundPrefab, currentOffset, new Vector3(0, -1, -_waterfallOffset), Quaternion.Euler(-90, 0, 0), cube.transform);
+            InstansiateWaterFall(WaterFallPrefab, waterFallOffset, new Vector3(0, 0, -_waterfallOffset), Quaternion.Euler(0, -180, -180), cube.transform);
+            InstansiateWaterFallBackground(WaterFallBackgroundPrefab, currentOffset, new Vector3(0, -1, -_waterfallPlaneOffset), Quaternion.Euler(-90, 0, 0), cube.transform);
         }
         // Top edge
-        else if (currentOffset.z == _height - 1)
-        {
-            InstansiateWaterFall(WaterFallPrefab, currentOffset, new Vector3(0, 0, _waterfallOffset), Quaternion.Euler(0, -180, -180), cube.transform);
-            InstansiateWaterFallBackground(WaterFallBackgroundPrefab, currentOffset, new Vector3(0, -1, _waterfallOffset), Quaternion.Euler(90, 0, 0), cube.transform);
-        }
+        //else if (currentOffset.z == _height - 1)
+        //{
+        //    InstansiateWaterFall(WaterFallPrefab, waterFallOffset, new Vector3(0, 0, _waterfallOffset), Quaternion.Euler(0, -180, -180), cube.transform);
+        //    InstansiateWaterFallBackground(WaterFallBackgroundPrefab, currentOffset, new Vector3(0, -1, _waterfallPlaneOffset), Quaternion.Euler(90, 0, 0), cube.transform);
+        //}
     }
 
     private void InstansiateWaterFall(GameObject prefab, Vector3 position, Vector3 relativeOffset, Quaternion rotation, Transform parent)
@@ -138,7 +145,7 @@ public class Map : MonoBehaviour
 
     private GameObject InstansiateCube(GameObject prefab, Vector3 position)
     {
-        var cube = Instantiate(prefab, position, Quaternion.identity) as GameObject;
+        var cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
         cube.transform.parent = transform;
 
         return cube;
