@@ -85,6 +85,56 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &9078221
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 416370, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 416370, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 416370, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 416370, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 416370, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.7148523
+      objectReference: {fileID: 0}
+    - target: {fileID: 416370, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 416370, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.69927555
+      objectReference: {fileID: 0}
+    - target: {fileID: 416370, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 416856, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.42800614
+      objectReference: {fileID: 0}
+    - target: {fileID: 416856, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9037759
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &92709509
 Prefab:
   m_ObjectHideFlags: 0
@@ -214,6 +264,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &328495015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 328495017}
+  - 212: {fileID: 328495016}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &328495016
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328495015}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: f44150a293cc97247a7f46cb79711d21, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
+--- !u!4 &328495017
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328495015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1001 &373142498
 Prefab:
   m_ObjectHideFlags: 0
@@ -251,7 +360,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438310, guid: 8cb52f94eafab9446924a01e29ebbd6f, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 124524, guid: 8cb52f94eafab9446924a01e29ebbd6f, type: 2}
       propertyPath: m_IsActive
@@ -345,6 +454,41 @@ Prefab:
       propertyPath: WaterFallHeight
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: mallardSpawnPoint
+      value: 
+      objectReference: {fileID: 2145719887}
+    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: initialGameData.mallard.count
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: initialGameData.man.throwCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: initialGameData.mallard.eatDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: initialGameData.mallard.speed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 11499206, guid: 4695e4eb8ef27f847898853139fe4e6a,
+        type: 2}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: mallardPrefab
+      value: 
+      objectReference: {fileID: 11401020, guid: 69e7b22bb515e1140b278c413f855604,
+        type: 2}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: feederPrefab
+      value: 
+      objectReference: {fileID: 11473726, guid: 756720756db3d2e40a7b46cc9773afb4,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
   m_IsPrefabParent: 0
@@ -409,4 +553,32 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
+--- !u!1 &2145719886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2145719887}
+  m_Layer: 0
+  m_Name: MallardSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2145719887
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2145719886}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.22, y: 0.5, z: 2.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
