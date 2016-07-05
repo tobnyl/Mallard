@@ -4,16 +4,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public class GameUi : MonoBehaviour
+public class MainPage : GuiPage
 {
 	#region Fields
 	[SerializeField]
-	public MainPage main;
-	#endregion
-	
-	#region Properties	
-	#endregion
-
-	#region Methods
+	public PointsGui points;
 	#endregion
 }

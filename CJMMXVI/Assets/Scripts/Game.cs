@@ -63,6 +63,8 @@ public class Game : MonoBehaviour
 
 		upgradeMan.onUpgradeFinished -= OnUpgradeFinished;
 		upgradeMan.onUpgradeFinished += OnUpgradeFinished;
+
+		loaded = true;
 	}
 
 	void OnDisable()
@@ -83,6 +85,9 @@ public class Game : MonoBehaviour
 		if(!loaded) { return; }
 
 		upgradeMan.DoUpdate();
+
+		// Temp
+		gui.main.points.SetPoints(currentGameData.points);
 	}
 	#endregion
 
