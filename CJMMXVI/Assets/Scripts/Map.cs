@@ -66,9 +66,13 @@ public class Map : MonoBehaviour
 
                     AddWaterfallParticleSystem(currentOffset, cube);
                 }
-                else if (pixel == GrassColor)
+                else if (pixel.r == 0 && pixel.b == 0)
                 {
-                    InstansiateCube(GrassPrefab, cubePosition);
+                    var cubeHeight = GetCubeHeight(pixel.g);
+
+                    Debug.Log("G: " + cubeHeight);
+
+                    InstansiateCube(GrassPrefab, cubePosition, cubeHeight);
                 }
 
                 currentOffset.x += _gridSize;
@@ -83,6 +87,24 @@ public class Map : MonoBehaviour
             }
 	    }
 	}
+
+    private int GetCubeHeight(float range)
+    {
+        if (range <= 0.25f)
+        {
+            return 4;
+        }
+        else if (range <= 0.5f)
+        {
+            return 3;
+        }
+        else if (range <= 0.75f)
+        {
+            return 2;
+        }
+
+        return 1;
+    }
 
     private void AddWaterfallParticleSystem(Vector3 currentOffset, GameObject cube)
     {
@@ -143,11 +165,27 @@ public class Map : MonoBehaviour
         }
     }
 
-    private GameObject InstansiateCube(GameObject prefab, Vector3 position)
+    private GameObject InstansiateCube(GameObject prefab, Vector3 position, int height = 1)
     {
-        var cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
-        cube.transform.parent = transform;
+        GameObject cube = null;
 
+        if (height > 1)
+        {
+            for (int i = 0; i < height; i++)
+            {
+                position += new Vector3(0, 1, 0);
+
+                cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
+                cube.transform.parent = transform;
+            }
+        }
+        else
+        {
+            cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
+            cube.transform.parent = transform;
+        }
+
+        // Only used when height = 1
         return cube;
     }
     #endregion
