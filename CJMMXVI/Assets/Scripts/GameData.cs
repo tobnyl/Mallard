@@ -30,6 +30,8 @@ public struct GameData
 
 	#region Fields
 	[SerializeField]
+	public int points;
+	[SerializeField]
 	public ManData man;
 	[SerializeField]
 	public MallardData mallard;
