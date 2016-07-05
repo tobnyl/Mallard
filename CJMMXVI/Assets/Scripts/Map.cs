@@ -7,29 +7,33 @@ using System.Linq;
 
 public class Map : MonoBehaviour
 {
+    #region Fields    
     public Texture2D SourceMap;
     public GameObject GrassPrefab;
     public GameObject WaterPrefab;
-    public GameObject NoPrefab;
 
+    [Header("Colors")]
     public Color GrassColor;
     public Color WaterColor;
-    public int GridSize = 1;
 
-    private bool _isCOol;
+    private int _gridSize = 1;
     private GameObject _cube;
 
-	void Start()
-	{
-	    GameObject currentPrefab;
+    #endregion
 
+    #region Properties	
+    #endregion
+
+    #region Methods
+
+    void Start()
+	{
 	    if (SourceMap != null)
 	    {
-            Vector3 cubePosition = Vector3.zero;
-            Vector3 currentOffset = Vector3.zero;
+            var cubePosition = Vector3.zero;
+            var currentOffset = Vector3.zero;
 	        var width = SourceMap.width;
 	        var height = SourceMap.height;
-	        int y = 0;
 
 	        var pixels = SourceMap.GetPixels(0, 0, width, height);
 
@@ -44,12 +48,12 @@ public class Map : MonoBehaviour
                     InstansiateCube(GrassPrefab, cubePosition);
                 }
 
-                currentOffset.x += GridSize;
+                currentOffset.x += _gridSize;
 
                 if (currentOffset.x > width - 1)
                 {
                     currentOffset.x = 0;
-                    currentOffset.z += GridSize;
+                    currentOffset.z += _gridSize;
                 }
 
                 cubePosition = currentOffset;
@@ -66,4 +70,6 @@ public class Map : MonoBehaviour
 	void Update() {
 
 	}
+
+    #endregion
 }
