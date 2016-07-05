@@ -10,6 +10,7 @@ public class Map : MonoBehaviour
     public Texture2D SourceMap;
     public GameObject GrassPrefab;
     public GameObject WaterPrefab;
+    public GameObject NoPrefab;
 
     public Color GrassColor;
     public Color WaterColor;
@@ -32,42 +33,35 @@ public class Map : MonoBehaviour
 
 	        var pixels = SourceMap.GetPixels(0, 0, width, height);
 
-            for (int i = 0; i < pixels.Length - 1; i++)
+            for (var i = 0; i < pixels.Length; i++)
             {
                 Debug.Log(pixels[i]);
-                InstansiateCube(WaterPrefab, cubePosition);
+
+                if (pixels[i] == WaterColor)
+                {
+                    InstansiateCube(WaterPrefab, cubePosition);
+                }
+                else if (pixels[i] == GrassColor)
+                {
+                    InstansiateCube(GrassPrefab, cubePosition);
+                }
+                else
+                {
+                    InstansiateCube(NoPrefab, cubePosition);
+                }
+
+                
 
                 currentOffset.x += GridSize;
 
-                if (currentOffset.x > width)
+                if (currentOffset.x > width - 1)
                 {
                     currentOffset.x = 0;
                     currentOffset.z += GridSize;
                 }
 
                 cubePosition = currentOffset;
-
-                //if (pixels[i].Equals(WaterColor))
-                //{
-                //    InstansiateCube(WaterPrefab);
-                //}
-
-
             }
-
-	        //for (int i = 0; i < pixels.Length; i++)
-	        //{
-         //       cube = Instantiate(GrassPrefab, transform.position, Quaternion.identity) as GameObject;
-
-         //    //   if (pixels[i] == GrassColor)
-	        //    //{
-	        //    //    cube = Instantiate(GrassPrefab, transform.position, Quaternion.identity) as GameObject;
-	        //    //}
-         //    //   else if (pixels[i] == WaterColor)
-         //    //   {
-         //    //       cube = Instantiate(WaterPrefab, transform.position, Quaternion.identity) as GameObject;
-         //    //   }
-	        //}
 	    }
 	}
 
