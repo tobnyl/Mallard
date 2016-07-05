@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 483730}
   - 114: {fileID: 11440590}
   - 114: {fileID: 11415230}
+  - 114: {fileID: 11453130}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -55,6 +56,22 @@ MonoBehaviour:
   initialGameData: {}
   upgrades: []
   currentGameData: {}
+--- !u!114 &11453130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02108fcdc1a08144996bfe812f8e4f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SourceMap: {fileID: 2800000, guid: b4626ed91c302ff47a3442e91f77b537, type: 3}
+  GrassPrefab: {fileID: 187218, guid: 1e9513c3fe972a54b9d2ac947543f049, type: 2}
+  WaterPrefab: {fileID: 124524, guid: 8cb52f94eafab9446924a01e29ebbd6f, type: 2}
+  GrassColor: {r: 0, g: 1, b: 0, a: 1}
+  WaterColor: {r: 0, g: 0, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

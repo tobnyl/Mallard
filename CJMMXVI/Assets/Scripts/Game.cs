@@ -4,7 +4,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(UpgradeManager))]
+[RequireComponent(
+	typeof(UpgradeManager),
+	typeof(Map)
+)]
 public class Game : MonoBehaviour
 {
 	#region Fields
@@ -18,6 +21,7 @@ public class Game : MonoBehaviour
 	[SerializeField]
 	GameData currentGameData;
 
+	Map map;
 	UpgradeManager upgradeMan;
 	#endregion
 	
@@ -28,6 +32,9 @@ public class Game : MonoBehaviour
 	void OnEnable()
 	{
 		currentGameData = initialGameData;
+
+		map = GetComponent<Map>();
+		map.Setup();
 
 		upgradeMan = GetComponent<UpgradeManager>();
 		upgradeMan.Setup(upgrades);

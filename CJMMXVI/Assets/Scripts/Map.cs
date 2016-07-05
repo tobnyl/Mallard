@@ -7,13 +7,18 @@ using System.Linq;
 
 public class Map : MonoBehaviour
 {
-    #region Fields    
+    #region Fields 
+ 	[SerializeField]
     public Texture2D SourceMap;
-    public GameObject GrassPrefab;
+	[SerializeField]
+	public GameObject GrassPrefab;
+	[SerializeField]
     public GameObject WaterPrefab;
 
     [Header("Colors")]
+	[SerializeField]
     public Color GrassColor;
+	[SerializeField]
     public Color WaterColor;
 
     private int _gridSize = 1;
@@ -26,7 +31,7 @@ public class Map : MonoBehaviour
 
     #region Methods
 
-    void Start()
+    public void Setup()
 	{
 	    if (SourceMap != null)
 	    {
@@ -66,10 +71,5 @@ public class Map : MonoBehaviour
         _cube = Instantiate(prefab, position, Quaternion.identity) as GameObject;
         _cube.transform.parent = transform;
     }
-
-	void Update() {
-
-	}
-
     #endregion
 }
