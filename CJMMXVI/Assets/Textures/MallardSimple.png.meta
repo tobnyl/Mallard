@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 6724d737075cfb047bdddc6586fe4e50
+timeCreated: 1467750526
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MallardW
+    21300002: MallardSW
+    21300004: MallardNW
+    21300006: MallardN
+    21300008: MallardS
+    21300010: MallardSimple_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MallardW
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 373
+        width: 254
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -90, y: 69.5}
+        - {x: -127, y: 48.5}
+        - {x: -127, y: -38.5}
+        - {x: -114, y: -68.5}
+        - {x: -109, y: -69.5}
+        - {x: 90, y: -69.5}
+        - {x: 127, y: -39.5}
+        - {x: 127, y: 1.5}
+        - {x: -38, y: 69.5}
+    - name: MallardSW
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 338
+        width: 209
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 104.5, y: -12}
+        - {x: 104.5, y: 31}
+        - {x: 96.5, y: 32}
+        - {x: 93.5, y: 31}
+        - {x: 91.5, y: 29}
+        - {x: 88.5, y: 24}
+        - {x: 86.5, y: 22}
+        - {x: 86.5, y: 18}
+        - {x: 86.5, y: 22}
+        - {x: 88.5, y: 25}
+        - {x: 104.5, y: 53}
+        - {x: 104.5, y: 84}
+        - {x: 6.5, y: 84}
+        - {x: -97.5, y: 29}
+        - {x: -104.5, y: -2}
+        - {x: -104.5, y: -40}
+        - {x: -60.5, y: -84}
+        - {x: -14.5, y: -84}
+        - {x: -13.5, y: -82}
+        - {x: -12.5, y: -84}
+        - {x: 43.5, y: -84}
+    - name: MallardNW
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 156
+        width: 206
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: -91.5}
+        - {x: -3, y: -98.5}
+        - {x: 2, y: -99.5}
+        - {x: 36, y: -98.5}
+        - {x: 43, y: -96.5}
+        - {x: 42, y: -92.5}
+        - {x: 67, y: -103.5}
+        - {x: 73, y: -104.5}
+        - {x: 85, y: -104.5}
+        - {x: 102, y: -72.5}
+        - {x: 102, y: -24.5}
+        - {x: -12, y: 104.5}
+        - {x: -101, y: 104.5}
+        - {x: -101, y: -78.5}
+        - {x: -57, y: -88.5}
+        - {x: -48, y: -89.5}
+        - {x: -46, y: -82.5}
+        - {x: -50, y: -79.5}
+        - {x: -30, y: -90.5}
+        - {x: -9, y: -104.5}
+        - {x: 0, y: -104.5}
+        - {x: 0, y: -101.5}
+        - {x: -2, y: -99.5}
+        - {x: -3, y: -99.5}
+      - - {x: -103, y: 92.5}
+        - {x: -100, y: 93.5}
+        - {x: -100, y: 96.5}
+        - {x: -102, y: 98.5}
+        - {x: -103, y: 98.5}
+    - name: MallardN
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 92
+        width: 116
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 121}
+        - {x: -43, y: 113}
+        - {x: -58, y: 26}
+        - {x: -58, y: -101}
+        - {x: -42, y: -121}
+        - {x: 8, y: -121}
+        - {x: 58, y: -96}
+        - {x: 58, y: 37}
+        - {x: 6, y: 121}
+    - name: MallardS
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 103
+        width: 121
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 114.5}
+        - {x: -60.5, y: 76.5}
+        - {x: -60.5, y: -85.5}
+        - {x: -53.5, y: -114.5}
+        - {x: 37.5, y: -114.5}
+        - {x: 60.5, y: -61.5}
+        - {x: 60.5, y: 63.5}
+        - {x: 37.5, y: 114.5}
+    - name: MallardSimple_5
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 228
+        width: 27
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
