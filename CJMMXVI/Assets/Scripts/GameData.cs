@@ -19,7 +19,11 @@ public struct GameData
 	public struct MallardData
 	{
 		[SerializeField]
+		public int count;
+		[SerializeField]
 		public float eatDuration;
+		[SerializeField]
+		public float speed;
 	}
 
 	[Serializable]
