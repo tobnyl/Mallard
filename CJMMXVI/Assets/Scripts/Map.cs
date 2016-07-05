@@ -88,7 +88,7 @@ public class Map : MonoBehaviour
     {
         var waterFallOffset = currentOffset + new Vector3(0, _gridSize/2f, 0);
 
-        // TODO: enable Right- and top-edge if we implement camera rotation
+        // TODO: enable Left- and top-edge if we implement camera rotation
 
         // Left edge
         //if (currentOffset.x == 0)
@@ -145,7 +145,7 @@ public class Map : MonoBehaviour
 
     private GameObject InstansiateCube(GameObject prefab, Vector3 position)
     {
-        var cube = Instantiate(prefab, position, Quaternion.identity) as GameObject;
+        var cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
         cube.transform.parent = transform;
 
         return cube;
