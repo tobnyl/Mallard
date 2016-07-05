@@ -7,7 +7,8 @@ using System.Collections.Generic;
 
 [RequireComponent(
 	typeof(UpgradeManager),
-	typeof(Map)
+	typeof(Map),
+	typeof(EntityManager)
 )]
 public class Game : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class Game : MonoBehaviour
 
 	Map map;
 	UpgradeManager upgradeMan;
+	EntityManager entityMan;
 	GameUi gui;
 	#endregion
 	
@@ -58,6 +60,9 @@ public class Game : MonoBehaviour
 		map = GetComponent<Map>();
 		map.Setup();
 
+		entityMan = GetComponent<EntityManager>();
+		entityMan.Setup();
+
 		upgradeMan = GetComponent<UpgradeManager>();
 		upgradeMan.Setup(upgrades);
 
@@ -84,6 +89,7 @@ public class Game : MonoBehaviour
 	{
 		if(!loaded) { return; }
 
+		entityMan.DoUpdate();
 		upgradeMan.DoUpdate();
 
 		// Temp
