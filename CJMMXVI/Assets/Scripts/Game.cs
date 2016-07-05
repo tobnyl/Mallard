@@ -7,11 +7,14 @@ using System.Collections.Generic;
 
 [RequireComponent(
 	typeof(UpgradeManager),
-	typeof(Map)
+	typeof(Map),
+	typeof(EntityManager)
 )]
 public class Game : MonoBehaviour
 {
 	#region Fields
+	[SerializeField]
+	Transform mallardSpawnPoint;
 	[SerializeField]
 	GameData initialGameData;
 
@@ -27,6 +30,7 @@ public class Game : MonoBehaviour
 
 	Map map;
 	UpgradeManager upgradeMan;
+	EntityManager entityMan;
 	GameUi gui;
 	#endregion
 	
@@ -58,11 +62,18 @@ public class Game : MonoBehaviour
 		map = GetComponent<Map>();
 		map.Setup();
 
+		entityMan = GetComponent<EntityManager>();
+		entityMan.Setup(mallardSpawnPoint);
+		entityMan.onMallardEat -= OnMallardEat;
+		entityMan.onMallardEat += OnMallardEat;
+
 		upgradeMan = GetComponent<UpgradeManager>();
 		upgradeMan.Setup(upgrades);
 
 		upgradeMan.onUpgradeFinished -= OnUpgradeFinished;
 		upgradeMan.onUpgradeFinished += OnUpgradeFinished;
+
+		entityMan.UpdateGameData(currentGameData);
 
 		loaded = true;
 	}
@@ -84,9 +95,11 @@ public class Game : MonoBehaviour
 	{
 		if(!loaded) { return; }
 
+		entityMan.DoUpdate();
 		upgradeMan.DoUpdate();
 
 		// Temp
+		entityMan.UpdateGameData(currentGameData);
 		gui.main.points.SetPoints(currentGameData.points);
 	}
 	#endregion
@@ -95,6 +108,11 @@ public class Game : MonoBehaviour
 	void OnUpgradeFinished(Upgrade upgrade)
 	{
 		currentGameData = upgrade.ApplyOn(currentGameData);
+	}
+
+	void OnMallardEat(Mallard mallard)
+	{
+		++currentGameData.points;
 	}
 	#endregion
 	#endregion
