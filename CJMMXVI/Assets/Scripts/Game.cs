@@ -22,6 +22,9 @@ public class Game : MonoBehaviour
 	[SerializeField]
 	GameData currentGameData;
 
+	bool loaded;
+	Coroutine loadRoutine;
+
 	Map map;
 	UpgradeManager upgradeMan;
 	GameUi gui;
@@ -31,7 +34,13 @@ public class Game : MonoBehaviour
 	#endregion
 
 	#region Methods
+	#region Setup / Shutdown
 	void OnEnable()
+	{
+		loadRoutine = StartCoroutine(Load());
+	}
+
+	IEnumerator Load()
 	{
 		currentGameData = initialGameData;
 
@@ -39,6 +48,8 @@ public class Game : MonoBehaviour
 		if(gui == null)
 		{
 			SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
+			// Need to wait a frame to find GameUi
+			yield return null;
 			gui = FindObjectOfType<GameUi>();
 		}
 
@@ -49,22 +60,37 @@ public class Game : MonoBehaviour
 
 		upgradeMan = GetComponent<UpgradeManager>();
 		upgradeMan.Setup(upgrades);
+
+		upgradeMan.onUpgradeFinished -= OnUpgradeFinished;
 		upgradeMan.onUpgradeFinished += OnUpgradeFinished;
 	}
 
 	void OnDisable()
 	{
-		upgradeMan.onUpgradeFinished -= OnUpgradeFinished;
+		loaded = false;
+
+		if(loadRoutine != null)
+		{
+			StopCoroutine(loadRoutine);
+			loadRoutine = null;
+		}
 	}
-	
+	#endregion
+
+	#region Updating
 	void Update()
 	{
+		if(!loaded) { return; }
+
 		upgradeMan.DoUpdate();
 	}
+	#endregion
 
+	#region Upgrades
 	void OnUpgradeFinished(Upgrade upgrade)
 	{
 		currentGameData = upgrade.ApplyOn(currentGameData);
 	}
+	#endregion
 	#endregion
 }
