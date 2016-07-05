@@ -53,9 +53,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e569cfd3e84e15d45bfb9ff1f9a2758f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialGameData: {}
+  initialGameData:
+    points: 0
+    man:
+      throwCooldown: 0
+    mallard:
+      eatDuration: 0
   upgrades: []
-  currentGameData: {}
+  currentGameData:
+    points: 0
+    man:
+      throwCooldown: 0
+    mallard:
+      eatDuration: 0
 --- !u!114 &11453130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -72,6 +82,9 @@ MonoBehaviour:
   WaterPrefab: {fileID: 124524, guid: 8cb52f94eafab9446924a01e29ebbd6f, type: 2}
   GrassColor: {r: 0, g: 1, b: 0, a: 1}
   WaterColor: {r: 0, g: 0, b: 1, a: 1}
+  WaterFallPrefab: {fileID: 156172, guid: 515e026924e07814eb6d365215f00f6a, type: 2}
+  WaterFallBackgroundPrefab: {fileID: 128332, guid: 4b61a9b2a45dddb47960c92f59d87604,
+    type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
