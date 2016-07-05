@@ -7,7 +7,6 @@ using System.Collections.Generic;
 public class UpgradeManager : MonoBehaviour
 {
 	#region Fields
-	[SerializeField]
 	Upgrade[] upgrades;
 
 	// Upgrades waiting to be applied
@@ -28,6 +27,12 @@ public class UpgradeManager : MonoBehaviour
 	#endregion
 
 	#region Methods
+	#region Interface
+	public void Setup(Upgrade[] upgrades)
+	{
+		this.upgrades = upgrades;
+	}
+
 	public bool Researchable(Upgrade upgrade)
 	{
 		return upgradeQueue.Contains(upgrade) ||
@@ -41,8 +46,9 @@ public class UpgradeManager : MonoBehaviour
 
 		upgradeQueue.Add(upgrade);
 	}
+	#endregion
 
-	void Update()
+	public void DoUpdate()
 	{
 		if(activeUpgrade == null && upgradeQueue.Count > 0)
 		{
