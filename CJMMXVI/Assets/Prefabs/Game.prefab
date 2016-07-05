@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11440590}
   - 114: {fileID: 11415230}
   - 114: {fileID: 11453130}
+  - 114: {fileID: 11400688}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -31,6 +32,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11400688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7aeff34b0c0eb4da5cf3cb1c613469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodPrefab: {fileID: 0}
+  mallardPrefab: {fileID: 0}
+  feederPrefab: {fileID: 0}
 --- !u!114 &11415230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,19 +68,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e569cfd3e84e15d45bfb9ff1f9a2758f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mallardSpawnPoint: {fileID: 0}
   initialGameData:
     points: 0
     man:
       throwCooldown: 0
     mallard:
+      count: 0
       eatDuration: 0
+      speed: 0
   upgrades: []
   currentGameData:
     points: 0
     man:
       throwCooldown: 0
     mallard:
+      count: 0
       eatDuration: 0
+      speed: 0
 --- !u!114 &11453130
 MonoBehaviour:
   m_ObjectHideFlags: 1

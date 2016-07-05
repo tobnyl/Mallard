@@ -7,9 +7,9 @@ using System.Collections.Generic;
 public class Mallard : Entity
 {
 	#region Fields
-	[SerializeField]
+	[SerializeField, ReadOnly]
 	public Food targetFood;
-	[NonSerialized]
+	[SerializeField, ReadOnly]
 	public float eatTimer;
 	#endregion
 }
