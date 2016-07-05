@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UE = UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ public class Game : MonoBehaviour
 
 	Map map;
 	UpgradeManager upgradeMan;
+	GameUi gui;
 	#endregion
 	
 	#region Properties
@@ -32,6 +34,15 @@ public class Game : MonoBehaviour
 	void OnEnable()
 	{
 		currentGameData = initialGameData;
+
+		gui = FindObjectOfType<GameUi>();
+		if(gui == null)
+		{
+			SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
+			gui = FindObjectOfType<GameUi>();
+		}
+
+		if(gui == null) { Debug.LogError("GUI could not be loaded. Add the GUI scene to build settings", this); }
 
 		map = GetComponent<Map>();
 		map.Setup();
