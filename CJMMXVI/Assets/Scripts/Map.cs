@@ -185,8 +185,6 @@ public class Map : MonoBehaviour
     private void InstansiateGrassCube(GameObject prefab, GameObject dirtPrefab, Vector3 position, int height = 0)
     {
         GameObject cube = null;
-        Debug.Log("Height: " + height);
-        
 
         if (height >= 1)
         {
