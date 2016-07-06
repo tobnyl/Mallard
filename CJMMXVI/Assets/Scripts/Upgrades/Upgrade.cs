@@ -27,18 +27,20 @@ public class Upgrade : ScriptableObject
 	}
 
 	[Serializable]
-	public class EnvData
+	public class SceneObject
 	{
+		[SerializeField]
+		public string scenePath;
 	}
 
-	//[Serializable]
-	//public class SceneData
-	//{
-	//	[SerializeField]
-	//	public Transform[] toEnable;
-	//	[SerializeField]
-	//	public Transform[] toDisable;
-	//}
+	[Serializable]
+	public class EnvData
+	{
+		[SerializeField]
+		public SceneObject[] toActivate;
+		[SerializeField]
+		public SceneObject[] toDeactivate;
+	}
 	#endregion
 
 	#region Fields

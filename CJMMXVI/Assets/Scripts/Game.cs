@@ -15,6 +15,8 @@ public class Game : MonoBehaviour
 	[SerializeField]
 	Transform mallardSpawnPoint;
 	[SerializeField]
+	Transform deactivateOnStart;
+	[SerializeField]
 	GameData initialGameData;
 
 	[SerializeField]
@@ -31,6 +33,8 @@ public class Game : MonoBehaviour
 	UpgradeManager upgradeMan;
 	EntityManager entityMan;
 	GameUi gui;
+
+	Dictionary<string, GameObject> sceneObjectsLookup;
 	#endregion
 	
 	#region Properties
@@ -45,6 +49,7 @@ public class Game : MonoBehaviour
 
 	IEnumerator Load()
 	{
+		sceneObjectsLookup = new Dictionary<string, GameObject>();
 		currentGameData = initialGameData;
 
 		map = GetComponentInChildren<Map>();
@@ -86,6 +91,20 @@ public class Game : MonoBehaviour
 
 		OnGameDataChanged();
 
+		foreach(Upgrade upgrade in upgradeMan.Upgrades)
+		{
+			CacheSceneObjects(upgrade.environment.toActivate);
+			CacheSceneObjects(upgrade.environment.toDeactivate);
+		}
+
+		if(deactivateOnStart != null)
+		{
+			foreach(Transform child in deactivateOnStart)
+			{
+				child.gameObject.SetActive(false);
+			}
+		}
+
 		loaded = true;
 	}
 
@@ -120,6 +139,11 @@ public class Game : MonoBehaviour
 	#region Upgrades
 	void OnUpgradeFinished(Upgrade upgrade)
 	{
+		Upgrade.SceneObject[] toActive = upgrade.environment.toActivate;
+		SetSceneObjectsActive(toActive, true);
+		Upgrade.SceneObject[] toInactive = upgrade.environment.toDeactivate;
+		SetSceneObjectsActive(toInactive, false);
+
 		currentGameData = upgrade.ApplyOn(currentGameData);
 		OnGameDataChanged();
 
@@ -136,6 +160,33 @@ public class Game : MonoBehaviour
 	{
 		entityMan.OnGameDataChanged(currentGameData);
 		gui.OnGameDataChanged(currentGameData);
+	}
+
+	void CacheSceneObjects(Upgrade.SceneObject[] objs)
+	{
+		for(int i = 0; i < objs.Length; ++i)
+		{
+			Upgrade.SceneObject obj = objs[i];
+			GameObject go = GameObject.Find(obj.scenePath);
+			if(go == null)
+			{
+				Debug.LogError("Unable to find object at scene path \"" + obj.scenePath + "\"");
+				continue;
+			}
+			sceneObjectsLookup[obj.scenePath] = go;
+		}
+	}
+
+	void SetSceneObjectsActive(Upgrade.SceneObject[] objs, bool active)
+	{
+		for(int i = 0; i < objs.Length; ++i)
+		{
+			Upgrade.SceneObject obj = objs[i];
+			GameObject go = sceneObjectsLookup[obj.scenePath];
+			if(go == null) { continue; }
+
+			go.SetActive(active);
+		}
 	}
 	#endregion
 	#endregion
