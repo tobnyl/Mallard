@@ -12,12 +12,21 @@ public class EntityManager : MonoBehaviour
 
 	#region Fields
 	// TODO: This differently
+    [Serializable]
+    private class Sounds
+    {
+        public Audio[] DuckSfx;
+    }
+
 	[SerializeField]
 	Food foodPrefab;
 	[SerializeField]
 	Mallard mallardPrefab;
 	[SerializeField]
 	Feeder feederPrefab;
+
+    [SerializeField]
+    Sounds sfx;
 
 	public event MallardEatHandler onMallardEat;
 
@@ -75,7 +84,13 @@ public class EntityManager : MonoBehaviour
 	{
 		if(entity is Feeder) { feeders.Remove((Feeder)entity); }
 		if(entity is Mallard) { mallards.Remove((Mallard)entity); }
-		if(entity is Food) { foods.Remove((Food)entity); }
+	    if (entity is Food)
+	    {
+	        var duckSfxIndex = UE.Random.Range(0, sfx.DuckSfx.Length);
+                        
+	        AudioManager.Instance.Play(sfx.DuckSfx[duckSfxIndex], Vector3.zero);
+	        foods.Remove((Food)entity);
+	    }
 
 		Destroy(entity.gameObject);
 	}

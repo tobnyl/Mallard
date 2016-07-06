@@ -292,6 +292,10 @@ Prefab:
       propertyPath: upgrades.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 483730, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -342,6 +346,106 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 22ee2f61d8460fb459a6dcde23e27065,
         type: 2}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[0].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 75fa1d44af9a9bd4c95f4fca172c1a49, type: 3}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[0].Output
+      value: 
+      objectReference: {fileID: 24354744, guid: 9128064bed47f964ea2c1feed5e68af4,
+        type: 2}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[0].MinVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[0].MaxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[0].MinPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[0].MaxPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[1].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f8e71f8e5ebfd0a4ca3d74b74c65504e, type: 3}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[1].Output
+      value: 
+      objectReference: {fileID: 24354744, guid: 9128064bed47f964ea2c1feed5e68af4,
+        type: 2}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[1].MinVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[1].MaxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[1].MinPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[1].MaxPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[2].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 837e8e11bf0ac3c4299846bc6fc3800d, type: 3}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[2].MinVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[2].MaxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[2].MinPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[2].MaxPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[2].Output
+      value: 
+      objectReference: {fileID: 24354744, guid: 9128064bed47f964ea2c1feed5e68af4,
+        type: 2}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[3].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c198e98f0d88f55438f8e1916e4d759b, type: 3}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[3].Output
+      value: 
+      objectReference: {fileID: 24354744, guid: 9128064bed47f964ea2c1feed5e68af4,
+        type: 2}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[3].MinVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[3].MaxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[3].MinPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400688, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sfx.DuckSfx.Array.data[3].MaxPitch
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
   m_IsPrefabParent: 0
