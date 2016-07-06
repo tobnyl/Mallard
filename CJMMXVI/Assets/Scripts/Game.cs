@@ -7,7 +7,6 @@ using System.Collections.Generic;
 
 [RequireComponent(
 	typeof(UpgradeManager),
-	typeof(Map),
 	typeof(EntityManager)
 )]
 public class Game : MonoBehaviour
@@ -57,21 +56,31 @@ public class Game : MonoBehaviour
 			gui = FindObjectOfType<GameUi>();
 		}
 
-		if(gui == null) { Debug.LogError("GUI could not be loaded. Add the GUI scene to build settings", this); }
+		if(gui == null) { Debug.LogError("GUI could not be loaded. Add the GUI scene to build settings", this); enabled = false; }
 
-		map = GetComponent<Map>();
-		map.Setup();
+		map = GetComponentInChildren<Map>();
+
+		if(map == null) { Debug.LogError("No Map attached to Game"); enabled = false; }
+		else { map.Setup(); }
 
 		entityMan = GetComponent<EntityManager>();
-		entityMan.Setup(mallardSpawnPoint);
-		entityMan.onMallardEat -= OnMallardEat;
-		entityMan.onMallardEat += OnMallardEat;
+
+		if(entityMan == null) { Debug.LogError("No EntityManager attached to Game"); enabled = false; }
+		else
+		{
+			entityMan.Setup(mallardSpawnPoint);
+			entityMan.onMallardEat -= OnMallardEat;
+			entityMan.onMallardEat += OnMallardEat;
+		}
 
 		upgradeMan = GetComponent<UpgradeManager>();
-		upgradeMan.Setup(upgrades);
-
-		upgradeMan.onUpgradeFinished -= OnUpgradeFinished;
-		upgradeMan.onUpgradeFinished += OnUpgradeFinished;
+		if(upgradeMan == null) { Debug.LogError("No UpgradeManager attached to Game"); enabled = false; }
+		else
+		{
+			upgradeMan.Setup(upgrades);
+			upgradeMan.onUpgradeFinished -= OnUpgradeFinished;
+			upgradeMan.onUpgradeFinished += OnUpgradeFinished;
+		}
 
 		entityMan.UpdateGameData(currentGameData);
 

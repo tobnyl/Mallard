@@ -93,7 +93,7 @@ GameObject:
   - 4: {fileID: 416856}
   - 114: {fileID: 11479992}
   - 212: {fileID: 21289054}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: OldManTemp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,6 +339,7 @@ MonoBehaviour:
       flipped: 0
   renderer: {fileID: 0}
   rotation: 0
+  dirIndex: 0
 --- !u!212 &21289054
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -367,7 +368,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f44150a293cc97247a7f46cb79711d21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
