@@ -111,6 +111,7 @@ public class FaceCamera : MonoBehaviour
 	{
 		const float degree = 360.0f / 8.0f;
 		angle = angle + degree / 2.0f;
+		angle = NormalizeAngle360(angle);
 
 		if(angle >= 0 * degree && angle < 1 * degree)
 			return dirs.n;
@@ -129,7 +130,7 @@ public class FaceCamera : MonoBehaviour
 		if(angle >= 7 * degree && angle < 8 * degree)
 			return dirs.nw;
 
-		throw new Exception();
+		throw new Exception("Weird angle " + degree);
 	}
 	#endregion
 }
