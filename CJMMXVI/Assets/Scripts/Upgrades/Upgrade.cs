@@ -69,6 +69,7 @@ public class Upgrade : ScriptableObject
 	#region Methods
 	public GameData ApplyOn(GameData data)
 	{
+		data.points -= cost;
 		data.man.throwCooldown += man.throwCooldown;
 		data.mallard.eatDuration += mallard.eatDuration;
 		

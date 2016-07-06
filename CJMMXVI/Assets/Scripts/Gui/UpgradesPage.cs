@@ -25,16 +25,30 @@ public class UpgradesPage : GuiPage
 
 		upgradesList.Setup(manager);
 		upgradesList.onUpgradeSelected += OnUpgradeSelected;
+
+		upgradeInfo.Setup(manager);
+		upgradeInfo.onPressedBuyButton += OnBuyButtonSelected;
+		upgradeInfo.SetUpgrade(manager.Upgrades[0]);
+	}
+
+	public void DoUpdate()
+	{
+		upgradeInfo.DoUpdate();
 	}
 
 	public void OnUpgradeSelected(Upgrade upgrade)
 	{
-
+		upgradeInfo.SetUpgrade(upgrade);
 	}
 
-	void OnBuyButtonSelected()
+	public override void OnGameDataChanged(GameData gameData)
 	{
-	
+		upgradeInfo.OnGameDataChanged(gameData);
+	}
+
+	void OnBuyButtonSelected(Upgrade upgrade)
+	{
+		manager.Research(upgrade);
 	}
 	#endregion
 }

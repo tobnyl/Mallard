@@ -46,7 +46,7 @@ public class EntityManager : MonoBehaviour
 		this.mallardSpawn = mallardSpawn;
 	}
 
-	public void UpdateGameData(GameData gameData)
+	public void OnGameDataChanged(GameData gameData)
 	{
 		this.gameData = gameData;
 

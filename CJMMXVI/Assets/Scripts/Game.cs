@@ -84,7 +84,7 @@ public class Game : MonoBehaviour
 
 		gui.Setup(upgradeMan);
 
-		entityMan.UpdateGameData(currentGameData);
+		OnGameDataChanged();
 
 		loaded = true;
 	}
@@ -110,8 +110,10 @@ public class Game : MonoBehaviour
 		upgradeMan.DoUpdate();
 
 		// Temp
-		entityMan.UpdateGameData(currentGameData);
+		
 		gui.main.points.SetPoints(currentGameData.points);
+
+		gui.DoUpdate();
 	}
 	#endregion
 
@@ -119,11 +121,19 @@ public class Game : MonoBehaviour
 	void OnUpgradeFinished(Upgrade upgrade)
 	{
 		currentGameData = upgrade.ApplyOn(currentGameData);
+		OnGameDataChanged();
 	}
 
 	void OnMallardEat(Mallard mallard)
 	{
 		++currentGameData.points;
+		OnGameDataChanged();
+	}
+
+	void OnGameDataChanged()
+	{
+		entityMan.OnGameDataChanged(currentGameData);
+		gui.OnGameDataChanged(currentGameData);
 	}
 	#endregion
 	#endregion

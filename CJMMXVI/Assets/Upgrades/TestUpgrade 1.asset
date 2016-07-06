@@ -9,14 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf8c96c281764cf4fbdf2a000c9dbead, type: 3}
-  m_Name: TestUpgrade
+  m_Name: TestUpgrade 1
   m_EditorClassIdentifier: 
-  upgradeName: TestUpgrade
-  upgradeDescription: A long description
-  cost: 0
+  upgradeName: Another Upgrade
+  upgradeDescription: YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+  cost: 3
   researchTime: 5
-  dependencies: []
+  dependencies:
+  - {fileID: 11400000, guid: 22ee2f61d8460fb459a6dcde23e27065, type: 2}
   man:
-    throwCooldown: -1
+    throwCooldown: 0
   mallard:
     eatDuration: 0
