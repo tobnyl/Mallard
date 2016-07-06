@@ -374,6 +374,10 @@ Prefab:
       propertyPath: WaterFallEdgePrefab
       value: 
       objectReference: {fileID: 169824, guid: 74a96a3f4752eb541ba0263f6890b4de, type: 2}
+    - target: {fileID: 11401336, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: WaterFallEdgePrefab
+      value: 
+      objectReference: {fileID: 169824, guid: 74a96a3f4752eb541ba0263f6890b4de, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
   m_IsPrefabParent: 0
