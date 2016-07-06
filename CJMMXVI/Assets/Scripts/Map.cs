@@ -70,7 +70,7 @@ public class Map : MonoBehaviour
                 {
                     var cubeHeight = GetCubeHeight(pixel.g);
 
-                    Debug.Log("G: " + pixel.g + " | " + cubeHeight);
+                    //Debug.Log("G: " + (pixel.g) + " | " + cubeHeight);
 
                     InstansiateCube(GrassPrefab, cubePosition, cubeHeight);
                 }
@@ -90,7 +90,7 @@ public class Map : MonoBehaviour
 
     private int GetCubeHeight(float range)
     {
-        return Convert.ToInt32(range*10);
+        return Mathf.FloorToInt(range * 10f);
     }
 
     private void AddWaterfallParticleSystem(Vector3 currentOffset, GameObject cube)
@@ -152,13 +152,16 @@ public class Map : MonoBehaviour
         }
     }
 
-    private GameObject InstansiateCube(GameObject prefab, Vector3 position, int height = 1)
+    private GameObject InstansiateCube(GameObject prefab, Vector3 position, int height = 0)
     {
         GameObject cube = null;
 
-        if (height > 1)
+        cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
+        cube.transform.parent = transform;
+
+        if (height >= 1)
         {
-            for (var i = 1; i < height; i++)
+            for (var i = 0; i < height; i++)
             {
                 position += new Vector3(0, 1, 0);
 
@@ -166,11 +169,11 @@ public class Map : MonoBehaviour
                 cube.transform.parent = transform;
             }
         }
-        else
-        {
-            cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
-            cube.transform.parent = transform;
-        }
+        //else
+        //{
+        //    cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
+        //    cube.transform.parent = transform;
+        //}
 
         // Only used when height = 1
         return cube;
