@@ -81,7 +81,7 @@ public class Map : MonoBehaviour
                 {
                     var cubeHeight = GetCubeHeight(pixel.g);
 
-                    InstansiateGrassCube(GrassPrefab, cubePosition, cubeHeight);
+                    InstansiateGrassCube(GrassPrefab, DirtCube, cubePosition, cubeHeight);
                     InstansiateDirtCubes(DirtCube, cubePosition);
                 }
 
@@ -182,23 +182,33 @@ public class Map : MonoBehaviour
         return cube;
     }
 
-    private void InstansiateGrassCube(GameObject prefab, Vector3 position, int height = 0)
+    private void InstansiateGrassCube(GameObject prefab, GameObject dirtPrefab, Vector3 position, int height = 0)
     {
         GameObject cube = null;
-
-        cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
-        cube.transform.parent = transform;
+        Debug.Log("Height: " + height);
+        
 
         if (height >= 1)
         {
+            cube = Instantiate(dirtPrefab, position, prefab.transform.rotation) as GameObject;
+            cube.transform.parent = transform;
+
             for (var i = 0; i < height; i++)
             {
                 position += new Vector3(0, 1, 0);
 
-                cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
+                var prefabToUse = (i < height - 1 ? dirtPrefab : prefab);
+
+                cube = Instantiate(prefabToUse, position, prefab.transform.rotation) as GameObject;
                 cube.transform.parent = transform;
             }
         }
+        else
+        {
+            cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
+            cube.transform.parent = transform;
+        }
+        
     }
 
     private void InstansiateDirtCubes(GameObject prefab, Vector3 position)
