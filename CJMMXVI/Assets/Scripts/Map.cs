@@ -17,6 +17,10 @@ public class Map : MonoBehaviour
     [SerializeField]
     public GameObject DirtCube;
     [SerializeField]
+    public Light LightPrefab;
+    [SerializeField]
+    public float WaterFallHeight = 10f;
+    [SerializeField]
     public float WorldBottomHeight = 10f;
 
     [Header("Colors")]
@@ -39,6 +43,7 @@ public class Map : MonoBehaviour
     private float _waterfallOffset;
     private float _waterfallPlaneOffset;
     private bool _isWaterFall;
+    private Vector3 _mapCenter;
 
     #endregion
 
@@ -52,16 +57,19 @@ public class Map : MonoBehaviour
         _gridSize = 1;
         _waterfallOffset = 0.61f;
         _waterfallPlaneOffset = 0.5f;
-        var pixelComponentZeroEpsilon = 0.01f;
+        
 
-	    if (SourceMap != null)
+        if (SourceMap != null)
 	    {
             var cubePosition = Vector3.zero;
             var currentOffset = Vector3.zero;
 	        _width = SourceMap.width;
 	        _height = SourceMap.height;
 
-	        var pixels = SourceMap.GetPixels(0, 0, _width, _height);
+	        var mapCenterOffset = _width/2f - _gridSize/2f;
+            _mapCenter = transform.position + new Vector3(mapCenterOffset, 0, mapCenterOffset);
+
+            var pixels = SourceMap.GetPixels(0, 0, _width, _height);
 
             foreach (var pixel in pixels)
             {
@@ -148,7 +156,7 @@ public class Map : MonoBehaviour
         waterFall.transform.parent = parent;
 
         var waterFallParticleSystem = waterFall.GetComponent<ParticleSystem>();
-        waterFallParticleSystem.startLifetime = WorldBottomHeight - 2;
+        waterFallParticleSystem.startLifetime = WaterFallHeight - 2;
 
         var waterFallEdge = Instantiate(WaterFallEdgePrefab, relativePosition, rotation) as GameObject;
         waterFallEdge.transform.parent = parent;
@@ -157,11 +165,11 @@ public class Map : MonoBehaviour
     private void InstansiateWaterFallBackground(GameObject prefab, Vector3 position, Vector3 relativeOffset, Quaternion rotation, Transform parent)
     {
         var waterFall = Instantiate(prefab, position, rotation) as GameObject;
-        waterFall.transform.position += relativeOffset + new Vector3(0, -WorldBottomHeight/2f + _gridSize/2f, 0);
+        waterFall.transform.position += relativeOffset + new Vector3(0, -WaterFallHeight/2f + _gridSize/2f, 0);
         waterFall.transform.parent = parent;
 
         var scale = waterFall.transform.localScale;
-        scale.x *= WorldBottomHeight;
+        scale.x *= WaterFallHeight;
         waterFall.transform.localScale = scale;
 
         // This is nice code, yes...
@@ -211,14 +219,24 @@ public class Map : MonoBehaviour
 
     private void InstansiateDirtCubes(GameObject prefab, Vector3 position)
     {
-        // Add dirt cubes to bottom of map
-        var dirtCubeHeight = 4;
+        //Debug.Log(position);
+        var distanceFromCenter = _mapCenter - position;
+        var maxHeight = WorldBottomHeight - distanceFromCenter.magnitude;
+        Debug.Log(distanceFromCenter.magnitude);
 
-        for (var i = 0; i < WorldBottomHeight; i++)
+        //Debug.DrawLine(_mapCenter, position, Color.magenta, 100f);
+
+
+        //var maxHeightX = Mathf.Clamp(position.x, 0, WorldBottomHeight);
+        //var maxHeightZ = Mathf.Clamp(position.z, 0, WorldBottomHeight);
+        //var maxHeight = Mathf.Max(maxHeightX, maxHeightZ);
+
+        for (var i = 0; i < maxHeight; i++)
         {
             position += new Vector3(0, -1, 0);
 
-            var dirtCube = Instantiate(DirtCube, position, prefab.transform.rotation);
+            var dirtCube = Instantiate(DirtCube, position, prefab.transform.rotation) as GameObject;
+            dirtCube.transform.parent = transform;
         }
     }
 

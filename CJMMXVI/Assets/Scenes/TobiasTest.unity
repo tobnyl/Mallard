@@ -206,7 +206,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 406382, guid: 74a96a3f4752eb541ba0263f6890b4de, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74a96a3f4752eb541ba0263f6890b4de, type: 2}
@@ -238,7 +238,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1001 &1034767598
 Prefab:
   m_ObjectHideFlags: 0
@@ -246,6 +246,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11401336, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: LightOffsets.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 483730, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -282,6 +286,15 @@ Prefab:
       propertyPath: mallardSpawnPoint
       value: 
       objectReference: {fileID: 652562571}
+    - target: {fileID: 11401336, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: LightPrefab
+      value: 
+      objectReference: {fileID: 10852816, guid: 4f66ce93b4210d440bd0a12ee02ba980,
+        type: 2}
+    - target: {fileID: 2064744, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: orthographic size
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
   m_IsPrefabParent: 0
