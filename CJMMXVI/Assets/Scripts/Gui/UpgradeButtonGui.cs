@@ -5,7 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public class UpgradeButton : MonoBehaviour
+public class UpgradeButtonGui : MonoBehaviour
 {
 	#region Fields
 	[SerializeField]

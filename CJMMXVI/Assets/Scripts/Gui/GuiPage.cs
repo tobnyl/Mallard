@@ -16,12 +16,12 @@ public abstract class GuiPage : MonoBehaviour
 	#region Properties	
 	public bool Hidden
 	{
-		get { return canvas == null ? true : canvas.enabled; }
+		get { return canvas == null ? true : !canvas.enabled; }
 		set
 		{
 			if(canvas != null)
 			{
-				canvas.enabled = value;
+				canvas.enabled = !value;
 			}
 		}
 	}
