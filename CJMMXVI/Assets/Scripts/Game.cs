@@ -47,6 +47,30 @@ public class Game : MonoBehaviour
 	{
 		currentGameData = initialGameData;
 
+		map = GetComponentInChildren<Map>();
+
+		if(map == null) { Debug.LogError("No Map attached to Game"); enabled = false; }
+		else { map.Setup(); }
+
+		entityMan = GetComponent<EntityManager>();
+
+		if(entityMan == null) { Debug.LogError("No EntityManager attached to Game");}
+		else
+		{
+			entityMan.Setup(mallardSpawnPoint);
+			entityMan.onMallardEat -= OnMallardEat;
+			entityMan.onMallardEat += OnMallardEat;
+		}
+
+		upgradeMan = GetComponent<UpgradeManager>();
+		if(upgradeMan == null) { Debug.LogError("No UpgradeManager attached to Game"); }
+		else
+		{
+			upgradeMan.Setup(upgrades);
+			upgradeMan.onUpgradeFinished -= OnUpgradeFinished;
+			upgradeMan.onUpgradeFinished += OnUpgradeFinished;
+		}
+
 		gui = FindObjectOfType<GameUi>();
 		if(gui == null)
 		{
@@ -56,31 +80,9 @@ public class Game : MonoBehaviour
 			gui = FindObjectOfType<GameUi>();
 		}
 
-		if(gui == null) { Debug.LogError("GUI could not be loaded. Add the GUI scene to build settings", this); enabled = false; }
+		if(gui == null) { Debug.LogError("GUI could not be loaded. Add the GUI scene to build settings", this); }
 
-		map = GetComponentInChildren<Map>();
-
-		if(map == null) { Debug.LogError("No Map attached to Game"); enabled = false; }
-		else { map.Setup(); }
-
-		entityMan = GetComponent<EntityManager>();
-
-		if(entityMan == null) { Debug.LogError("No EntityManager attached to Game"); enabled = false; }
-		else
-		{
-			entityMan.Setup(mallardSpawnPoint);
-			entityMan.onMallardEat -= OnMallardEat;
-			entityMan.onMallardEat += OnMallardEat;
-		}
-
-		upgradeMan = GetComponent<UpgradeManager>();
-		if(upgradeMan == null) { Debug.LogError("No UpgradeManager attached to Game"); enabled = false; }
-		else
-		{
-			upgradeMan.Setup(upgrades);
-			upgradeMan.onUpgradeFinished -= OnUpgradeFinished;
-			upgradeMan.onUpgradeFinished += OnUpgradeFinished;
-		}
+		gui.Setup(upgradeMan);
 
 		entityMan.UpdateGameData(currentGameData);
 
