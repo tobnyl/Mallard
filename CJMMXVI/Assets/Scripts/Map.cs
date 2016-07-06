@@ -14,6 +14,8 @@ public class Map : MonoBehaviour
 	public GameObject GrassPrefab;
 	[SerializeField]
     public GameObject WaterPrefab;
+    [SerializeField]
+    public GameObject DirtCube;
 
     [Header("Colors")]
 	[SerializeField]
@@ -64,7 +66,7 @@ public class Map : MonoBehaviour
             {
                 if (pixel == WaterColor)
                 {
-                    var cube = InstansiateCube(WaterPrefab, cubePosition);
+                    var cube = InstansiateWaterCube(WaterPrefab, cubePosition);
 
                     AddWaterfallParticleSystem(currentOffset, cube);
                 }
@@ -72,7 +74,7 @@ public class Map : MonoBehaviour
                 {
                     var cubeHeight = GetCubeHeight(pixel.g);
 
-                    InstansiateCube(GrassPrefab, cubePosition, cubeHeight);
+                    InstansiateGrassCube(GrassPrefab, cubePosition, cubeHeight);
                 }
 
                 currentOffset.x += _gridSize;
@@ -156,9 +158,21 @@ public class Map : MonoBehaviour
         }
     }
 
-    private GameObject InstansiateCube(GameObject prefab, Vector3 position, int height = 0)
+    private GameObject InstansiateWaterCube(GameObject prefab, Vector3 position)
     {
         GameObject cube = null;
+        var dirtCubePosition = position;
+
+        cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
+        cube.transform.parent = transform;
+
+        return cube;
+    }
+
+    private void InstansiateGrassCube(GameObject prefab, Vector3 position, int height = 0)
+    {
+        GameObject cube = null;
+        var dirtCubePosition = position;
 
         cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
         cube.transform.parent = transform;
@@ -173,14 +187,17 @@ public class Map : MonoBehaviour
                 cube.transform.parent = transform;
             }
         }
-        //else
-        //{
-        //    cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
-        //    cube.transform.parent = transform;
-        //}
 
-        // Only used when height = 1
-        return cube;
+        // Add dirt cubes to bottom of map
+        var dirtCubeHeight = 4;
+
+        for (var i = 0; i < dirtCubeHeight; i++)
+        {
+            position += new Vector3(0, -1, 0);
+
+            var dirtCube = Instantiate(DirtCube, position, prefab.transform.rotation);
+        }
     }
+
     #endregion
 }

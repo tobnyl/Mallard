@@ -240,9 +240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02108fcdc1a08144996bfe812f8e4f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SourceMap: {fileID: 2800000, guid: b4626ed91c302ff47a3442e91f77b537, type: 3}
+  SourceMap: {fileID: 2800000, guid: 2c1a5949926df8f4799d2e43679aa3d5, type: 3}
   GrassPrefab: {fileID: 179240, guid: d6fab1dcaa754684186c2577e38162fa, type: 2}
   WaterPrefab: {fileID: 124524, guid: 8cb52f94eafab9446924a01e29ebbd6f, type: 2}
+  DirtCube: {fileID: 179240, guid: 2d5dd1e13a4d530458e527cb221a4287, type: 2}
   GrassColor: {r: 0, g: 1, b: 0, a: 1}
   WaterColor: {r: 0, g: 0, b: 1, a: 1}
   WaterFallPrefab: {fileID: 156172, guid: 515e026924e07814eb6d365215f00f6a, type: 2}
