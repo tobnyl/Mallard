@@ -50,7 +50,23 @@ public class GameUi : MonoBehaviour
 
 		upgrades.Setup(upgradeMan);
 
+		for(int i = 0; i < pages.Count; ++i)
+		{
+			GuiPage page = pages[i];
+			page.gameObject.active = true;
+		}
+
 		currentPage = Page.Main;
+
+		main.upgradesButton.onClick.AddListener(() =>
+		{
+			currentPage = Page.Upgrades;
+		});
+
+		upgrades.exitButton.onClick.AddListener(() =>
+		{
+			currentPage = Page.Main;
+		});
 	}
 
 	void HideAllPages()

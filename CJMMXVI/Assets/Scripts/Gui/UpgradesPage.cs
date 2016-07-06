@@ -9,6 +9,8 @@ public class UpgradesPage : GuiPage
 {
 	#region Fields
 	[SerializeField]
+	public UI.Button exitButton;
+	[SerializeField]
 	UpgradeInfoGui upgradeInfo;
 	[SerializeField]
 	UpgradesListGui upgradesList;
