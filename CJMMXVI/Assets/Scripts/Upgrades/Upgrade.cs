@@ -39,6 +39,12 @@ public class Upgrade : ScriptableObject
 
 	#region Fields
 	[SerializeField]
+	public string upgradeName;
+
+	[SerializeField]
+	public string upgradeDescription;
+
+	[SerializeField]
 	public int cost;
 
 	[SerializeField]
