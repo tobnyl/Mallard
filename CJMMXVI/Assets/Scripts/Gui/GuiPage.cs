@@ -26,4 +26,8 @@ public abstract class GuiPage : MonoBehaviour
 		}
 	}
 	#endregion
+
+	#region Methods
+	public virtual void OnGameDataChanged(GameData gameData) {}
+	#endregion
 }

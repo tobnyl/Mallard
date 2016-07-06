@@ -69,6 +69,20 @@ public class GameUi : MonoBehaviour
 		});
 	}
 
+	public void DoUpdate()
+	{
+		upgrades.DoUpdate();
+	}
+
+	public void OnGameDataChanged(GameData gameData)
+	{
+		for(int i = 0; i < pages.Count; ++i)
+		{
+			GuiPage page = pages[i];
+			page.OnGameDataChanged(gameData);
+		}
+	}
+
 	void HideAllPages()
 	{
 		for(int i = 0; i < pages.Count; ++i)

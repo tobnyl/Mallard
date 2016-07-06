@@ -44,6 +44,20 @@ public class UpgradeManager : MonoBehaviour
 		activeUpgradeRoutine = null;
 	}
 
+	public bool IsResearching(Upgrade upgrade)
+	{
+		if(upgrade == null) { return false; }
+
+		return activeUpgrade == upgrade;
+	}
+
+	public bool IsResearched(Upgrade upgrade)
+	{
+		if(upgrade == null) { return false; }
+
+		return appliedUpgrades.Contains(upgrade);
+	}
+
 	public bool Researchable(Upgrade upgrade)
 	{
 		for(int i = 0; i < upgrade.dependencies.Length; ++i)
@@ -52,14 +66,16 @@ public class UpgradeManager : MonoBehaviour
 			if(!appliedUpgrades.Contains(dependency)) { return false; }
 		}
 
-		return upgradeQueue.Contains(upgrade) ||
-			appliedUpgrades.Contains(upgrade) ||
-			upgrade == activeUpgrade;
+		return !upgradeQueue.Contains(upgrade) &&
+			!appliedUpgrades.Contains(upgrade) &&
+			upgrade != activeUpgrade;
 	}
 
 	public void Research(Upgrade upgrade)
 	{
 		if(!Researchable(upgrade)) { return; }
+
+		Debug.Log("Adding " + upgrade.upgradeName + " to research queue");
 
 		upgradeQueue.Add(upgrade);
 	}
@@ -78,6 +94,9 @@ public class UpgradeManager : MonoBehaviour
 		Upgrade upgrade = upgradeQueue[0];
 		upgradeQueue.RemoveAt(0);
 		activeUpgrade = upgrade;
+
+		Debug.Log("Start upgrade " + upgrade.upgradeName);
+
 		activeUpgradeRoutine = StartCoroutine(ApplyRoutine(upgrade));
 	}
 
@@ -96,6 +115,8 @@ public class UpgradeManager : MonoBehaviour
 
 	void FinalizeApplyingUpgrade(Upgrade upgrade)
 	{
+		Debug.Log("Finished upgrading " + upgrade.upgradeName);
+
 		activeUpgradeRoutine = null;
 		activeUpgrade = null;
 
