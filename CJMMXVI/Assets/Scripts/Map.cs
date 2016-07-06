@@ -47,7 +47,7 @@ public class Map : MonoBehaviour
         _gridSize = 1;
         _waterfallOffset = 0.61f;
         _waterfallPlaneOffset = 0.5f;
-        
+        var pixelComponentZeroEpsilon = 0.01f;
 
 	    if (SourceMap != null)
 	    {
@@ -60,6 +60,8 @@ public class Map : MonoBehaviour
 
             foreach (var pixel in pixels)
             {
+                Debug.Log(pixel);
+
                 if (pixel == WaterColor)
                 {
                     var cube = InstansiateCube(WaterPrefab, cubePosition);
@@ -69,8 +71,6 @@ public class Map : MonoBehaviour
                 else if (pixel.r == 0 && pixel.b == 0)
                 {
                     var cubeHeight = GetCubeHeight(pixel.g);
-
-                    //Debug.Log("G: " + (pixel.g) + " | " + cubeHeight);
 
                     InstansiateCube(GrassPrefab, cubePosition, cubeHeight);
                 }
