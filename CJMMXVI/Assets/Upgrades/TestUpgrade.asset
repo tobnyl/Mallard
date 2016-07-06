@@ -11,12 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8c96c281764cf4fbdf2a000c9dbead, type: 3}
   m_Name: TestUpgrade
   m_EditorClassIdentifier: 
-  upgradeName: TestUpgrade
-  upgradeDescription: A long description
+  upgradeName: Fresh Bread
+  upgradeDescription: Invest in some fresh bread which is easier to break into pieces.
+    Twice the bread, half the effort!
   cost: 0
   researchTime: 5
   dependencies: []
   man:
-    throwCooldown: -1
+    breadThrown: 2
+    throwCooldown: 0
   mallard:
     eatDuration: 0
+    count: 0

@@ -12,6 +12,8 @@ public class Upgrade : ScriptableObject
 	public class ManData
 	{
 		[SerializeField]
+		public int breadThrown;
+		[SerializeField]
 		public float throwCooldown;
 	}
 
@@ -20,6 +22,8 @@ public class Upgrade : ScriptableObject
 	{
 		[SerializeField]
 		public float eatDuration;
+		[SerializeField]
+		public int count;
 	}
 
 	[Serializable]
@@ -42,6 +46,7 @@ public class Upgrade : ScriptableObject
 	public string upgradeName;
 
 	[SerializeField]
+	[Multiline]
 	public string upgradeDescription;
 
 	[SerializeField]
@@ -70,8 +75,10 @@ public class Upgrade : ScriptableObject
 	public GameData ApplyOn(GameData data)
 	{
 		data.points -= cost;
+		data.man.breadThrown += data.man.breadThrown;
 		data.man.throwCooldown += man.throwCooldown;
 		data.mallard.eatDuration += mallard.eatDuration;
+		data.mallard.count += mallard.count;
 		
 		return data;
 	}

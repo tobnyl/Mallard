@@ -122,6 +122,8 @@ public class Game : MonoBehaviour
 	{
 		currentGameData = upgrade.ApplyOn(currentGameData);
 		OnGameDataChanged();
+
+		gui.OnUpgradeResearched(upgrade);
 	}
 
 	void OnMallardEat(Mallard mallard)

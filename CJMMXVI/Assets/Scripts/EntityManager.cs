@@ -132,13 +132,17 @@ public class EntityManager : MonoBehaviour
 
 		if(!shouldFeed) { return; }
 
-		var food = Instantiate<Food>(foodPrefab);
-		AddEntity(food);
-		food.transform.position =
-			feeder.feedOrigin.position +
-			Vector3.right * UE.Random.Range(0.0f, 2.0f) +
-			Vector3.forward * UE.Random.Range(0.0f, 2.0f);
-		food.lifeTimer = food.decayDuration;
+		int thrown = Mathf.Max(1, gameData.man.breadThrown);
+		for(int i = 0; i < thrown; ++i)
+		{
+			var food = Instantiate<Food>(foodPrefab);
+			AddEntity(food);
+			food.transform.position =
+				mallardSpawn.transform.position +
+				Vector3.right * UE.Random.Range(-2.0f, 2.0f) +
+				Vector3.forward * UE.Random.Range(0.0f, 4.0f);
+			food.lifeTimer = food.decayDuration;
+		}
 
 		feeder.feedTimer = gameData.man.throwCooldown;
 	}
