@@ -29,5 +29,6 @@ public abstract class GuiPage : MonoBehaviour
 
 	#region Methods
 	public virtual void OnGameDataChanged(GameData gameData) {}
+	public virtual void OnUpgradeResearched(Upgrade upgrade) {}
 	#endregion
 }

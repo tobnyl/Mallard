@@ -46,6 +46,11 @@ public class UpgradesPage : GuiPage
 		upgradeInfo.OnGameDataChanged(gameData);
 	}
 
+	public override void OnUpgradeResearched(Upgrade upgrade)
+	{
+		upgradesList.OnUpgradeResearched(upgrade);
+	}
+
 	void OnBuyButtonSelected(Upgrade upgrade)
 	{
 		manager.Research(upgrade);

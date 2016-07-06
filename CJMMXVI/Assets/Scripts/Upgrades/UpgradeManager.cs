@@ -58,12 +58,22 @@ public class UpgradeManager : MonoBehaviour
 		return appliedUpgrades.Contains(upgrade);
 	}
 
-	public bool Researchable(Upgrade upgrade)
+	public bool AllDependenciesResearched(Upgrade upgrade)
 	{
 		for(int i = 0; i < upgrade.dependencies.Length; ++i)
 		{
 			Upgrade dependency = upgrade.dependencies[i];
 			if(!appliedUpgrades.Contains(dependency)) { return false; }
+		}
+
+		return true;
+	}
+
+	public bool Researchable(Upgrade upgrade)
+	{
+		if(!AllDependenciesResearched(upgrade))
+		{
+			return false;
 		}
 
 		return !upgradeQueue.Contains(upgrade) &&

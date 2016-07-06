@@ -83,6 +83,15 @@ public class GameUi : MonoBehaviour
 		}
 	}
 
+	public void OnUpgradeResearched(Upgrade upgrade)
+	{
+		for(int i = 0; i < pages.Count; ++i)
+		{
+			GuiPage page = pages[i];
+			page.OnUpgradeResearched(upgrade);
+		}
+	}
+
 	void HideAllPages()
 	{
 		for(int i = 0; i < pages.Count; ++i)

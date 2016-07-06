@@ -12,6 +12,8 @@ public struct GameData
 	public struct ManData
 	{
 		[SerializeField]
+		public int breadThrown;
+		[SerializeField]
 		public float throwCooldown;
 	}
 

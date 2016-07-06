@@ -36,6 +36,8 @@ public class UpgradesListGui : MonoBehaviour
 			Upgrade upgrade = upgrades[i];
 			AddUpgradeButton(upgrade);
 		}
+
+		UpdateButtonsInteractivity();
 	}
 
 	public void AddUpgradeButton(Upgrade upgrade)
@@ -69,6 +71,21 @@ public class UpgradesListGui : MonoBehaviour
 		if(onUpgradeSelected != null)
 		{
 			onUpgradeSelected(button.upgrade);
+		}
+	}
+
+	public void OnUpgradeResearched(Upgrade upgrade)
+	{
+		UpdateButtonsInteractivity();
+	}
+
+	void UpdateButtonsInteractivity()
+	{
+		for(int i = 0; i < upgradeButtons.Count; ++i)
+		{
+			UpgradeButtonGui upgradeButton = upgradeButtons[i];
+
+			upgradeButton.button.interactable = manager.AllDependenciesResearched(upgradeButton.upgrade);
 		}
 	}
 	#endregion
