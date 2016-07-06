@@ -39,6 +39,7 @@ public class Pool<T>
 		{
 			T obj = creator();
 			free.Add(obj);
+			onFree(obj);
 		}
 	}
 
