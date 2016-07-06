@@ -39,7 +39,7 @@ public class UpgradeInfoGui : MonoBehaviour
 		this.manager = manager;
 		buyButton.onClick.AddListener(OnBuyButtonSelected);
 
-		researchLabel.gameObject.active = false;
+		researchLabel.gameObject.SetActive(false);
 	}
 
 	public void SetUpgrade(Upgrade upgrade)
@@ -57,23 +57,23 @@ public class UpgradeInfoGui : MonoBehaviour
 		{
 			if(manager.IsResearching(currentUpgrade))
 			{
-				researchLabel.gameObject.active = true;
-				buyButton.gameObject.active = false;
-				costLabel.gameObject.active = false;
+				researchLabel.gameObject.SetActive(true);
+				buyButton.gameObject.SetActive(false);
+				costLabel.gameObject.SetActive(false);
 				researchLabel.text = "Researching...";
 			}
 			else if(manager.IsResearched(currentUpgrade))
 			{
-				researchLabel.gameObject.active = true;
-				buyButton.gameObject.active = false;
-				costLabel.gameObject.active = false;
+				researchLabel.gameObject.SetActive(true);
+				buyButton.gameObject.SetActive(false);
+				costLabel.gameObject.SetActive(false);
 				researchLabel.text = "Purchased";
 			}
 			else
 			{
-				researchLabel.gameObject.active = false;
-				buyButton.gameObject.active = true;
-				costLabel.gameObject.active = true;
+				researchLabel.gameObject.SetActive(false);
+				buyButton.gameObject.SetActive(true);
+				costLabel.gameObject.SetActive(true);
 
 
 				bool buyable = currentUpgrade.cost <= gameData.points &&

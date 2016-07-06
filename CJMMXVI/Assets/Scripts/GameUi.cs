@@ -53,7 +53,7 @@ public class GameUi : MonoBehaviour
 		for(int i = 0; i < pages.Count; ++i)
 		{
 			GuiPage page = pages[i];
-			page.gameObject.active = true;
+			page.gameObject.SetActive(true);
 		}
 
 		currentPage = Page.Main;
