@@ -219,23 +219,16 @@ public class Map : MonoBehaviour
 
     private void InstansiateDirtCubes(GameObject prefab, Vector3 position)
     {
-        //Debug.Log(position);
         var distanceFromCenter = _mapCenter - position;
-        var maxHeight = WorldBottomHeight - distanceFromCenter.magnitude;
-        Debug.Log(distanceFromCenter.magnitude);
+        var maxHeight = Convert.ToInt32(WorldBottomHeight - distanceFromCenter.magnitude);
 
-        //Debug.DrawLine(_mapCenter, position, Color.magenta, 100f);
+        var isCubeAtEdge = position.x == _width - 1 || position.x == 0 || position.z == _height - 1 || position.z == 0;
 
+        var startIndex = (isCubeAtEdge ? 1 : maxHeight);
 
-        //var maxHeightX = Mathf.Clamp(position.x, 0, WorldBottomHeight);
-        //var maxHeightZ = Mathf.Clamp(position.z, 0, WorldBottomHeight);
-        //var maxHeight = Mathf.Max(maxHeightX, maxHeightZ);
-
-        for (var i = 0; i < maxHeight; i++)
+        for (var i = startIndex; i <= maxHeight; i++)
         {
-            position += new Vector3(0, -1, 0);
-
-            var dirtCube = Instantiate(DirtCube, position, prefab.transform.rotation) as GameObject;
+            var dirtCube = Instantiate(DirtCube, position + new Vector3(0, -i, 0), prefab.transform.rotation) as GameObject;
             dirtCube.transform.parent = transform;
         }
     }
