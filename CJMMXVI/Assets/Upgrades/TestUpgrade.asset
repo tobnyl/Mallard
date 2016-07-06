@@ -25,5 +25,5 @@ MonoBehaviour:
     count: 0
   environment:
     toActivate:
-    - scenePath: DeactivateOnStart/Nested/Cube
+    - scenePath: Nested
     toDeactivate: []
