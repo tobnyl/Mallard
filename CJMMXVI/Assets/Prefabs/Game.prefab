@@ -180,7 +180,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -244,6 +244,7 @@ MonoBehaviour:
   GrassPrefab: {fileID: 179240, guid: d6fab1dcaa754684186c2577e38162fa, type: 2}
   WaterPrefab: {fileID: 124524, guid: 8cb52f94eafab9446924a01e29ebbd6f, type: 2}
   DirtCube: {fileID: 179240, guid: 2d5dd1e13a4d530458e527cb221a4287, type: 2}
+  LightPrefab: {fileID: 10852816, guid: 4f66ce93b4210d440bd0a12ee02ba980, type: 2}
   WaterFallHeight: 10
   WorldBottomHeight: 10
   GrassColor: {r: 0, g: 1, b: 0, a: 1}
