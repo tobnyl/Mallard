@@ -26,6 +26,8 @@ public class Map : MonoBehaviour
     public GameObject WaterFallPrefab;
     [SerializeField]
     public GameObject WaterFallBackgroundPrefab;
+    [SerializeField]
+    public GameObject WaterFallEdgePrefab;
 
     public float WaterFallHeight;
 
@@ -106,13 +108,13 @@ public class Map : MonoBehaviour
         // Right edge
         if (currentOffset.x == _width - 1)
         {
-            InstansiateWaterFall(WaterFallPrefab, waterFallOffset, new Vector3(_waterfallOffset, 0, 0), Quaternion.Euler(0, 90, 180), cube.transform);
+            InstansiateWaterFall(waterFallOffset, new Vector3(_waterfallOffset, 0, 0), Quaternion.Euler(0, 90, 180), cube.transform);
             InstansiateWaterFallBackground(WaterFallBackgroundPrefab, currentOffset, new Vector3(_waterfallPlaneOffset, -1, 0), Quaternion.Euler(0, 0, -90), cube.transform);
         }
         // Bottom edge
         else if (currentOffset.z == 0)
         {
-            InstansiateWaterFall(WaterFallPrefab, waterFallOffset, new Vector3(0, 0, -_waterfallOffset), Quaternion.Euler(0, -180, -180), cube.transform);
+            InstansiateWaterFall(waterFallOffset, new Vector3(0, 0, -_waterfallOffset), Quaternion.Euler(0, -180, -180), cube.transform);
             InstansiateWaterFallBackground(WaterFallBackgroundPrefab, currentOffset, new Vector3(0, -1, -_waterfallPlaneOffset), Quaternion.Euler(-90, 0, 0), cube.transform);
         }
         // Top edge
@@ -123,14 +125,18 @@ public class Map : MonoBehaviour
         //}
     }
 
-    private void InstansiateWaterFall(GameObject prefab, Vector3 position, Vector3 relativeOffset, Quaternion rotation, Transform parent)
+    private void InstansiateWaterFall(Vector3 position, Vector3 relativeOffset, Quaternion rotation, Transform parent)
     {
-        var waterFall = Instantiate(prefab, position, rotation) as GameObject;                
-        waterFall.transform.position += relativeOffset;
+        var relativePosition = position + relativeOffset;
+
+        var waterFall = Instantiate(WaterFallPrefab, relativePosition, rotation) as GameObject;                
         waterFall.transform.parent = parent;
 
         var waterFallParticleSystem = waterFall.GetComponent<ParticleSystem>();
         waterFallParticleSystem.startLifetime = WaterFallHeight - 2;
+
+        var waterFallEdge = Instantiate(WaterFallEdgePrefab, relativePosition, rotation) as GameObject;
+        waterFallEdge.transform.parent = parent;
     }
 
     private void InstansiateWaterFallBackground(GameObject prefab, Vector3 position, Vector3 relativeOffset, Quaternion rotation, Transform parent)
