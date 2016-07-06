@@ -11,13 +11,14 @@ public class AudioSourceExtended : MonoBehaviour
 
     #region Properties	
 
+	public AudioSource Source { get; set; }
     public float Duration { get; set; }
     public bool Loop { get; set; }
 
     #endregion
 
     #region Methods
-    void Start()
+    public void Run()
 	{
         if (!Loop)
         {
@@ -27,7 +28,8 @@ public class AudioSourceExtended : MonoBehaviour
 
     void Destroy()
     {
-        Destroy(gameObject);
+		AudioManager.Instance.Return(this);
+		//Destroy(gameObject);
     }
 
     #endregion
