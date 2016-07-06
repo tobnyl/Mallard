@@ -152,19 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 11458158, guid: bb7a39b28bcd87f48bcb1cfd47711ad8, type: 2}
-      propertyPath: Music.Mute
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11458158, guid: bb7a39b28bcd87f48bcb1cfd47711ad8, type: 2}
-      propertyPath: Music.Output
-      value: 
-      objectReference: {fileID: 24360614, guid: 902a5e76d93c1fc4dbd6358818522202,
-        type: 2}
-    - target: {fileID: 11458158, guid: bb7a39b28bcd87f48bcb1cfd47711ad8, type: 2}
-      propertyPath: Music.Clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 8b29e63732c107247a1d3f797199e5ac, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb7a39b28bcd87f48bcb1cfd47711ad8, type: 2}
   m_IsPrefabParent: 0
