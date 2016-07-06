@@ -141,6 +141,8 @@ public class AudioManager : MonoBehaviour
             audioSource.volume = Random.Range(minVol, maxVol);
         }
 
+        //Debug.Log("Vol: " + audioSource.volume + " | Pitch: " + audioSource.pitch);
+
         AudioSourceExtended audioSourceExtended = audioSource.GetComponent<AudioSourceExtended>();
         audioSourceExtended.Duration = clip.length;
         audioSourceExtended.Loop = loop; // I don't like this code...

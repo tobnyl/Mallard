@@ -84,12 +84,7 @@ public class EntityManager : MonoBehaviour
 	{
 		if(entity is Feeder) { feeders.Remove((Feeder)entity); }
 		if(entity is Mallard) { mallards.Remove((Mallard)entity); }
-	    if (entity is Food)
-	    {
-	        var duckSfxIndex = UE.Random.Range(0, sfx.DuckSfx.Length);
-                        
-	        AudioManager.Instance.Play(sfx.DuckSfx[duckSfxIndex], Vector3.zero);
-	        foods.Remove((Food)entity);
+	    if (entity is Food) {  foods.Remove((Food)entity);
 	    }
 
 		Destroy(entity.gameObject);
@@ -172,7 +167,10 @@ public class EntityManager : MonoBehaviour
 			{
 				if(onMallardEat != null) { onMallardEat(mallard); }
 
-				Debug.Log("Quack");
+                var duckSfxIndex = UE.Random.Range(0, sfx.DuckSfx.Length);
+
+                AudioManager.Instance.Play(sfx.DuckSfx[duckSfxIndex], Vector3.zero);
+                Debug.Log("Quack");
 			}
 
 			return;

@@ -233,34 +233,34 @@ MonoBehaviour:
     DuckSfx:
     - Clip: {fileID: 8300000, guid: 75fa1d44af9a9bd4c95f4fca172c1a49, type: 3}
       Output: {fileID: 24354744, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
-      MinVolume: 1
+      MinVolume: 0.5
       MaxVolume: 1
-      MinPitch: 1
-      MaxPitch: 1
+      MinPitch: 0.9
+      MaxPitch: 1.1
       Loop: 0
       Mute: 0
     - Clip: {fileID: 8300000, guid: f8e71f8e5ebfd0a4ca3d74b74c65504e, type: 3}
       Output: {fileID: 24354744, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
-      MinVolume: 1
+      MinVolume: 0.5
       MaxVolume: 1
-      MinPitch: 1
-      MaxPitch: 1
+      MinPitch: 0.9
+      MaxPitch: 1.1
       Loop: 0
       Mute: 0
     - Clip: {fileID: 8300000, guid: 837e8e11bf0ac3c4299846bc6fc3800d, type: 3}
       Output: {fileID: 24354744, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
-      MinVolume: 1
+      MinVolume: 0.5
       MaxVolume: 1
-      MinPitch: 1
-      MaxPitch: 1
+      MinPitch: 0.9
+      MaxPitch: 1.1
       Loop: 0
       Mute: 0
     - Clip: {fileID: 8300000, guid: c198e98f0d88f55438f8e1916e4d759b, type: 3}
       Output: {fileID: 24354744, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
-      MinVolume: 1
+      MinVolume: 0.5
       MaxVolume: 1
-      MinPitch: 1
-      MaxPitch: 1
+      MinPitch: 0.9
+      MaxPitch: 1.1
       Loop: 0
       Mute: 0
 --- !u!114 &11401336

@@ -159,7 +159,7 @@ Prefab:
     - target: {fileID: 11458158, guid: bb7a39b28bcd87f48bcb1cfd47711ad8, type: 2}
       propertyPath: Music.Output
       value: 
-      objectReference: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202,
+      objectReference: {fileID: 24360614, guid: 902a5e76d93c1fc4dbd6358818522202,
         type: 2}
     - target: {fileID: 11458158, guid: bb7a39b28bcd87f48bcb1cfd47711ad8, type: 2}
       propertyPath: Music.Clip
