@@ -60,8 +60,6 @@ public class Map : MonoBehaviour
 
             foreach (var pixel in pixels)
             {
-                Debug.Log(pixel);
-
                 if (pixel == WaterColor)
                 {
                     var cube = InstansiateCube(WaterPrefab, cubePosition);
