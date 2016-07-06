@@ -129,7 +129,9 @@ public class Game : MonoBehaviour
 		upgradeMan.DoUpdate();
 
 		// Temp
-		
+#if UNITY_EDITOR
+		entityMan.OnGameDataChanged(currentGameData);
+#endif
 		gui.main.points.SetPoints(currentGameData.points);
 
 		gui.DoUpdate();
