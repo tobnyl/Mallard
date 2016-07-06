@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3393188}
   - 23: {fileID: 2317188}
   m_Layer: 0
-  m_Name: GrassCubeNew
+  m_Name: DirtCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6055208b5e1811248bb0660f1ad92f8a, type: 2}
+  - {fileID: 2100000, guid: f26e6a92a5ab2154784eb01a6236962b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
