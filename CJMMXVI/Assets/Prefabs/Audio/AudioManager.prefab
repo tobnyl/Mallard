@@ -45,7 +45,7 @@ MonoBehaviour:
   AllowDuplicatesPerFrame: 0
   Music:
     Clip: {fileID: 8300000, guid: 8b29e63732c107247a1d3f797199e5ac, type: 3}
-    Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
+    Output: {fileID: 24360614, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
     MinVolume: 1
     MaxVolume: 1
     MinPitch: 1

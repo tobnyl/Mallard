@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mallardSpawnPoint: {fileID: 0}
+  deactivateOnStart: {fileID: 0}
   initialGameData:
     points: 0
     man:
