@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169824}
   m_LocalRotation: {x: -0.7071068, y: -0.0000003427267, z: -0.000000348036, w: 0.7071068}
-  m_LocalPosition: {x: -8.421, y: 0.523, z: -5.503}
+  m_LocalPosition: {x: -8.421, y: 0.52, z: -5.8}
   m_LocalScale: {x: 1.5558656, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_Children: []
@@ -76,7 +76,7 @@ ParticleSystem:
   speed: 1
   randomSeed: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   moveWithTransform: 1
   scalingMode: 1
@@ -84,7 +84,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     startLifetime:
-      scalar: 0.48
+      scalar: 0.66
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -119,7 +119,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: 1.06
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -242,13 +242,13 @@ ParticleSystem:
         m_NumAlphaKeys: 2
       minColor:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 2156760461
       maxColor:
         serializedVersion: 2
         rgba: 4294967295
-      minMaxState: 0
+      minMaxState: 2
     startSize:
-      scalar: 0.7
+      scalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -264,7 +264,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0.71428573
+          value: 0.80000025
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -377,15 +377,15 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 0
-    randomizeRotationDirection: 0
-    gravityModifier: 0
+    randomizeRotationDirection: 0.03
+    gravityModifier: 0.17
     maxNumParticles: 1000
     rotation3D: 0
   ShapeModule:
     serializedVersion: 2
     enabled: 1
     type: 12
-    radius: 0.36
+    radius: 0.35
     angle: 25
     length: 5
     boxX: 1
@@ -440,11 +440,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 0
-    cnt0: 30
+    cnt0: 110
     cnt1: 30
     cnt2: 30
     cnt3: 30
-    cntmax0: 30
+    cntmax0: 110
     cntmax1: 30
     cntmax2: 30
     cntmax3: 30
@@ -607,7 +607,7 @@ ParticleSystem:
           rgba: 4294967295
         key1:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 1946157055
         key2:
           serializedVersion: 2
           rgba: 0
@@ -1288,7 +1288,7 @@ ParticleSystem:
     separateAxes: 0
     range: {x: 0, y: 1}
   ColorBySpeedModule:
-    enabled: 0
+    enabled: 1
     gradient:
       maxGradient:
         key0:
@@ -1296,7 +1296,7 @@ ParticleSystem:
           rgba: 4294967295
         key1:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 1677721599
         key2:
           serializedVersion: 2
           rgba: 0
