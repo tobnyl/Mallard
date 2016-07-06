@@ -36,15 +36,37 @@ public class EntityManager : MonoBehaviour
 
 	List<Feeder> feeders;
 	List<Mallard> mallards;
+	Pool<Food> foodPool;
 	List<Food> foods;
 
 	GameData gameData;
+
+	Transform objectsRoot;
 	#endregion
 
 	#region Methods
 	public void Setup(Transform mallardSpawn)
 	{
+		var go = new GameObject("Entities");
+		go.transform.parent = transform;
+		objectsRoot = go.transform;
+
 		feeders = new List<Feeder>(FindObjectsOfType<Feeder>());
+		foodPool = new Pool<Food>(() =>
+		{
+			var obj = Instantiate(foodPrefab);
+			obj.transform.parent = objectsRoot;
+			return obj;
+		});
+		foodPool.onGet = (Food food) =>
+		{
+			food.gameObject.SetActive(true);
+		};
+		foodPool.onFree = (Food food) =>
+		{
+			food.gameObject.SetActive(false);
+		};
+		foodPool.Grow(32);
 		mallards = new List<Mallard>(FindObjectsOfType<Mallard>());
 		foods = new List<Food>();
 
@@ -78,16 +100,15 @@ public class EntityManager : MonoBehaviour
 		if(entity is Feeder) { feeders.Add((Feeder)entity); }
 		if(entity is Mallard) { mallards.Add((Mallard)entity); }
 		if(entity is Food) { foods.Add((Food)entity); }
+
+		entity.transform.parent = objectsRoot;
 	}
 
 	public void RemoveEntity(Entity entity)
 	{
 		if(entity is Feeder) { feeders.Remove((Feeder)entity); }
 		if(entity is Mallard) { mallards.Remove((Mallard)entity); }
-	    if (entity is Food) {  foods.Remove((Food)entity);
-	    }
-
-		Destroy(entity.gameObject);
+		if(entity is Food) { foods.Remove((Food)entity); }
 	}
 	
 	public void DoUpdate()
@@ -145,7 +166,7 @@ public class EntityManager : MonoBehaviour
 		int thrown = Mathf.Max(1, gameData.man.breadThrown);
 		for(int i = 0; i < thrown; ++i)
 		{
-			var food = Instantiate<Food>(foodPrefab);
+			var food = foodPool.Get();
 			AddEntity(food);
 			food.transform.position =
 				mallardSpawn.transform.position +
@@ -170,7 +191,7 @@ public class EntityManager : MonoBehaviour
                 var duckSfxIndex = UE.Random.Range(0, sfx.DuckSfx.Length);
 
                 AudioManager.Instance.Play(sfx.DuckSfx[duckSfxIndex], Vector3.zero);
-                Debug.Log("Quack");
+				//Debug.Log("Quack");
 			}
 
 			return;
@@ -179,7 +200,10 @@ public class EntityManager : MonoBehaviour
 		Transform mallardTrans = mallard.transform;
 		Vector3 mallardPos = mallardTrans.position;
 
-		if(mallard.targetFood == null)
+		bool targetFoodAlive = mallard.targetFood != null &&
+			foods.Contains(mallard.targetFood);
+
+		if(!targetFoodAlive)
 		{
 			Food closestFood = null;
 			float closestDist = Mathf.Infinity;
@@ -197,11 +221,6 @@ public class EntityManager : MonoBehaviour
 			}
 
 			mallard.targetFood = closestFood;
-		}
-		else if(!foods.Contains(mallard.targetFood))
-		{
-			// Not sure why this is happening
-			mallard.targetFood = null;
 		}
 
 		Vector3 targetPos = mallard.targetFood == null ?
@@ -224,9 +243,10 @@ public class EntityManager : MonoBehaviour
 		{
 			if(mallard.targetFood != null)
 			{
-				Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
+				//Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
 				// Reached food!
 				RemoveEntity(mallard.targetFood);
+				foodPool.Return(mallard.targetFood);
 				mallard.eatTimer = gameData.mallard.eatDuration;
 				mallard.targetFood = null;
 			}
@@ -239,6 +259,7 @@ public class EntityManager : MonoBehaviour
 		if(food.lifeTimer <= 0.0f)
 		{
 			RemoveEntity(food);
+			foodPool.Return(food);
 		}
 	}
 	#endregion
