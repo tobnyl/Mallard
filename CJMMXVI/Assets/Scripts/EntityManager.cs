@@ -57,7 +57,7 @@ public class EntityManager : MonoBehaviour
 			Vector2 rand = UE.Random.insideUnitCircle;
 			mallard.transform.position = mallardSpawn.position + new Vector3(rand.x, 0.0f, rand.y) * 3.0f;
 			rand = UE.Random.insideUnitCircle.normalized;
-			float angle = Mathf.Atan2(rand.x, rand.y) * (Mathf.Rad2Deg * Mathf.Sign(rand.x));
+			float angle = rand.ToAngle();
 			mallard.transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
 
 		}
@@ -189,7 +189,8 @@ public class EntityManager : MonoBehaviour
 		Vector3 dir = fromMallardToFood.normalized;
 
 		float angle = Mathf.Atan2(dir.x, -dir.y);
-		mallard.transform.rotation = Quaternion.Euler(0.0f, angle * Mathf.Rad2Deg, 0.0f);
+		mallard.transform.rotation = Quaternion.Euler(0.0f, dir.ToAngleXZ(), 0.0f);
+		//mallard.transform.rotation = Quaternion.Euler(0.0f, angle * Mathf.Rad2Deg, 0.0f);
 
 		Vector3 vel = dir * gameData.mallard.speed;
 		vel = Vector3.ClampMagnitude(vel, fromMallardToFood.magnitude);
@@ -198,6 +199,7 @@ public class EntityManager : MonoBehaviour
 		float finalDist = Vector3.Distance(mallardTrans.position, targetPos);
 		if(finalDist < 0.001f)
 		{
+			Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
 			// Reached food!
 			RemoveEntity(mallard.targetFood);
 			mallard.eatTimer = gameData.mallard.eatDuration;
