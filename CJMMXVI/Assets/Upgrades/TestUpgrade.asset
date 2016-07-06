@@ -23,3 +23,7 @@ MonoBehaviour:
   mallard:
     eatDuration: 0
     count: 0
+  environment:
+    toActivate:
+    - scenePath: DeactivateOnStart/Nested/Cube
+    toDeactivate: []
