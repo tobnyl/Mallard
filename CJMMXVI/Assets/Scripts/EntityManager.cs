@@ -55,7 +55,8 @@ public class EntityManager : MonoBehaviour
 			var mallard = Instantiate<Mallard>(mallardPrefab);
 			AddEntity(mallard);
 			Vector2 rand = UE.Random.insideUnitCircle;
-			mallard.transform.position = mallardSpawn.position + new Vector3(rand.x, 0.0f, rand.y) * 3.0f;
+			mallard.defaultPosition = mallardSpawn.position + new Vector3(rand.x, 0.0f, rand.y) * 3.0f;
+			mallard.transform.position = mallard.defaultPosition;
 			rand = UE.Random.insideUnitCircle.normalized;
 			float angle = rand.ToAngle();
 			mallard.transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
@@ -169,7 +170,7 @@ public class EntityManager : MonoBehaviour
 			for(int i = 0; i < foods.Count; ++i)
 			{
 				Food food = foods[i];
-				
+
 				float distSqr = (food.transform.position - mallardPos).sqrMagnitude;
 				if(distSqr < closestDist)
 				{
@@ -180,10 +181,15 @@ public class EntityManager : MonoBehaviour
 
 			mallard.targetFood = closestFood;
 		}
+		else if(!foods.Contains(mallard.targetFood))
+		{
+			// Not sure why this is happening
+			mallard.targetFood = null;
+		}
 
-		if(mallard.targetFood == null) { return; }
-
-		Vector3 targetPos = mallard.targetFood.transform.position;
+		Vector3 targetPos = mallard.targetFood == null ?
+			mallard.defaultPosition :
+			mallard.targetFood.transform.position;
 		
 		Vector3 fromMallardToFood = targetPos - mallardPos;
 		Vector3 dir = fromMallardToFood.normalized;
@@ -199,11 +205,14 @@ public class EntityManager : MonoBehaviour
 		float finalDist = Vector3.Distance(mallardTrans.position, targetPos);
 		if(finalDist < 0.001f)
 		{
-			Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
-			// Reached food!
-			RemoveEntity(mallard.targetFood);
-			mallard.eatTimer = gameData.mallard.eatDuration;
-			mallard.targetFood = null;
+			if(mallard.targetFood != null)
+			{
+				Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
+				// Reached food!
+				RemoveEntity(mallard.targetFood);
+				mallard.eatTimer = gameData.mallard.eatDuration;
+				mallard.targetFood = null;
+			}
 		}
 	}
 

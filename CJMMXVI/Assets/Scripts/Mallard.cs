@@ -8,6 +8,8 @@ public class Mallard : Entity
 {
 	#region Fields
 	[SerializeField, ReadOnly]
+	public Vector3 defaultPosition;
+	[SerializeField, ReadOnly]
 	public Food targetFood;
 	[SerializeField, ReadOnly]
 	public float eatTimer;
