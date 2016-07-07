@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf8c96c281764cf4fbdf2a000c9dbead, type: 3}
-  m_Name: Bread_Tier2_3
+  m_Name: Bread_Tier2_2
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: Smokey Bread III
+  upgradeName: Smokey Bread II
   upgradeDescription: 
   researchSound:
     Clip: {fileID: 8300000, guid: 061ac20cae3c9654582a561281768812, type: 3}
@@ -26,12 +26,12 @@ MonoBehaviour:
   cost: 0
   researchTime: 0
   dependencies:
-  - {fileID: 11400000, guid: 8dfcc2487adf7b44faaa7a233fe980c7, type: 2}
+  - {fileID: 11400000, guid: f366987ab36b59d479e8b0ab9128b067, type: 2}
   man:
     breadThrown: 0
     throwCooldown: 0
   mallard:
-    eatDuration: 0
+    eatDuration: -0.1
     count: 0
   environment:
     toActivate: []

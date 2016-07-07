@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf8c96c281764cf4fbdf2a000c9dbead, type: 3}
-  m_Name: Env_Tier1_3
+  m_Name: Env_Final
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: Hostile Takeover III
+  upgradeName: "Fallwater\u2122"
   upgradeDescription: 
   researchSound:
-    Clip: {fileID: 8300000, guid: 5ffea400666ad0747b182132486bf876, type: 3}
+    Clip: {fileID: 8300000, guid: 45c66a2ba33a178488c1d75bf1fe51fc, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
     MinVolume: 1
     MaxVolume: 1
@@ -26,7 +26,9 @@ MonoBehaviour:
   cost: 0
   researchTime: 0
   dependencies:
-  - {fileID: 11400000, guid: 8ed866f7005ff8241bb7bb021d56343a, type: 2}
+  - {fileID: 11400000, guid: dc2d5c6c438894840ae58d1975721451, type: 2}
+  - {fileID: 11400000, guid: 4406166260a3ab14bb4a21ea4c6f2ca0, type: 2}
+  - {fileID: 11400000, guid: 07b83c8ca9509e84b97ef1a5613b7dea, type: 2}
   man:
     breadThrown: 0
     throwCooldown: 0
@@ -34,5 +36,6 @@ MonoBehaviour:
     eatDuration: 0
     count: 0
   environment:
-    toActivate: []
+    toActivate:
+    - scenePath: PowerPlant
     toDeactivate: []

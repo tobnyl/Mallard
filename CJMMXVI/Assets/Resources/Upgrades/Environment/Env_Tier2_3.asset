@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf8c96c281764cf4fbdf2a000c9dbead, type: 3}
-  m_Name: Env_Tier3_3
+  m_Name: Env_Tier2_3
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: Military-Grade Feeding III
+  upgradeName: Automaton III
   upgradeDescription: 
   researchSound:
-    Clip: {fileID: 8300000, guid: e7c4e561e6c921f4b8e5572119db3a8c, type: 3}
+    Clip: {fileID: 8300000, guid: 39816e5a59c689142aee849dd91b6fe0, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
     MinVolume: 1
     MaxVolume: 1
@@ -26,7 +26,8 @@ MonoBehaviour:
   cost: 0
   researchTime: 0
   dependencies:
-  - {fileID: 11400000, guid: 10165883f516b93418acd3548fd4e0f9, type: 2}
+  - {fileID: 11400000, guid: 615078510ba22704188249f960b7bfbe, type: 2}
+  - {fileID: 11400000, guid: dc2d5c6c438894840ae58d1975721451, type: 2}
   man:
     breadThrown: 0
     throwCooldown: 0
@@ -34,5 +35,6 @@ MonoBehaviour:
     eatDuration: 0
     count: 0
   environment:
-    toActivate: []
+    toActivate:
+    - scenePath: Feeder3
     toDeactivate: []

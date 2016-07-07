@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf8c96c281764cf4fbdf2a000c9dbead, type: 3}
-  m_Name: Env_Tier2_1
+  m_Name: Env_Tier1_2
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: Automaton I
+  upgradeName: Hostile Takeover II
   upgradeDescription: 
   researchSound:
-    Clip: {fileID: 8300000, guid: 39816e5a59c689142aee849dd91b6fe0, type: 3}
+    Clip: {fileID: 8300000, guid: c81cf29bad0e5ba4abf89499001ac40f, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
     MinVolume: 1
     MaxVolume: 1
@@ -35,4 +35,5 @@ MonoBehaviour:
     count: 0
   environment:
     toActivate: []
-    toDeactivate: []
+    toDeactivate:
+    - scenePath: Agda2

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf8c96c281764cf4fbdf2a000c9dbead, type: 3}
-  m_Name: Bread_Tier1_1
+  m_Name: Bread_Tier1_2
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: Fresh From the Oven I
+  upgradeName: Fresh From the Oven II
   upgradeDescription: 
   researchSound:
     Clip: {fileID: 8300000, guid: 8e0daad8dededbe4da0f61c451e89f6e, type: 3}
@@ -25,13 +25,14 @@ MonoBehaviour:
     Mute: 0
   cost: 0
   researchTime: 0
-  dependencies: []
+  dependencies:
+  - {fileID: 11400000, guid: 20f733abca61a5349830c3fbc02a3bd2, type: 2}
   man:
-    breadThrown: 0
+    breadThrown: 4
     throwCooldown: 0
   mallard:
     eatDuration: 0
-    count: 0
+    count: 3
   environment:
     toActivate: []
     toDeactivate: []

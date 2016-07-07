@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf8c96c281764cf4fbdf2a000c9dbead, type: 3}
-  m_Name: TestUpgrade 1
+  m_Name: Bread_Tier2_1
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: Mallard Whistle
+  upgradeName: Smokey Bread I
   upgradeDescription: 
   researchSound:
-    Clip: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 061ac20cae3c9654582a561281768812, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
     MinVolume: 1
     MaxVolume: 1
@@ -23,16 +23,16 @@ MonoBehaviour:
     MaxPitch: 1
     Loop: 0
     Mute: 0
-  cost: 10
-  researchTime: 5
+  cost: 0
+  researchTime: 0
   dependencies:
-  - {fileID: 11400000, guid: 22ee2f61d8460fb459a6dcde23e27065, type: 2}
+  - {fileID: 11400000, guid: 20f733abca61a5349830c3fbc02a3bd2, type: 2}
   man:
     breadThrown: 0
     throwCooldown: 0
   mallard:
-    eatDuration: 0
-    count: 3
+    eatDuration: -0.1
+    count: 0
   environment:
     toActivate: []
     toDeactivate: []
