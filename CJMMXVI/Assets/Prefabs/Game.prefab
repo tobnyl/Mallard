@@ -377,7 +377,7 @@ MonoBehaviour:
   initialGameData:
     points: 0
     man:
-      breadThrown: 50
+      breadThrown: 1
       throwCooldown: 2
     mallard:
       count: 3
@@ -387,7 +387,7 @@ MonoBehaviour:
       rotationSpeed: 10
     npcFeeders:
       breadThrown: 1
-      throwCooldown: 0.1
+      throwCooldown: 5
     autoFeeders:
       breadThrown: 1
       throwCooldown: 5
