@@ -34,12 +34,15 @@ MonoBehaviour:
     throwCooldown: 0
     airTime: 0
     ammo: 0
+    range: 0
+    spread: 0
   mallard:
     eatDuration: 0
     count: 0
     speed: 0
     acceleration: 0
     rotationSpeed: 0
+    pointsPerQuack: 1
   environment:
     toActivate: []
     toDeactivate: []
@@ -49,8 +52,12 @@ MonoBehaviour:
     throwCooldown: 0
     airTime: 0
     ammo: 0
+    range: 0
+    spread: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: 0
     airTime: 0
     ammo: 0
+    range: 0
+    spread: 0
