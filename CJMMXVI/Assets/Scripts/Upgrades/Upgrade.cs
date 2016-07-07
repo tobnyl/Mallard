@@ -55,6 +55,9 @@ public class Upgrade : ScriptableObject
 	public string upgradeDescription;
 
 	[SerializeField]
+	public Audio researchSound;
+
+	[SerializeField]
 	public int cost;
 
 	[SerializeField]

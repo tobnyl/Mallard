@@ -150,6 +150,8 @@ public class Game : MonoBehaviour
 		OnGameDataChanged();
 
 		gui.OnUpgradeResearched(upgrade);
+
+		AudioManager.Instance.Play(upgrade.researchSound, Vector3.zero);
 	}
 
 	void OnMallardEat(Mallard mallard)
