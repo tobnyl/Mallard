@@ -83,7 +83,7 @@ public class Upgrade : ScriptableObject
 	public GameData ApplyOn(GameData data)
 	{
 		data.points -= cost;
-		data.man.breadThrown += data.man.breadThrown;
+		data.man.breadThrown += man.breadThrown;
 		data.man.throwCooldown += man.throwCooldown;
 		data.mallard.eatDuration += mallard.eatDuration;
 		data.mallard.count += mallard.count;
