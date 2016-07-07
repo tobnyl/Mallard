@@ -23,6 +23,8 @@ public struct GameData
 		public float range;
 		[SerializeField]
 		public float spread;
+		[SerializeField]
+		public float throwAnimSpeed;
 	}
 
 	[Serializable]
@@ -90,6 +92,7 @@ public struct GameData
 		data.ammo = Mathf.Max(0, data.ammo);
 		data.range = Mathf.Max(0.0f, data.range);
 		data.spread = Mathf.Max(0.0f, data.spread);
+		data.throwAnimSpeed = Mathf.Max(1.0f, data.throwAnimSpeed);
 	}
 	#endregion
 }

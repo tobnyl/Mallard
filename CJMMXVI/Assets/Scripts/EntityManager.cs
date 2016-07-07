@@ -11,6 +11,8 @@ public partial class EntityManager : MonoBehaviour
 	#endregion
 
 	#region Static Fields
+	static readonly int THROW_MULT_HASH = Animator.StringToHash("ThrowMultiplier");
+
 	static EntityManager instance;
 	static readonly List<Entity> entitiesToRegister = new List<Entity>();
 	#endregion
@@ -153,7 +155,16 @@ public partial class EntityManager : MonoBehaviour
 			rand = UE.Random.insideUnitCircle.normalized;
 			float angle = rand.ToAngle();
 			mallard.transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
+		}
 
+		for(int i = 0; i < feeders.Count; ++i)
+		{
+			Feeder feeder = feeders[i];
+			if(feeder.animator == null) { continue; }
+
+			GameData.FeederData data = FeederDataForKind(feeder.kind);
+
+			feeder.animator.SetFloat(THROW_MULT_HASH, data.throwAnimSpeed);
 		}
 	}
 
