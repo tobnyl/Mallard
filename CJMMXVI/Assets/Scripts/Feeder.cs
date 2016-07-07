@@ -31,9 +31,13 @@ public class Feeder : Entity
 	public Transform feedOrigin;
 	[SerializeField]
 	public Animator animator;
+	[SerializeField]
+	public float throwDelayDuration;
 
 	[ReadOnly]
 	public float feedTimer;
+	[ReadOnly]
+	public float throwDelayTimer;
 	#endregion
 
 	#region Methods
