@@ -1,0 +1,1930 @@
+fileFormatVersion: 2
+guid: 46cd51783c766ce488f289e2eb398717
+timeCreated: 1467934157
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: NorthEat_000
+    21300002: NorthEat_001
+    21300004: NorthEat_002
+    21300006: NorthEat_003
+    21300008: NorthIdle_000
+    21300010: NorthIdle_001
+    21300012: NorthIdle_002
+    21300014: NorthIdle_003
+    21300016: NorthQuack_000
+    21300018: NorthQuack_001
+    21300020: NorthQuack_002
+    21300022: NorthQuack_003
+    21300024: NorthSwim_000
+    21300026: NorthSwim_001
+    21300028: NorthSwim_002
+    21300030: NorthSwim_003
+    21300032: NorthWestEat_000
+    21300034: NorthWestEat_001
+    21300036: NorthWestEat_002
+    21300038: NorthWestEat_003
+    21300040: NorthWestIdle_000
+    21300042: NorthWestIdle_001
+    21300044: NorthWestIdle_002
+    21300046: NorthWestIdle_003
+    21300048: NorthWestQuack_000
+    21300050: NorthWestQuack_001
+    21300052: NorthWestQuack_002
+    21300054: NorthWestQuack_003
+    21300056: NorthWestSwim_000
+    21300058: NorthWestSwim_001
+    21300060: NorthWestSwim_002
+    21300062: NorthWestSwim_003
+    21300064: SouthEat_000
+    21300066: SouthEat_001
+    21300068: SouthEat_002
+    21300070: SouthEat_003
+    21300072: SouthIdle_000
+    21300074: SouthIdle_001
+    21300076: SouthIdle_002
+    21300078: SouthIdle_003
+    21300080: SouthQuack_000
+    21300082: SouthQuack_001
+    21300084: SouthQuack_002
+    21300086: SouthQuack_003
+    21300088: SouthSwim_000
+    21300090: SouthSwim_001
+    21300092: SouthSwim_002
+    21300094: SouthSwim_003
+    21300096: SouthWestEat_000
+    21300098: SouthWestEat_001
+    21300100: SouthWestEat_002
+    21300102: SouthWestEat_003
+    21300104: SouthWestIdle_000
+    21300106: SouthWestIdle_001
+    21300108: SouthWestIdle_002
+    21300110: SouthWestIdle_003
+    21300112: SouthWestQuack_000
+    21300114: SouthWestQuack_001
+    21300116: SouthWestQuack_002
+    21300118: SouthWestQuack_003
+    21300120: SouthWestSwim_000
+    21300122: SouthWestSwim_001
+    21300124: SouthWestSwim_002
+    21300126: SouthWestSwim_003
+    21300128: WestEat_000
+    21300130: WestEat_001
+    21300132: WestEat_002
+    21300134: WestEat_003
+    21300136: WestIdle_000
+    21300138: WestIdle_001
+    21300140: WestIdle_002
+    21300142: WestIdle_003
+    21300144: WestQuack_000
+    21300146: WestQuack_001
+    21300148: WestQuack_002
+    21300150: WestQuack_003
+    21300152: WestSwim_000
+    21300154: WestSwim_001
+    21300156: WestSwim_002
+    21300158: WestSwim_003
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: NorthEat_000
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1807
+        width: 95
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.5, y: 119}
+        - {x: -47.5, y: -119}
+        - {x: 33.5, y: -119}
+        - {x: 47.5, y: -111}
+        - {x: 47.5, y: 40}
+        - {x: 30.5, y: 119}
+    - name: NorthEat_001
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1810
+        width: 95
+        height: 235
+      alignment: 9
+      pivot: {x: 0.5, y: 0.506383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.5, y: 106}
+        - {x: -16.5, y: 106}
+        - {x: -47.5, y: 43}
+        - {x: -47.5, y: -90}
+        - {x: -39.5, y: -119}
+        - {x: 37.5, y: -119}
+        - {x: 47.5, y: -90}
+        - {x: 47.5, y: 53}
+        - {x: 16.5, y: 102}
+    - name: NorthEat_002
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1809
+        width: 95
+        height: 236
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5042373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 101}
+        - {x: -47.5, y: 27}
+        - {x: -47.5, y: -82}
+        - {x: -26.5, y: -119}
+        - {x: 18.5, y: -119}
+        - {x: 47.5, y: -97}
+        - {x: 47.5, y: 25}
+        - {x: 32.5, y: 101}
+    - name: NorthEat_003
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1809
+        width: 95
+        height: 236
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5042373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 111}
+        - {x: -47.5, y: 30}
+        - {x: -47.5, y: -82}
+        - {x: -40.5, y: -119}
+        - {x: 36.5, y: -119}
+        - {x: 47.5, y: -82}
+        - {x: 47.5, y: 52}
+        - {x: 21.5, y: 111}
+    - name: NorthIdle_000
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1807
+        width: 96
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 119}
+        - {x: -48, y: -119}
+        - {x: 39, y: -119}
+        - {x: 48, y: -88}
+        - {x: 48, y: 55}
+        - {x: 14, y: 119}
+    - name: NorthIdle_001
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1813
+        width: 96
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5, y: 0.51293105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 111}
+        - {x: -48, y: -119}
+        - {x: 45, y: -119}
+        - {x: 48, y: -112}
+        - {x: 48, y: 77}
+        - {x: 22, y: 111}
+      - - {x: -30, y: 48}
+        - {x: -32, y: 47}
+        - {x: -32, y: 42}
+        - {x: -25, y: 42}
+        - {x: -25, y: 46}
+        - {x: -26, y: 48}
+    - name: NorthIdle_002
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1814
+        width: 96
+        height: 231
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5151515}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 111}
+        - {x: -48, y: -74}
+        - {x: -47, y: -77}
+        - {x: -36, y: -119}
+        - {x: 25, y: -119}
+        - {x: 48, y: -84}
+        - {x: 48, y: 65}
+        - {x: 15, y: 111}
+      - - {x: -33, y: 47}
+        - {x: -34, y: 45}
+        - {x: -34, y: 43}
+        - {x: -33, y: 41}
+        - {x: -30, y: 41}
+        - {x: -28, y: 42}
+        - {x: -28, y: 46}
+        - {x: -29, y: 47}
+    - name: NorthIdle_003
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1807
+        width: 96
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 119}
+        - {x: -48, y: -119}
+        - {x: 40, y: -119}
+        - {x: 48, y: -94}
+        - {x: 48, y: 62}
+        - {x: 18, y: 119}
+    - name: NorthQuack_000
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1805
+        width: 95
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 120}
+        - {x: -18.5, y: 114}
+        - {x: -47.5, y: 47}
+        - {x: -47.5, y: -95}
+        - {x: -41.5, y: -120}
+        - {x: 40.5, y: -120}
+        - {x: 47.5, y: -95}
+        - {x: 47.5, y: 55}
+        - {x: 12.5, y: 120}
+    - name: NorthQuack_001
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1805
+        width: 95
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.5, y: 120}
+        - {x: -47.5, y: -120}
+        - {x: 36.5, y: -120}
+        - {x: 47.5, y: -90}
+        - {x: 47.5, y: 53}
+        - {x: 7.5, y: 120}
+    - name: NorthQuack_002
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 1813
+        width: 95
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5, y: 0.51724136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.5, y: 110}
+        - {x: -47.5, y: -120}
+        - {x: 34.5, y: -120}
+        - {x: 47.5, y: -88}
+        - {x: 47.5, y: 57}
+        - {x: 17.5, y: 110}
+      - - {x: -24.5, y: 41}
+        - {x: -24.5, y: 39}
+        - {x: -22.5, y: 37}
+        - {x: -19.5, y: 37}
+        - {x: -17.5, y: 39}
+        - {x: -18.5, y: 42}
+        - {x: -22.5, y: 43}
+    - name: NorthQuack_003
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1812
+        width: 95
+        height: 233
+      alignment: 9
+      pivot: {x: 0.5, y: 0.51502144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.5, y: 111}
+        - {x: -47.5, y: -96}
+        - {x: -28.5, y: -120}
+        - {x: 19.5, y: -120}
+        - {x: 47.5, y: -99}
+        - {x: 47.5, y: 77}
+        - {x: 25.5, y: 111}
+      - - {x: -27.5, y: 43}
+        - {x: -27.5, y: 42}
+        - {x: -25.5, y: 40}
+        - {x: -23.5, y: 40}
+        - {x: -20.5, y: 43}
+        - {x: -21.5, y: 46}
+        - {x: -24.5, y: 46}
+    - name: NorthSwim_000
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 1804
+        width: 95
+        height: 241
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5020747}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 119}
+        - {x: -18.5, y: 113}
+        - {x: -47.5, y: 46}
+        - {x: -47.5, y: -96}
+        - {x: -41.5, y: -121}
+        - {x: 40.5, y: -121}
+        - {x: 47.5, y: -96}
+        - {x: 47.5, y: 54}
+        - {x: 12.5, y: 119}
+    - name: NorthSwim_001
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 1807
+        width: 95
+        height: 238
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50840336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 99}
+        - {x: -47.5, y: 52}
+        - {x: -47.5, y: -91}
+        - {x: -37.5, y: -121}
+        - {x: 19.5, y: -121}
+        - {x: 47.5, y: -100}
+        - {x: 47.5, y: 12}
+        - {x: 28.5, y: 99}
+    - name: NorthSwim_002
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 1803
+        width: 95
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.5, y: 121}
+        - {x: -27.5, y: 121}
+        - {x: -47.5, y: 114}
+        - {x: -47.5, y: -121}
+        - {x: 37.5, y: -121}
+        - {x: 47.5, y: -89}
+        - {x: 47.5, y: 56}
+        - {x: 21.5, y: 111}
+    - name: NorthSwim_003
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 1804
+        width: 95
+        height: 241
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5020747}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 120}
+        - {x: -47.5, y: 68}
+        - {x: -47.5, y: -118}
+        - {x: -46.5, y: -121}
+        - {x: 25.5, y: -121}
+        - {x: 47.5, y: -102}
+        - {x: 47.5, y: 46}
+        - {x: 35.5, y: 120}
+    - name: NorthWestEat_000
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 1868
+        width: 204
+        height: 177
+      alignment: 9
+      pivot: {x: 0.45588234, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -70, y: 88.5}
+        - {x: -70, y: -50.5}
+        - {x: -63, y: -72.5}
+        - {x: -10, y: -88.5}
+        - {x: 111, y: -88.5}
+        - {x: 111, y: -43.5}
+        - {x: 7, y: 88.5}
+      - - {x: -40, y: -71.5}
+        - {x: -37, y: -70.5}
+        - {x: -37, y: -67.5}
+        - {x: -40, y: -66.5}
+        - {x: -42, y: -68.5}
+      - - {x: -56, y: 29.5}
+        - {x: -59, y: 26.5}
+        - {x: -59, y: 25.5}
+        - {x: -57, y: 23.5}
+        - {x: -54, y: 23.5}
+        - {x: -52, y: 25.5}
+        - {x: -52, y: 26.5}
+        - {x: -55, y: 29.5}
+    - name: NorthWestEat_001
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 1872
+        width: 219
+        height: 173
+      alignment: 9
+      pivot: {x: 0.49315068, y: 0.5115607}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 74.5}
+        - {x: -105, y: 74.5}
+        - {x: -105, y: -8.5}
+        - {x: -22, y: -88.5}
+        - {x: 95, y: -88.5}
+        - {x: 111, y: -83.5}
+        - {x: 111, y: -53.5}
+        - {x: 40, y: 46.5}
+      - - {x: -40, y: -71.5}
+        - {x: -37, y: -70.5}
+        - {x: -37, y: -67.5}
+        - {x: -40, y: -66.5}
+        - {x: -42, y: -68.5}
+    - name: NorthWestEat_002
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1655
+        width: 222
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6145833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 51.5}
+        - {x: -109, y: 51.5}
+        - {x: -109, y: -13.5}
+        - {x: -30, y: -88.5}
+        - {x: 100, y: -88.5}
+        - {x: 111, y: -82.5}
+        - {x: 111, y: -39.5}
+        - {x: 84, y: 26.5}
+      - - {x: -40, y: -71.5}
+        - {x: -37, y: -70.5}
+        - {x: -37, y: -67.5}
+        - {x: -40, y: -66.5}
+        - {x: -42, y: -68.5}
+    - name: NorthWestEat_003
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1635
+        width: 221
+        height: 164
+      alignment: 9
+      pivot: {x: 0.49773756, y: 0.53963417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -105, y: 72.5}
+        - {x: -106, y: 71.5}
+        - {x: -107, y: 69.5}
+        - {x: -107, y: -8.5}
+        - {x: -29, y: -88.5}
+        - {x: 111, y: -88.5}
+        - {x: 111, y: -16.5}
+        - {x: 1, y: 72.5}
+      - - {x: -40, y: -71.5}
+        - {x: -37, y: -70.5}
+        - {x: -37, y: -67.5}
+        - {x: -40, y: -66.5}
+        - {x: -42, y: -68.5}
+    - name: NorthWestIdle_000
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1621
+        width: 178
+        height: 178
+      alignment: 9
+      pivot: {x: 0.5, y: 0.502809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -89, y: 88.5}
+        - {x: -89, y: -34.5}
+        - {x: -38, y: -89.5}
+        - {x: 89, y: -89.5}
+        - {x: 89, y: -29.5}
+        - {x: 1, y: 88.5}
+      - - {x: -62, y: -72.5}
+        - {x: -59, y: -71.5}
+        - {x: -59, y: -68.5}
+        - {x: -62, y: -67.5}
+        - {x: -64, y: -69.5}
+      - - {x: -78, y: 28.5}
+        - {x: -80, y: 27.5}
+        - {x: -80, y: 23.5}
+        - {x: -79, y: 22.5}
+        - {x: -75, y: 22.5}
+        - {x: -74, y: 24.5}
+        - {x: -74, y: 26.5}
+        - {x: -77, y: 28.5}
+    - name: NorthWestIdle_001
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 1620
+        width: 178
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -88, y: 89.5}
+        - {x: -88, y: -78.5}
+        - {x: -66, y: -89.5}
+        - {x: 79, y: -89.5}
+        - {x: 89, y: -87.5}
+        - {x: 89, y: -44.5}
+        - {x: 47, y: 10.5}
+        - {x: -28, y: 89.5}
+      - - {x: -62, y: -72.5}
+        - {x: -59, y: -71.5}
+        - {x: -59, y: -68.5}
+        - {x: -62, y: -67.5}
+        - {x: -64, y: -69.5}
+    - name: NorthWestIdle_002
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1620
+        width: 177
+        height: 179
+      alignment: 9
+      pivot: {x: 0.49717513, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 89.5}
+        - {x: -73, y: 89.5}
+        - {x: -86, y: 87.5}
+        - {x: -86, y: -46.5}
+        - {x: -65, y: -89.5}
+        - {x: 78, y: -89.5}
+        - {x: 89, y: -84.5}
+        - {x: 89, y: -54.5}
+        - {x: 48, y: 11.5}
+      - - {x: -62, y: -72.5}
+        - {x: -59, y: -71.5}
+        - {x: -59, y: -68.5}
+        - {x: -62, y: -67.5}
+        - {x: -64, y: -69.5}
+    - name: NorthWestIdle_003
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1620
+        width: 178
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -89, y: 89.5}
+        - {x: -89, y: -78.5}
+        - {x: -47, y: -89.5}
+        - {x: 89, y: -89.5}
+        - {x: 89, y: -33.5}
+        - {x: -2, y: 89.5}
+      - - {x: -62, y: -72.5}
+        - {x: -59, y: -71.5}
+        - {x: -59, y: -68.5}
+        - {x: -62, y: -67.5}
+        - {x: -64, y: -69.5}
+      - - {x: -71, y: 26.5}
+        - {x: -73, y: 25.5}
+        - {x: -73, y: 21.5}
+        - {x: -72, y: 20.5}
+        - {x: -68, y: 20.5}
+        - {x: -67, y: 22.5}
+        - {x: -67, y: 24.5}
+        - {x: -70, y: 26.5}
+    - name: NorthWestQuack_000
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 1619
+        width: 181
+        height: 180
+      alignment: 9
+      pivot: {x: 0.49447513, y: 0.5138889}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -89.5, y: 86.5}
+        - {x: -89.5, y: -35.5}
+        - {x: -36.5, y: -92.5}
+        - {x: 90.5, y: -92.5}
+        - {x: 91.5, y: -88.5}
+        - {x: 91.5, y: -44.5}
+        - {x: -24.5, y: 86.5}
+      - - {x: -76.5, y: 24.5}
+        - {x: -78.5, y: 23.5}
+        - {x: -78.5, y: 20.5}
+        - {x: -77.5, y: 18.5}
+        - {x: -73.5, y: 18.5}
+        - {x: -71.5, y: 19.5}
+        - {x: -71.5, y: 22.5}
+        - {x: -72.5, y: 24.5}
+    - name: NorthWestQuack_001
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1614
+        width: 183
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32.5, y: 92.5}
+        - {x: -91.5, y: 92.5}
+        - {x: -91.5, y: -56.5}
+        - {x: -40.5, y: -92.5}
+        - {x: 86.5, y: -92.5}
+        - {x: 91.5, y: -89.5}
+        - {x: 91.5, y: -46.5}
+        - {x: 60.5, y: 20.5}
+      - - {x: -80.5, y: 32.5}
+        - {x: -82.5, y: 31.5}
+        - {x: -82.5, y: 27.5}
+        - {x: -81.5, y: 26.5}
+        - {x: -77.5, y: 26.5}
+        - {x: -76.5, y: 28.5}
+        - {x: -76.5, y: 30.5}
+        - {x: -79.5, y: 32.5}
+    - name: NorthWestQuack_002
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 1616
+        width: 181
+        height: 183
+      alignment: 9
+      pivot: {x: 0.49447513, y: 0.5054645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -81.5, y: 90.5}
+        - {x: -89.5, y: 83.5}
+        - {x: -89.5, y: -34.5}
+        - {x: -36.5, y: -92.5}
+        - {x: 91.5, y: -92.5}
+        - {x: 91.5, y: -29.5}
+        - {x: 8.5, y: 90.5}
+      - - {x: -82.5, y: 27.5}
+        - {x: -82.5, y: 26.5}
+        - {x: -78.5, y: 23.5}
+        - {x: -75.5, y: 24.5}
+        - {x: -75.5, y: 27.5}
+        - {x: -78.5, y: 30.5}
+        - {x: -79.5, y: 30.5}
+    - name: NorthWestQuack_003
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 1616
+        width: 180
+        height: 183
+      alignment: 9
+      pivot: {x: 0.49166667, y: 0.5054645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -88.5, y: 88.5}
+        - {x: -88.5, y: -36.5}
+        - {x: -36.5, y: -92.5}
+        - {x: 91.5, y: -92.5}
+        - {x: 91.5, y: -41.5}
+        - {x: -7.5, y: 88.5}
+      - - {x: -78.5, y: 27.5}
+        - {x: -80.5, y: 26.5}
+        - {x: -80.5, y: 22.5}
+        - {x: -79.5, y: 21.5}
+        - {x: -75.5, y: 21.5}
+        - {x: -74.5, y: 23.5}
+        - {x: -74.5, y: 25.5}
+        - {x: -77.5, y: 27.5}
+    - name: NorthWestSwim_000
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1432
+        width: 209
+        height: 178
+      alignment: 9
+      pivot: {x: 0.48564592, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: -89}
+        - {x: 107.5, y: -89}
+        - {x: 107.5, y: -38}
+        - {x: 28.5, y: 89}
+        - {x: -76.5, y: 89}
+        - {x: -76.5, y: -41}
+      - - {x: -63.5, y: 25}
+        - {x: -62.5, y: 22}
+        - {x: -58.5, y: 22}
+        - {x: -56.5, y: 24}
+        - {x: -57.5, y: 27}
+        - {x: -61.5, y: 27}
+    - name: NorthWestSwim_001
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1432
+        width: 181
+        height: 178
+      alignment: 9
+      pivot: {x: 0.40607736, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56.5, y: 87}
+        - {x: -65.5, y: 81}
+        - {x: -65.5, y: -82}
+        - {x: -27.5, y: -89}
+        - {x: 107.5, y: -89}
+        - {x: 107.5, y: -22}
+        - {x: 32.5, y: 87}
+    - name: NorthWestSwim_002
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1435
+        width: 215
+        height: 175
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50857145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.5, y: 82}
+        - {x: -79.5, y: 82}
+        - {x: -107.5, y: 76}
+        - {x: -107.5, y: 5}
+        - {x: -44.5, y: -89}
+        - {x: 98.5, y: -89}
+        - {x: 107.5, y: -85}
+        - {x: 107.5, y: -53}
+        - {x: 65.5, y: 12}
+      - - {x: -76.5, y: 11}
+        - {x: -76.5, y: 8}
+        - {x: -75.5, y: 6}
+        - {x: -73.5, y: 6}
+        - {x: -70.5, y: 9}
+        - {x: -71.5, y: 12}
+        - {x: -74.5, y: 12}
+    - name: NorthWestSwim_003
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1432
+        width: 202
+        height: 178
+      alignment: 9
+      pivot: {x: 0.46782178, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93.5, y: 38}
+        - {x: -78.5, y: -34}
+        - {x: -17.5, y: -89}
+        - {x: 107.5, y: -89}
+        - {x: 107.5, y: -17}
+        - {x: 28.5, y: 88}
+        - {x: -93.5, y: 88}
+      - - {x: -70.5, y: 20}
+        - {x: -70.5, y: 17}
+        - {x: -69.5, y: 15}
+        - {x: -67.5, y: 15}
+        - {x: -64.5, y: 18}
+        - {x: -65.5, y: 21}
+        - {x: -68.5, y: 21}
+    - name: SouthEat_000
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1411
+        width: 105
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 99.5}
+        - {x: -27.5, y: 93.5}
+        - {x: -52.5, y: 65.5}
+        - {x: -52.5, y: -82.5}
+        - {x: -48.5, y: -99.5}
+        - {x: 28.5, y: -99.5}
+        - {x: 52.5, y: -83.5}
+        - {x: 52.5, y: 43.5}
+        - {x: 44.5, y: 99.5}
+      - - {x: -34.5, y: 81.5}
+        - {x: -33.5, y: 78.5}
+        - {x: -30.5, y: 78.5}
+        - {x: -28.5, y: 80.5}
+        - {x: -29.5, y: 83.5}
+        - {x: -32.5, y: 83.5}
+    - name: SouthEat_001
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1411
+        width: 105
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 99.5}
+        - {x: -27.5, y: 93.5}
+        - {x: -52.5, y: 65.5}
+        - {x: -52.5, y: -82.5}
+        - {x: -48.5, y: -99.5}
+        - {x: 28.5, y: -99.5}
+        - {x: 52.5, y: -83.5}
+        - {x: 52.5, y: 43.5}
+        - {x: 44.5, y: 99.5}
+      - - {x: -34.5, y: 81.5}
+        - {x: -33.5, y: 78.5}
+        - {x: -30.5, y: 78.5}
+        - {x: -28.5, y: 80.5}
+        - {x: -29.5, y: 83.5}
+        - {x: -32.5, y: 83.5}
+    - name: SouthEat_002
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1411
+        width: 105
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 99.5}
+        - {x: -27.5, y: 93.5}
+        - {x: -52.5, y: 65.5}
+        - {x: -52.5, y: -82.5}
+        - {x: -48.5, y: -99.5}
+        - {x: 28.5, y: -99.5}
+        - {x: 52.5, y: -83.5}
+        - {x: 52.5, y: 43.5}
+        - {x: 44.5, y: 99.5}
+      - - {x: -34.5, y: 81.5}
+        - {x: -33.5, y: 78.5}
+        - {x: -30.5, y: 78.5}
+        - {x: -28.5, y: 80.5}
+        - {x: -29.5, y: 83.5}
+        - {x: -32.5, y: 83.5}
+    - name: SouthEat_003
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 1411
+        width: 105
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 99.5}
+        - {x: -27.5, y: 93.5}
+        - {x: -52.5, y: 65.5}
+        - {x: -52.5, y: -82.5}
+        - {x: -48.5, y: -99.5}
+        - {x: 28.5, y: -99.5}
+        - {x: 52.5, y: -83.5}
+        - {x: 52.5, y: 43.5}
+        - {x: 44.5, y: 99.5}
+      - - {x: -34.5, y: 81.5}
+        - {x: -33.5, y: 78.5}
+        - {x: -30.5, y: 78.5}
+        - {x: -28.5, y: 80.5}
+        - {x: -29.5, y: 83.5}
+        - {x: -32.5, y: 83.5}
+    - name: SouthIdle_000
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1411
+        width: 108
+        height: 199
+      alignment: 9
+      pivot: {x: 0.46296296, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 99.5}
+        - {x: -49, y: 75.5}
+        - {x: -49, y: -74.5}
+        - {x: -42, y: -99.5}
+        - {x: 34, y: -99.5}
+        - {x: 58, y: -83.5}
+        - {x: 58, y: 47.5}
+        - {x: 50, y: 99.5}
+      - - {x: -29, y: 81.5}
+        - {x: -28, y: 78.5}
+        - {x: -25, y: 78.5}
+        - {x: -23, y: 80.5}
+        - {x: -24, y: 83.5}
+        - {x: -27, y: 83.5}
+    - name: SouthIdle_001
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 1411
+        width: 108
+        height: 199
+      alignment: 9
+      pivot: {x: 0.46296296, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 99.5}
+        - {x: -49, y: 75.5}
+        - {x: -49, y: -74.5}
+        - {x: -42, y: -99.5}
+        - {x: 34, y: -99.5}
+        - {x: 58, y: -83.5}
+        - {x: 58, y: 47.5}
+        - {x: 50, y: 99.5}
+      - - {x: -29, y: 81.5}
+        - {x: -28, y: 78.5}
+        - {x: -25, y: 78.5}
+        - {x: -23, y: 80.5}
+        - {x: -24, y: 83.5}
+        - {x: -27, y: 83.5}
+    - name: SouthIdle_002
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 1411
+        width: 116
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 99.5}
+        - {x: -58, y: 72.5}
+        - {x: -58, y: -62.5}
+        - {x: -47, y: -99.5}
+        - {x: 34, y: -99.5}
+        - {x: 58, y: -83.5}
+        - {x: 58, y: 47.5}
+        - {x: 50, y: 99.5}
+      - - {x: -29, y: 81.5}
+        - {x: -28, y: 78.5}
+        - {x: -25, y: 78.5}
+        - {x: -23, y: 80.5}
+        - {x: -24, y: 83.5}
+        - {x: -27, y: 83.5}
+    - name: SouthIdle_003
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 1411
+        width: 115
+        height: 199
+      alignment: 9
+      pivot: {x: 0.49565217, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 99.5}
+        - {x: -55, y: 57.5}
+        - {x: -55, y: -67.5}
+        - {x: -26, y: -99.5}
+        - {x: 47, y: -99.5}
+        - {x: 58, y: -74.5}
+        - {x: 58, y: 86.5}
+        - {x: 45, y: 99.5}
+      - - {x: -29, y: 81.5}
+        - {x: -28, y: 78.5}
+        - {x: -25, y: 78.5}
+        - {x: -23, y: 80.5}
+        - {x: -24, y: 83.5}
+        - {x: -27, y: 83.5}
+    - name: SouthQuack_000
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1411
+        width: 105
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 99.5}
+        - {x: -27.5, y: 93.5}
+        - {x: -52.5, y: 65.5}
+        - {x: -52.5, y: -82.5}
+        - {x: -48.5, y: -99.5}
+        - {x: 28.5, y: -99.5}
+        - {x: 52.5, y: -83.5}
+        - {x: 52.5, y: 43.5}
+        - {x: 44.5, y: 99.5}
+      - - {x: -34.5, y: 81.5}
+        - {x: -33.5, y: 78.5}
+        - {x: -30.5, y: 78.5}
+        - {x: -28.5, y: 80.5}
+        - {x: -29.5, y: 83.5}
+        - {x: -32.5, y: 83.5}
+    - name: SouthQuack_001
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1411
+        width: 105
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 99.5}
+        - {x: -27.5, y: 93.5}
+        - {x: -52.5, y: 65.5}
+        - {x: -52.5, y: -82.5}
+        - {x: -48.5, y: -99.5}
+        - {x: 28.5, y: -99.5}
+        - {x: 52.5, y: -83.5}
+        - {x: 52.5, y: 43.5}
+        - {x: 44.5, y: 99.5}
+      - - {x: -34.5, y: 81.5}
+        - {x: -33.5, y: 78.5}
+        - {x: -30.5, y: 78.5}
+        - {x: -28.5, y: 80.5}
+        - {x: -29.5, y: 83.5}
+        - {x: -32.5, y: 83.5}
+    - name: SouthQuack_002
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1411
+        width: 105
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 99.5}
+        - {x: -27.5, y: 93.5}
+        - {x: -52.5, y: 65.5}
+        - {x: -52.5, y: -82.5}
+        - {x: -48.5, y: -99.5}
+        - {x: 28.5, y: -99.5}
+        - {x: 52.5, y: -83.5}
+        - {x: 52.5, y: 43.5}
+        - {x: 44.5, y: 99.5}
+      - - {x: -34.5, y: 81.5}
+        - {x: -33.5, y: 78.5}
+        - {x: -30.5, y: 78.5}
+        - {x: -28.5, y: 80.5}
+        - {x: -29.5, y: 83.5}
+        - {x: -32.5, y: 83.5}
+    - name: SouthQuack_003
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 1411
+        width: 105
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 99.5}
+        - {x: -27.5, y: 93.5}
+        - {x: -52.5, y: 65.5}
+        - {x: -52.5, y: -82.5}
+        - {x: -48.5, y: -99.5}
+        - {x: 28.5, y: -99.5}
+        - {x: 52.5, y: -83.5}
+        - {x: 52.5, y: 43.5}
+        - {x: 44.5, y: 99.5}
+      - - {x: -34.5, y: 81.5}
+        - {x: -33.5, y: 78.5}
+        - {x: -30.5, y: 78.5}
+        - {x: -28.5, y: 80.5}
+        - {x: -29.5, y: 83.5}
+        - {x: -32.5, y: 83.5}
+    - name: SouthSwim_000
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 1408
+        width: 105
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45049506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.5, y: 111}
+        - {x: -52.5, y: 46}
+        - {x: -52.5, y: -70}
+        - {x: -30.5, y: -90}
+        - {x: 21.5, y: -90}
+        - {x: 52.5, y: -64}
+        - {x: 52.5, y: 53}
+        - {x: 27.5, y: 111}
+      - - {x: -32.5, y: 90}
+        - {x: -29.5, y: 91}
+        - {x: -29.5, y: 94}
+        - {x: -32.5, y: 95}
+        - {x: -34.5, y: 93}
+    - name: SouthSwim_001
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1408
+        width: 105
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45049506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.5, y: 111}
+        - {x: -52.5, y: 46}
+        - {x: -52.5, y: -70}
+        - {x: -30.5, y: -90}
+        - {x: 21.5, y: -90}
+        - {x: 52.5, y: -64}
+        - {x: 52.5, y: 53}
+        - {x: 27.5, y: 111}
+      - - {x: -32.5, y: 90}
+        - {x: -29.5, y: 91}
+        - {x: -29.5, y: 94}
+        - {x: -32.5, y: 95}
+        - {x: -34.5, y: 93}
+    - name: SouthSwim_002
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1202
+        width: 105
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45049506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.5, y: 111}
+        - {x: -52.5, y: 46}
+        - {x: -52.5, y: -70}
+        - {x: -30.5, y: -90}
+        - {x: 21.5, y: -90}
+        - {x: 52.5, y: -64}
+        - {x: 52.5, y: 53}
+        - {x: 27.5, y: 111}
+      - - {x: -32.5, y: 90}
+        - {x: -29.5, y: 91}
+        - {x: -29.5, y: 94}
+        - {x: -32.5, y: 95}
+        - {x: -34.5, y: 93}
+    - name: SouthSwim_003
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1182
+        width: 105
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 111}
+        - {x: -34.5, y: 108}
+        - {x: -52.5, y: 94}
+        - {x: -52.5, y: -86}
+        - {x: -42.5, y: -111}
+        - {x: 12.5, y: -111}
+        - {x: 52.5, y: -69}
+        - {x: 52.5, y: 59}
+        - {x: 27.5, y: 111}
+      - - {x: -32.5, y: 90}
+        - {x: -29.5, y: 91}
+        - {x: -29.5, y: 94}
+        - {x: -32.5, y: 95}
+        - {x: -34.5, y: 93}
+    - name: SouthWestEat_000
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1272
+        width: 190
+        height: 132
+      alignment: 9
+      pivot: {x: 0.3631579, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 66}
+        - {x: -65, y: 13}
+        - {x: -65, y: -48}
+        - {x: -49, y: -66}
+        - {x: 56, y: -66}
+        - {x: 121, y: -33}
+        - {x: 121, y: 61}
+        - {x: 109, y: 66}
+    - name: SouthWestEat_001
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1272
+        width: 209
+        height: 132
+      alignment: 9
+      pivot: {x: 0.42105263, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 121, y: 66}
+        - {x: -2, y: 66}
+        - {x: -87, y: 32}
+        - {x: -87, y: -53}
+        - {x: -52, y: -66}
+        - {x: 49, y: -66}
+        - {x: 80, y: -58}
+        - {x: 108, y: -11}
+        - {x: 111, y: -4}
+        - {x: 121, y: 28}
+    - name: SouthWestEat_002
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1272
+        width: 218
+        height: 132
+      alignment: 9
+      pivot: {x: 0.44495413, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 113, y: 66}
+        - {x: 78, y: 66}
+        - {x: 37, y: 55}
+        - {x: 5, y: 33}
+        - {x: -71, y: 34}
+        - {x: -94, y: 19}
+        - {x: -94, y: -62}
+        - {x: -92, y: -66}
+        - {x: 57, y: -66}
+        - {x: 113, y: -13}
+        - {x: 121, y: 34}
+        - {x: 121, y: 58}
+    - name: SouthWestEat_003
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1272
+        width: 206
+        height: 132
+      alignment: 9
+      pivot: {x: 0.41262135, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 66}
+        - {x: -66, y: 59}
+        - {x: -82, y: 0}
+        - {x: -82, y: -46}
+        - {x: -59, y: -66}
+        - {x: 55, y: -66}
+        - {x: 121, y: -30}
+        - {x: 121, y: 63}
+        - {x: 116, y: 66}
+    - name: SouthWestIdle_000
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1272
+        width: 184
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 79, y: 66}
+        - {x: -46, y: 66}
+        - {x: -52, y: 65}
+        - {x: -92, y: 11}
+        - {x: -92, y: -26}
+        - {x: -51, y: -66}
+        - {x: 29, y: -66}
+        - {x: 87, y: -7}
+        - {x: 92, y: 14}
+        - {x: 92, y: 60}
+    - name: SouthWestIdle_001
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 1272
+        width: 175
+        height: 132
+      alignment: 9
+      pivot: {x: 0.47428572, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 82, y: 66}
+        - {x: -14, y: 66}
+        - {x: -42, y: 64}
+        - {x: -83, y: 17}
+        - {x: -83, y: -33}
+        - {x: -53, y: -66}
+        - {x: 26, y: -66}
+        - {x: 81, y: -13}
+        - {x: 92, y: 40}
+        - {x: 92, y: 56}
+    - name: SouthWestIdle_002
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 1272
+        width: 182
+        height: 132
+      alignment: 9
+      pivot: {x: 0.4945055, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 82, y: 66}
+        - {x: 33, y: 66}
+        - {x: -42, y: 54}
+        - {x: -78, y: 16}
+        - {x: -78, y: -36}
+        - {x: -61, y: -66}
+        - {x: 28, y: -66}
+        - {x: 44, y: -60}
+        - {x: 80, y: -12}
+        - {x: 92, y: 40}
+        - {x: 92, y: 56}
+    - name: SouthWestIdle_003
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 1272
+        width: 164
+        height: 132
+      alignment: 9
+      pivot: {x: 0.4390244, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 92, y: 60}
+        - {x: 89, y: 66}
+        - {x: -70, y: 66}
+        - {x: -70, y: -52}
+        - {x: -63, y: -66}
+        - {x: 21, y: -66}
+        - {x: 46, y: -54}
+        - {x: 78, y: -11}
+        - {x: 82, y: -5}
+        - {x: 92, y: 40}
+      - - {x: -23, y: 63}
+        - {x: -22, y: 60}
+        - {x: -19, y: 60}
+        - {x: -17, y: 62}
+        - {x: -18, y: 65}
+        - {x: -21, y: 65}
+    - name: SouthWestQuack_000
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 1268
+        width: 191
+        height: 136
+      alignment: 9
+      pivot: {x: 0.4973822, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 66}
+        - {x: -48, y: 62}
+        - {x: -90, y: 5}
+        - {x: -90, y: -33}
+        - {x: -58, y: -68}
+        - {x: 32, y: -68}
+        - {x: 96, y: -27}
+        - {x: 96, y: 59}
+        - {x: 80, y: 66}
+    - name: SouthWestQuack_001
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1042
+        width: 172
+        height: 136
+      alignment: 9
+      pivot: {x: 0.44186047, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86, y: 66}
+        - {x: 57, y: 66}
+        - {x: -26, y: 44}
+        - {x: -66, y: 24}
+        - {x: -72, y: 20}
+        - {x: -72, y: -29}
+        - {x: -58, y: -68}
+        - {x: 33, y: -68}
+        - {x: 85, y: -15}
+        - {x: 96, y: 33}
+        - {x: 96, y: 57}
+    - name: SouthWestQuack_002
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1042
+        width: 167
+        height: 136
+      alignment: 9
+      pivot: {x: 0.4251497, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 89, y: 66}
+        - {x: 34, y: 66}
+        - {x: -70, y: 36}
+        - {x: -70, y: -22}
+        - {x: -67, y: -52}
+        - {x: -61, y: -68}
+        - {x: 41, y: -68}
+        - {x: 85, y: -15}
+        - {x: 96, y: 14}
+        - {x: 96, y: 55}
+    - name: SouthWestQuack_003
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1042
+        width: 191
+        height: 136
+      alignment: 9
+      pivot: {x: 0.4973822, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 80, y: 66}
+        - {x: 38, y: 66}
+        - {x: -92, y: 31}
+        - {x: -95, y: 24}
+        - {x: -95, y: 6}
+        - {x: -62, y: -68}
+        - {x: 41, y: -68}
+        - {x: 86, y: -16}
+        - {x: 96, y: 22}
+        - {x: 96, y: 59}
+    - name: SouthWestSwim_000
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1046
+        width: 190
+        height: 132
+      alignment: 9
+      pivot: {x: 0.44210526, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: 66}
+        - {x: -80, y: 13}
+        - {x: -80, y: -48}
+        - {x: -64, y: -66}
+        - {x: 41, y: -66}
+        - {x: 106, y: -33}
+        - {x: 106, y: 61}
+        - {x: 94, y: 66}
+    - name: SouthWestSwim_001
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1046
+        width: 177
+        height: 132
+      alignment: 9
+      pivot: {x: 0.40112993, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 70, y: 66}
+        - {x: -32, y: 61}
+        - {x: -71, y: 7}
+        - {x: -71, y: -29}
+        - {x: -50, y: -66}
+        - {x: 42, y: -66}
+        - {x: 106, y: -37}
+        - {x: 106, y: 58}
+        - {x: 100, y: 66}
+    - name: SouthWestSwim_002
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1046
+        width: 191
+        height: 132
+      alignment: 9
+      pivot: {x: 0.4450262, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64, y: 66}
+        - {x: 22, y: 55}
+        - {x: -42, y: 60}
+        - {x: -82, y: 16}
+        - {x: -82, y: -30}
+        - {x: -56, y: -66}
+        - {x: 68, y: -66}
+        - {x: 106, y: 3}
+        - {x: 106, y: 66}
+    - name: SouthWestSwim_003
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 1046
+        width: 212
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: 66}
+        - {x: 22, y: 55}
+        - {x: 5, y: 43}
+        - {x: -64, y: 44}
+        - {x: -69, y: 40}
+        - {x: -83, y: 28}
+        - {x: -106, y: -14}
+        - {x: -106, y: -29}
+        - {x: -68, y: -66}
+        - {x: 41, y: -66}
+        - {x: 106, y: -33}
+        - {x: 106, y: 61}
+        - {x: 94, y: 66}
+    - name: WestEat_000
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 1048
+        width: 259
+        height: 130
+      alignment: 9
+      pivot: {x: 0.43629342, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -62, y: -65}
+        - {x: 81, y: -65}
+        - {x: 146, y: -36}
+        - {x: 146, y: -6}
+        - {x: 111, y: 65}
+        - {x: -102, y: 65}
+        - {x: -102, y: -17}
+    - name: WestEat_001
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 1054
+        width: 282
+        height: 124
+      alignment: 9
+      pivot: {x: 0.4822695, y: 0.5241935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -96, y: -50}
+        - {x: -56, y: -65}
+        - {x: 90, y: -65}
+        - {x: 146, y: -56}
+        - {x: 146, y: 9}
+        - {x: 57, y: 58}
+        - {x: -133, y: 58}
+        - {x: -133, y: -34}
+    - name: WestEat_002
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 938
+        width: 285
+        height: 100
+      alignment: 9
+      pivot: {x: 0.4877193, y: 0.65}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -139, y: 29}
+        - {x: -139, y: -65}
+        - {x: 122, y: -65}
+        - {x: 146, y: -45}
+        - {x: 146, y: -1}
+        - {x: 121, y: 29}
+    - name: WestEat_003
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 917
+        width: 278
+        height: 121
+      alignment: 9
+      pivot: {x: 0.47482014, y: 0.5371901}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -126, y: 53}
+        - {x: -129, y: 38}
+        - {x: -129, y: -62}
+        - {x: -128, y: -64}
+        - {x: -120, y: -65}
+        - {x: 96, y: -65}
+        - {x: 146, y: -31}
+        - {x: 146, y: 1}
+        - {x: -63, y: 53}
+    - name: WestIdle_000
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 909
+        width: 245
+        height: 129
+      alignment: 9
+      pivot: {x: 0.5, y: 0.503876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -105.5, y: 64}
+        - {x: -122.5, y: 50}
+        - {x: -122.5, y: 13}
+        - {x: -92.5, y: -65}
+        - {x: 76.5, y: -65}
+        - {x: 116.5, y: -60}
+        - {x: 122.5, y: -59}
+        - {x: 122.5, y: 21}
+        - {x: 70.5, y: 64}
+    - name: WestIdle_001
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 908
+        width: 244
+        height: 130
+      alignment: 9
+      pivot: {x: 0.49795082, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -95.5, y: 65}
+        - {x: -120.5, y: 48}
+        - {x: -120.5, y: 26}
+        - {x: -92.5, y: -65}
+        - {x: 72.5, y: -65}
+        - {x: 115.5, y: -59}
+        - {x: 122.5, y: -34}
+        - {x: 122.5, y: -13}
+        - {x: -32.5, y: 65}
+    - name: WestIdle_002
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 909
+        width: 241
+        height: 129
+      alignment: 9
+      pivot: {x: 0.49170125, y: 0.503876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -116.5, y: 64}
+        - {x: -116.5, y: -48}
+        - {x: -88.5, y: -65}
+        - {x: 122.5, y: -65}
+        - {x: 122.5, y: 23}
+        - {x: 72.5, y: 64}
+    - name: WestIdle_003
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 910
+        width: 236
+        height: 128
+      alignment: 9
+      pivot: {x: 0.4809322, y: 0.5078125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -100.5, y: 63}
+        - {x: -111.5, y: 52}
+        - {x: -111.5, y: 17}
+        - {x: -86.5, y: -45}
+        - {x: -74.5, y: -65}
+        - {x: 122.5, y: -65}
+        - {x: 122.5, y: 6}
+        - {x: 66.5, y: 63}
+    - name: WestQuack_000
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 900
+        width: 245
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5, y: 0.51449275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -103.5, y: 59}
+        - {x: -122.5, y: 44}
+        - {x: -122.5, y: 7}
+        - {x: -92.5, y: -71}
+        - {x: 76.5, y: -71}
+        - {x: 116.5, y: -66}
+        - {x: 122.5, y: -65}
+        - {x: 122.5, y: 15}
+        - {x: 69.5, y: 59}
+    - name: WestQuack_001
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 908
+        width: 239
+        height: 130
+      alignment: 9
+      pivot: {x: 0.4874477, y: 0.54615384}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: 2}
+        - {x: -38.5, y: -3}
+        - {x: -43.5, y: -6}
+        - {x: -44.5, y: -6}
+        - {x: -32.5, y: 0}
+        - {x: -27.5, y: 2}
+        - {x: -18.5, y: 8}
+        - {x: -12.5, y: 39}
+        - {x: -16.5, y: 56}
+        - {x: -111.5, y: 56}
+        - {x: -111.5, y: -15}
+        - {x: -75.5, y: -71}
+        - {x: 57.5, y: -71}
+        - {x: 122.5, y: -49}
+        - {x: 122.5, y: -17}
+        - {x: 66.5, y: 28}
+    - name: WestQuack_002
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 769
+        width: 234
+        height: 127
+      alignment: 9
+      pivot: {x: 0.4764957, y: 0.5590551}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -105.5, y: 55}
+        - {x: -105.5, y: 12}
+        - {x: -79.5, y: -71}
+        - {x: 72.5, y: -71}
+        - {x: 122.5, y: -50}
+        - {x: 122.5, y: -16}
+        - {x: 24.5, y: 55}
+    - name: WestQuack_003
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 760
+        width: 239
+        height: 136
+      alignment: 9
+      pivot: {x: 0.4874477, y: 0.52205884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49.5, y: 58}
+        - {x: -58.5, y: 58}
+        - {x: -116.5, y: 49}
+        - {x: -116.5, y: 17}
+        - {x: -91.5, y: -71}
+        - {x: 113.5, y: -71}
+        - {x: 119.5, y: -70}
+        - {x: 122.5, y: -51}
+        - {x: 122.5, y: -14}
+        - {x: -31.5, y: 57}
+    - name: WestSwim_000
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 762
+        width: 253
+        height: 134
+      alignment: 9
+      pivot: {x: 0.49209487, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -124.5, y: 67}
+        - {x: -124.5, y: -38}
+        - {x: -100.5, y: -67}
+        - {x: 72.5, y: -67}
+        - {x: 128.5, y: -34}
+        - {x: 128.5, y: -10}
+        - {x: 89.5, y: 67}
+    - name: WestSwim_001
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 764
+        width: 252
+        height: 132
+      alignment: 9
+      pivot: {x: 0.49007937, y: 0.50757575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 63}
+        - {x: -78.5, y: 63}
+        - {x: -121.5, y: 46}
+        - {x: -121.5, y: 19}
+        - {x: -106.5, y: -29}
+        - {x: -79.5, y: -67}
+        - {x: 83.5, y: -67}
+        - {x: 115.5, y: -53}
+        - {x: 128.5, y: -47}
+        - {x: 128.5, y: -8}
+        - {x: 79.5, y: 30}
+    - name: WestSwim_002
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 765
+        width: 250
+        height: 131
+      alignment: 9
+      pivot: {x: 0.486, y: 0.5114504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 68.5, y: 5}
+        - {x: -11.5, y: 57}
+        - {x: -83.5, y: 57}
+        - {x: -117.5, y: 47}
+        - {x: -117.5, y: 4}
+        - {x: -84.5, y: -67}
+        - {x: 55.5, y: -67}
+        - {x: 110.5, y: -45}
+        - {x: 128.5, y: -29}
+        - {x: 128.5, y: -15}
+    - name: WestSwim_003
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 767
+        width: 256
+        height: 129
+      alignment: 9
+      pivot: {x: 0.49804688, y: 0.51937985}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -70.5, y: 49}
+        - {x: -116.5, y: 33}
+        - {x: -116.5, y: -19}
+        - {x: -86.5, y: -67}
+        - {x: 62.5, y: -67}
+        - {x: 120.5, y: -60}
+        - {x: 128.5, y: -44}
+        - {x: 128.5, y: 9}
+        - {x: 15.5, y: 49}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
