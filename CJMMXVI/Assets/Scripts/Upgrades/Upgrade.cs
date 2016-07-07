@@ -19,6 +19,10 @@ public class Upgrade : ScriptableObject
 		public float airTime;
 		[SerializeField]
 		public int ammo;
+		[SerializeField]
+		public float range;
+		[SerializeField]
+		public float spread;
 	}
 
 	[Serializable]
@@ -119,6 +123,8 @@ public class Upgrade : ScriptableObject
 		gameData.throwCooldown += upgr.throwCooldown;
 		gameData.airTime += upgr.airTime;
 		gameData.ammo += upgr.ammo;
+		gameData.range += upgr.range;
+		gameData.spread += upgr.spread;
 		
 		return gameData;
 	}

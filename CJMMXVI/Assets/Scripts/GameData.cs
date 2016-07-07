@@ -19,6 +19,10 @@ public struct GameData
 		public float airTime;
 		[SerializeField]
 		public int ammo;
+		[SerializeField]
+		public float range;
+		[SerializeField]
+		public float spread;
 	}
 
 	[Serializable]

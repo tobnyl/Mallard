@@ -21,6 +21,8 @@ public partial class EntityManager : MonoBehaviour
 
 	void UpdateFeeder(Feeder feeder, bool wasSelected)
 	{
+		Transform feederTrans = feeder.transform;
+
 		if(feeder.feedTimer > 0.0f)
 		{
 			feeder.feedTimer -= Time.deltaTime;
@@ -61,15 +63,28 @@ public partial class EntityManager : MonoBehaviour
 			}
 		}
 
+		Vector3 feederFwd = feederTrans.forward;
+		float spread = feederData.spread / 2.0f;
+		float maxSpread = Mathf.Max(1.0f, feederData.range);
+
+		Vector3 randomOrigin = feederTrans.position;
+		randomOrigin.y = mallardSpawn.position.y;
+
 		for(int i = 0; i < thrown; ++i)
 		{
 			var food = foodPool.Get();
 			AddEntity(food);
 
+			float range = UE.Random.Range(1.0f, maxSpread);
+			float angle = UE.Random.Range(-spread, spread);
+			var quat = Quaternion.Euler(0.0f, angle, 0.0f);
+
+			Vector3 targetPos = randomOrigin + ((quat * feederFwd) * range);
+
 			Vector3 startPos = feeder.feedOrigin.position;
-			Vector3 targetPos = mallardSpawn.transform.position +
-				Vector3.right * UE.Random.Range(-2.0f, 2.0f) +
-				Vector3.forward * UE.Random.Range(0.0f, 4.0f);
+			//Vector3 targetPos = mallardSpawn.transform.position +
+			//	Vector3.right * UE.Random.Range(-2.0f, 2.0f) +
+			//	Vector3.forward * UE.Random.Range(0.0f, 4.0f);
 
 			food.airTimeRemaining = food.airTimeDuration = feederData.airTime;
 			food.transform.position = startPos;
