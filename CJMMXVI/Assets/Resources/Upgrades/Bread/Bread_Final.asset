@@ -32,9 +32,25 @@ MonoBehaviour:
   man:
     breadThrown: 0
     throwCooldown: 0
+    airTime: 0
+    ammo: 0
   mallard:
     eatDuration: 0
     count: 0
+    speed: 0
+    acceleration: 0
+    rotationSpeed: 0
   environment:
     toActivate: []
     toDeactivate: []
+    enableRadioactiveWater: 1
+  manualFeeders:
+    breadThrown: 0
+    throwCooldown: 0
+    airTime: 0
+    ammo: 0
+  autoFeeders:
+    breadThrown: 0
+    throwCooldown: 0
+    airTime: 0
+    ammo: 0
