@@ -351,6 +351,13 @@ MonoBehaviour:
       eatDuration: 1
       speed: 2
       acceleration: 5
+      rotationSpeed: 10
+    npcFeeders:
+      breadThrown: 1
+      throwCooldown: 0.1
+    autoFeeders:
+      breadThrown: 1
+      throwCooldown: 5
   currentGameData:
     points: 0
     man:
@@ -361,6 +368,13 @@ MonoBehaviour:
       eatDuration: 0
       speed: 0
       acceleration: 0
+      rotationSpeed: 0
+    npcFeeders:
+      breadThrown: 0
+      throwCooldown: 0
+    autoFeeders:
+      breadThrown: 0
+      throwCooldown: 0
 --- !u!114 &11463072
 MonoBehaviour:
   m_ObjectHideFlags: 1
