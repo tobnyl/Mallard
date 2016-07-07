@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Performance Enhancing III
-  upgradeDescription: 
+  upgradeDescription: Swim Faster
   researchSound:
     Clip: {fileID: 8300000, guid: 0104daf0b23ad554ca0aec5e1e36f930, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}

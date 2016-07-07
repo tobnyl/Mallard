@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Bionic Commando
-  upgradeDescription: 
+  upgradeDescription: Removes throw cooldown
   researchSound:
     Clip: {fileID: 8300000, guid: 38eef2c324a90a747bfb98830c2c9a8c, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Plutonium-Enhanced Bread
-  upgradeDescription: 
+  upgradeDescription: 2 times the quacks
   researchSound:
     Clip: {fileID: 8300000, guid: a6c4b32127f1c4941b63e2eac6228cfc, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
