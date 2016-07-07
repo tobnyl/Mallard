@@ -124,7 +124,9 @@ MonoBehaviour:
   ammo: 0
   feedOrigin: {fileID: 429414}
   animator: {fileID: 0}
+  throwDelayDuration: 0.1
   feedTimer: 0
+  throwDelayTimer: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

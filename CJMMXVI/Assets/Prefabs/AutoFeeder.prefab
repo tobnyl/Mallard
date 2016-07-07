@@ -184,9 +184,13 @@ MonoBehaviour:
   kind: 3
   playerControlled: 1
   autoFeed: 1
+  usesAmmo: 0
+  ammo: 0
   feedOrigin: {fileID: 406210}
   animator: {fileID: 0}
+  throwDelayDuration: 0.1
   feedTimer: 0
+  throwDelayTimer: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
