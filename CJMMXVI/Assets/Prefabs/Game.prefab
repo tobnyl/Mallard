@@ -349,7 +349,8 @@ MonoBehaviour:
     mallard:
       count: 3
       eatDuration: 1
-      speed: 0.1
+      speed: 0.3
+      acceleration: 0.5
   currentGameData:
     points: 0
     man:
@@ -359,6 +360,7 @@ MonoBehaviour:
       count: 0
       eatDuration: 0
       speed: 0
+      acceleration: 0
 --- !u!114 &11463072
 MonoBehaviour:
   m_ObjectHideFlags: 1
