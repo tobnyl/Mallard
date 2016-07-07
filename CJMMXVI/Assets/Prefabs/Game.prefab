@@ -309,7 +309,7 @@ MonoBehaviour:
   WaterPrefab: {fileID: 124524, guid: 8cb52f94eafab9446924a01e29ebbd6f, type: 2}
   DirtCube: {fileID: 179240, guid: 2d5dd1e13a4d530458e527cb221a4287, type: 2}
   LightPrefab: {fileID: 10852816, guid: 4f66ce93b4210d440bd0a12ee02ba980, type: 2}
-  WaterFallHeight: 10
+  WaterFallHeight: 11
   WorldBottomHeight: 10
   GrassColor: {r: 0, g: 1, b: 0, a: 1}
   WaterColor: {r: 0, g: 0, b: 1, a: 1}
@@ -344,15 +344,12 @@ MonoBehaviour:
   initialGameData:
     points: 0
     man:
-      breadThrown: 1000
+      breadThrown: 1
       throwCooldown: 2
     mallard:
-      count: 1000
+      count: 3
       eatDuration: 1
       speed: 0.1
-  upgrades:
-  - {fileID: 11400000, guid: 22ee2f61d8460fb459a6dcde23e27065, type: 2}
-  - {fileID: 11400000, guid: 9dddc9848dd4adc459cabf815aa1a522, type: 2}
   currentGameData:
     points: 0
     man:
@@ -383,7 +380,7 @@ MonoBehaviour:
     MaxVolume: 1
     MinPitch: 1
     MaxPitch: 1
-    Loop: 0
+    Loop: 1
     Mute: 0
   - Clip: {fileID: 8300000, guid: 8b29e63732c107247a1d3f797199e5ac, type: 3}
     Output: {fileID: 24360614, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
@@ -392,24 +389,6 @@ MonoBehaviour:
     MinPitch: 1
     MaxPitch: 1
     Loop: 1
-    Mute: 0
-  Music:
-    Clip: {fileID: 8300000, guid: bb9dd4e7b292a3644962dde9afabacc5, type: 3}
-    Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
-    MinVolume: 1
-    MaxVolume: 1
-    MinPitch: 1
-    MaxPitch: 1
-    Loop: 1
-    Mute: 0
-  Ambience:
-    Clip: {fileID: 8300000, guid: 8b29e63732c107247a1d3f797199e5ac, type: 3}
-    Output: {fileID: 24360614, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
-    MinVolume: 1
-    MaxVolume: 1
-    MinPitch: 1
-    MaxPitch: 1
-    Loop: 0
     Mute: 0
 --- !u!124 &12421514
 Behaviour:
