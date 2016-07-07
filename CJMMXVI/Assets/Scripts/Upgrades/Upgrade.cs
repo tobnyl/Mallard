@@ -39,7 +39,7 @@ public class Upgrade : ScriptableObject
 		[SerializeField]
 		public float rotationSpeed;
 		[SerializeField]
-		public float pointsPerQuack;
+		public int pointsPerQuack;
 	}
 
 	[Serializable]
