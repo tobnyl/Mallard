@@ -22,6 +22,9 @@ public partial class EntityManager : MonoBehaviour
 		if(!shouldFeed) { return; }
 
 		int thrown = Mathf.Max(1, gameData.man.breadThrown);
+
+		PlayRandomAudioFromList(sfx.OldManSfx);
+
 		for(int i = 0; i < thrown; ++i)
 		{
 			var food = foodPool.Get();

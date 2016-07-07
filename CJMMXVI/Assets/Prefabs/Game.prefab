@@ -260,6 +260,39 @@ MonoBehaviour:
   mallardPrefab: {fileID: 11401020, guid: 69e7b22bb515e1140b278c413f855604, type: 2}
   feederPrefab: {fileID: 11473726, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
   sfx:
+    OldManSfx:
+    - Clip: {fileID: 8300000, guid: 6978eb9fa09846a44b24e2b6c20f5575, type: 3}
+      Output: {fileID: 24344886, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
+      MinVolume: 1
+      MaxVolume: 1
+      MinPitch: 1
+      MaxPitch: 1
+      Loop: 0
+      Mute: 0
+    - Clip: {fileID: 8300000, guid: 8e29dc6523eb5f741a8c05b1aef14f83, type: 3}
+      Output: {fileID: 24344886, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
+      MinVolume: 1
+      MaxVolume: 1
+      MinPitch: 1
+      MaxPitch: 1
+      Loop: 0
+      Mute: 0
+    - Clip: {fileID: 8300000, guid: 98661f00c9b426144ade66e9f76732f2, type: 3}
+      Output: {fileID: 24344886, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
+      MinVolume: 1
+      MaxVolume: 1
+      MinPitch: 1
+      MaxPitch: 1
+      Loop: 0
+      Mute: 0
+    - Clip: {fileID: 8300000, guid: fcb772e6d9736234c84c6844f27adea9, type: 3}
+      Output: {fileID: 24344886, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
+      MinVolume: 1
+      MaxVolume: 1
+      MinPitch: 1
+      MaxPitch: 1
+      Loop: 0
+      Mute: 0
     DuckSfx:
     - Clip: {fileID: 8300000, guid: 75fa1d44af9a9bd4c95f4fca172c1a49, type: 3}
       Output: {fileID: 24354744, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -344,7 +377,7 @@ MonoBehaviour:
   initialGameData:
     points: 0
     man:
-      breadThrown: 1
+      breadThrown: 50
       throwCooldown: 2
     mallard:
       count: 3
