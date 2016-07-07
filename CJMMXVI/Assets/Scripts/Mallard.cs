@@ -13,9 +13,12 @@ public class Mallard : Entity
 	public Food targetFood;
 	[SerializeField, ReadOnly]
 	public float eatTimer;
+    [SerializeField]
+    public Vector3 Velocity;
 
     private bool _isTurning;
     private Quaternion _targetRotation;
+    private float _speed;
 
     #endregion
 
@@ -40,4 +43,11 @@ public class Mallard : Entity
 
         return false;
     }
+
+    //public bool MoveToTarget(Vector3 dir, float speed)
+    //{
+    //    Vector3 vel = dir * speed;
+    //    vel = Vector3.ClampMagnitude(vel, fromMallardToFood.magnitude);
+    //    mallardTrans.position += vel;
+    //}
 }

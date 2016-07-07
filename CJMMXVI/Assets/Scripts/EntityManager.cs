@@ -233,10 +233,15 @@ public class EntityManager : MonoBehaviour
 	    var isAtRotationTarget = mallard.RotateToTarget(dir);
 
 	    if (isAtRotationTarget)
-	    {
-	        Vector3 vel = dir*gameData.mallard.speed;
-	        vel = Vector3.ClampMagnitude(vel, fromMallardToFood.magnitude);
-	        mallardTrans.position += vel;
+	    {            
+	        mallard.Velocity = Vector3.Lerp(Vector3.zero, dir*gameData.mallard.speed, Time.deltaTime * 10f);
+            mallard.Velocity = Vector3.ClampMagnitude(mallard.Velocity, fromMallardToFood.magnitude);
+            Debug.Log("Vel: " + mallard.Velocity);
+
+
+            //Vector3 vel = dir*gameData.mallard.speed;
+            //vel = Vector3.ClampMagnitude(vel, fromMallardToFood.magnitude);
+            mallardTrans.position += mallard.Velocity;
 
 	        float finalDist = Vector3.Distance(mallardTrans.position, targetPos);
 	        if (finalDist < 0.001f)
