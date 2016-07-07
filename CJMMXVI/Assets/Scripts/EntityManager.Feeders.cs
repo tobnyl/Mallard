@@ -51,11 +51,17 @@ public partial class EntityManager : MonoBehaviour
 		{
 			var food = foodPool.Get();
 			AddEntity(food);
-			food.transform.position =
-				//feeder.feedOrigin.position +
-				mallardSpawn.transform.position +
+
+			Vector3 startPos = feeder.feedOrigin.position;
+			Vector3 targetPos = mallardSpawn.transform.position +
 				Vector3.right * UE.Random.Range(-2.0f, 2.0f) +
 				Vector3.forward * UE.Random.Range(0.0f, 4.0f);
+
+			food.airTimeRemaining = food.airTimeDuration = feederData.airTime;
+			food.transform.position = startPos;
+			food.startPos = startPos;
+			food.targetPos = targetPos;
+
 			food.lifeTimer = food.decayDuration;
 			food.originatedFrom = feeder;
 		}
