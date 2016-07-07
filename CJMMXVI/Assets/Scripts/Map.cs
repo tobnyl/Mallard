@@ -49,7 +49,8 @@ public class Map : MonoBehaviour
     private bool _isWaterFall;
     private Vector3 _mapCenter;
 
-	private List<WaterCube> _waterObjectList;
+	private List<WaterCube> _waterCubeList;
+	private List<MeshRenderer> _waterFallList; 
 
     #endregion
 
@@ -63,10 +64,12 @@ public class Map : MonoBehaviour
         _gridSize = 1;
         _waterfallOffset = 0.61f;
         _waterfallPlaneOffset = 0.5f;
-		_waterObjectList = new List<WaterCube>();
-        
+		_waterCubeList = new List<WaterCube>();
+		_waterFallList = new List<MeshRenderer>();
 
-        if (SourceMap != null)
+
+
+		if (SourceMap != null)
 	    {
             var cubePosition = Vector3.zero;
             var currentOffset = Vector3.zero;
@@ -112,19 +115,28 @@ public class Map : MonoBehaviour
             }
 	    }
 
-	    Debug.Log(_waterObjectList.Count);
+	    Debug.Log(_waterCubeList.Count);
     }
 
 	public void DoUpdate()
 	{
 		if (Input.GetKeyDown(KeyCode.A))
 		{
-			foreach (var waterObject in _waterObjectList)
-			{
-				waterObject.SetMaterial(RadioactiveMaterial);
-				waterObject.ToggleParticleSystem();
-			}
+			EnableRadioactiveWater();
+		}
+	}
 
+	public void EnableRadioactiveWater()
+	{
+		foreach (var waterObject in _waterCubeList)
+		{
+			waterObject.SetMaterial(RadioactiveMaterial);
+			waterObject.EnableParticleSystem();
+		}
+
+		foreach (var waterFall in _waterFallList)
+		{
+			waterFall.material = RadioactiveMaterial;
 		}
 	}
 
@@ -189,7 +201,7 @@ public class Map : MonoBehaviour
         var waterFall = Instantiate(prefab, position, rotation) as GameObject;
         waterFall.transform.position += relativeOffset + new Vector3(0, -WaterFallHeight/2f + _gridSize/2f, 0);
         waterFall.transform.parent = parent;
-		//_waterObjectList.Add(waterFall.GetComponent<WaterCube>());
+		_waterFallList.Add(waterFall.GetComponent<MeshRenderer>());
 
         var scale = waterFall.transform.localScale;
         scale.x *= WaterFallHeight;
@@ -209,7 +221,7 @@ public class Map : MonoBehaviour
 
         cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
         cube.transform.parent = transform;
-		_waterObjectList.Add(cube.GetComponent<WaterCube>());
+		_waterCubeList.Add(cube.GetComponent<WaterCube>());
 
 		return cube;
     }

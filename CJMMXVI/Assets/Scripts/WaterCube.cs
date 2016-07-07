@@ -21,7 +21,6 @@ public class WaterCube : MonoBehaviour
 	#region Methods
 	void OnEnable()
 	{
-
 		var ps = GetComponentsInChildren<ParticleSystem>();
 		_radioactivePs = ps[0];
 		_surfacePs = ps[1];
@@ -36,7 +35,7 @@ public class WaterCube : MonoBehaviour
 		_meshRenderer.material = material;
 	}
 
-	public void ToggleParticleSystem()
+	public void EnableParticleSystem()
 	{
 		if (!_radioactivePs.enableEmission)
 		{
