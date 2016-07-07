@@ -6,6 +6,10 @@ using System.Collections.Generic;
 
 public partial class EntityManager : MonoBehaviour
 {
+	#region Constants
+	static readonly int THROW_HASH = Animator.StringToHash("Throw");
+	#endregion
+
 	#region Methods
 	void UpdateFeeder(Feeder feeder, bool wasSelected)
 	{
@@ -15,15 +19,25 @@ public partial class EntityManager : MonoBehaviour
 			return;
 		}
 
+		GameData.FeederData feederData =
+			feeder.kind == Feeder.Kind.Player ? gameData.man :
+			feeder.kind == Feeder.Kind.Npc ? gameData.npcFeeders :
+			gameData.autoFeeders;
+
 		bool shouldFeed =
 			feeder.autoFeed ||
 			(feeder.playerControlled && wasSelected);
 
 		if(!shouldFeed) { return; }
 
-		int thrown = Mathf.Max(1, gameData.man.breadThrown);
+		if(feeder.animator != null)
+		{
+			feeder.animator.SetTrigger(THROW_HASH);
+		}
 
-		if (feeder.playerControlled)
+		int thrown = Mathf.Max(1, feederData.breadThrown);
+
+		if (feeder.playerControlled && feeder.kind == Feeder.Kind.Player)
 		{
 			var playSfx = UE.Random.Range(0, 4) == 0;
 
@@ -37,14 +51,25 @@ public partial class EntityManager : MonoBehaviour
 		{
 			var food = foodPool.Get();
 			AddEntity(food);
-			food.transform.position =
-				mallardSpawn.transform.position +
+
+			Vector3 startPos = feeder.feedOrigin.position;
+			Vector3 targetPos = mallardSpawn.transform.position +
 				Vector3.right * UE.Random.Range(-2.0f, 2.0f) +
 				Vector3.forward * UE.Random.Range(0.0f, 4.0f);
+
+			food.airTimeRemaining = food.airTimeDuration = feederData.airTime;
+			food.transform.position = startPos;
+			food.startPos = startPos;
+			food.targetPos = targetPos;
+
+			Vector3 dir = (targetPos - startPos).normalized;
+			food.transform.rotation = Quaternion.Euler(0.0f, dir.ToAngleXZ(), 0.0f);
+
 			food.lifeTimer = food.decayDuration;
+			food.originatedFrom = feeder;
 		}
 
-		feeder.feedTimer = gameData.man.throwCooldown;
+		feeder.feedTimer = feederData.throwCooldown;
 	}
 
 	#endregion

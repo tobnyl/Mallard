@@ -13,7 +13,9 @@ public class Mallard : Entity
 	public Food targetFood;
 	[SerializeField, ReadOnly]
 	public float eatTimer;
-    [SerializeField]
+	[SerializeField, ReadOnly]
+	public Feeder eatOrigin;
+    [SerializeField, ReadOnly]
     public Vector3 Velocity;
 
     private bool _isTurning;
@@ -22,7 +24,7 @@ public class Mallard : Entity
 
 	#endregion
 
-	public bool RotateToTarget(Vector3 direction)
+	public bool RotateToTarget(Vector3 direction, float rotationSpeed)
 	{
 		if (!_isTurning)
 		{
@@ -31,7 +33,7 @@ public class Mallard : Entity
 		}
 		else
 		{
-			transform.rotation = Quaternion.Lerp(transform.rotation, _targetRotation, Time.deltaTime * 10f);			
+			transform.rotation = Quaternion.Lerp(transform.rotation, _targetRotation, Time.deltaTime * rotationSpeed);			
 
 			if (Quaternion.Angle(transform.rotation, _targetRotation) < 5f)
 			{				

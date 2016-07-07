@@ -9,12 +9,14 @@ public struct GameData
 {
 	#region Types
 	[Serializable]
-	public struct ManData
+	public struct FeederData
 	{
 		[SerializeField]
 		public int breadThrown;
 		[SerializeField]
 		public float throwCooldown;
+		[SerializeField]
+		public float airTime;
 	}
 
 	[Serializable]
@@ -28,6 +30,8 @@ public struct GameData
 		public float speed;
 		[SerializeField]
 		public float acceleration;
+		[SerializeField]
+		public float rotationSpeed;
 	}
 
 	[Serializable]
@@ -40,13 +44,15 @@ public struct GameData
 	[SerializeField]
 	public int points;
 	[SerializeField]
-	public ManData man;
+	public FeederData man;
 	[SerializeField]
 	public MallardData mallard;
 	[SerializeField]
 	public EnvData environment;
-	#endregion
 
-	#region Methods
+	[SerializeField]
+	public FeederData npcFeeders;
+	[SerializeField]
+	public FeederData autoFeeders;
 	#endregion
 }

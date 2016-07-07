@@ -29,6 +29,14 @@ public partial class EntityManager : MonoBehaviour
     [SerializeField]
     Sounds sfx;
 
+	[SerializeField]
+	AnimationCurve breadCurve = AnimationCurve.Linear(
+		timeStart: 0.0f,
+		valueStart: 0.0f,
+		timeEnd: 0.0f,
+		valueEnd: 0.0f
+	);
+
 	public event MallardEatHandler onMallardEat;
 
 	Transform mallardSpawn;
@@ -67,6 +75,7 @@ public partial class EntityManager : MonoBehaviour
 		};
 		foodPool.onFree = (Food food) =>
 		{
+			food.Reset();
 			food.gameObject.SetActive(false);
 		};
 		foodPool.Grow(32);
@@ -149,16 +158,6 @@ public partial class EntityManager : MonoBehaviour
 		{
 			Food food = foods[i];
 			UpdateFood(food);
-		}
-	}
-
-	void UpdateFood(Food food)
-	{
-		food.lifeTimer -= Time.deltaTime;
-		if(food.lifeTimer <= 0.0f)
-		{
-			RemoveEntity(food);
-			foodPool.Return(food);
 		}
 	}
 
