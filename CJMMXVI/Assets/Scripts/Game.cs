@@ -178,7 +178,7 @@ public class Game : MonoBehaviour
 
 	void OnMallardEat(Mallard mallard)
 	{
-		++currentGameData.points;
+		currentGameData.points += Mathf.Max(1, currentGameData.mallard.pointsPerQuack);
 		OnGameDataChanged();
 	}
 

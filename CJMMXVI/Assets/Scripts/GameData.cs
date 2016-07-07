@@ -38,6 +38,8 @@ public struct GameData
 		public float acceleration;
 		[SerializeField]
 		public float rotationSpeed;
+		[SerializeField]
+		public int pointsPerQuack;
 	}
 
 	[Serializable]

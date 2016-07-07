@@ -38,6 +38,8 @@ public class Upgrade : ScriptableObject
 		public float acceleration;
 		[SerializeField]
 		public float rotationSpeed;
+		[SerializeField]
+		public float pointsPerQuack;
 	}
 
 	[Serializable]
@@ -110,6 +112,9 @@ public class Upgrade : ScriptableObject
 		data.mallard.eatDuration += mallard.eatDuration;
 		data.mallard.count += mallard.count;
 		data.mallard.speed += mallard.speed;
+		data.mallard.acceleration += mallard.acceleration;
+		data.mallard.rotationSpeed += mallard.rotationSpeed;
+		data.mallard.pointsPerQuack += mallard.pointsPerQuack;
 		
 		data.mallard.acceleration += mallard.acceleration;
 		data.mallard.rotationSpeed += mallard.rotationSpeed;
