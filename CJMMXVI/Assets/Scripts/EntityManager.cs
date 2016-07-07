@@ -226,44 +226,39 @@ public class EntityManager : MonoBehaviour
 		Vector3 targetPos = mallard.targetFood == null ?
 			mallard.defaultPosition :
 			mallard.targetFood.transform.position;
+
+		if (mallardTrans.position == targetPos)
+		{
+			return;
+		}
 		
 		Vector3 fromMallardToTarget = targetPos - mallardPos;
 		Vector3 dir = fromMallardToTarget.normalized;
 
 		var isAtRotationTarget = mallard.RotateToTarget(dir);
 
-	    if (isAtRotationTarget)
+		if (!isAtRotationTarget)
+		{
+			mallard.Velocity = Vector3.zero;
+		}
+		else
 	    {
-			// --- NEW STUFF
-
-			var mallardAcc = 0.1f;
-
 			// if vel < speed then vel += acc * dt
-			if (mallard.Velocity.magnitude < gameData.mallard.speed)
+			if (mallard.Velocity.normalized != dir || mallard.Velocity.magnitude < gameData.mallard.speed)
 			{
-				mallard.Velocity += dir * mallardAcc * Time.deltaTime;
+				mallard.Velocity += dir * gameData.mallard.acceleration * Time.deltaTime;
 			}
 
+			//mallard.Velocity += -mallard.Velocity.normalized * mallard.decel
+
 			mallard.Velocity = Vector3.ClampMagnitude(mallard.Velocity, fromMallardToTarget.magnitude);
-
-			// ---- END
-
-			//Debug.Log("x :" + mallard.Velocity.x + " | y: " + mallard.Velocity.y + " | z: " + mallard.Velocity.z);
-
-			// ---OLD
-
-			//mallard.Velocity = dir * gameData.mallard.speed;
-			//mallard.Velocity = Vector3.ClampMagnitude(mallard.Velocity, fromMallardToTarget.magnitude);
-
-			// ----
 
 			mallardTrans.position += mallard.Velocity;
 
 	        float finalDist = Vector3.Distance(mallardTrans.position, targetPos);
-			Debug.Log("FinalDist: " + finalDist);
+						
 	        if (finalDist < 0.001f)
-	        {
-				Debug.Log("Reached distance target...");
+	        {				
 				mallard.Velocity = Vector3.zero;
 
 	            if (mallard.targetFood != null)
