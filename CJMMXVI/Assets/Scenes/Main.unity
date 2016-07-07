@@ -142,10 +142,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: upgrades.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 483730, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -186,32 +182,6 @@ Prefab:
       propertyPath: deactivateOnStart
       value: 
       objectReference: {fileID: 1473010933}
-    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: initialGameData.mallard.count
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: initialGameData.man.breadThrown
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 11401336, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: SourceMap
-      value: 
-      objectReference: {fileID: 2800000, guid: 2c1a5949926df8f4799d2e43679aa3d5, type: 3}
-    - target: {fileID: 11401336, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: WaterFallHeight
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: upgrades.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 22ee2f61d8460fb459a6dcde23e27065,
-        type: 2}
-    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: upgrades.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9dddc9848dd4adc459cabf815aa1a522,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
   m_IsPrefabParent: 0
