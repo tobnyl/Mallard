@@ -29,8 +29,26 @@ public class AudioManager : MonoBehaviour
     private float _audioSourceCollidingDistance;
     private AudioSource _musicAudioSource;
 
+	Pool<AudioSource> sourcePool;
+
     void Awake()
     {
+		sourcePool = new Pool<AudioSource>(() =>
+		{
+			var source = Instantiate(AudioSourcePrefab);
+			source.transform.parent = this.transform;
+			return source;
+		});
+		sourcePool.onGet = (AudioSource source) =>
+		{
+			source.gameObject.active = true;
+		};
+		sourcePool.onFree = (AudioSource source) =>
+		{
+			source.gameObject.active = false;
+		};
+		sourcePool.Grow(32);
+
         //_clipList = new List<string>();
         _clipList = new List<QueuedAudio>();
         _audioSourceCollidingDistance = AudioSourcePrefab.minDistance * 2f;
@@ -100,6 +118,11 @@ public class AudioManager : MonoBehaviour
         return _audioSource;
     }
 
+	public void Return(AudioSourceExtended source)
+	{
+		sourcePool.Return(source.Source);
+	}
+
     private bool AlreadyInQueueAndOutOfDistance(Audio audio, Vector3 position)
     {
         var clips = _clipList.Where(x => x.Name == audio.Clip.name);
@@ -126,8 +149,8 @@ public class AudioManager : MonoBehaviour
 
     private GameObject Play(AudioClip clip, AudioMixerGroup group, Vector3 position, bool loop, float minVol = 1.0f, float maxVol = 1.0f, float minPitch = 1.0f, float maxPitch = 1.0f)
     {
-        AudioSource audioSource = Instantiate(AudioSourcePrefab, transform.position, transform.rotation) as AudioSource;
-        audioSource.transform.parent = this.transform;
+		AudioSource audioSource = sourcePool.Get();
+     
         audioSource.transform.position = position;
         audioSource.loop = loop;
 
@@ -144,6 +167,7 @@ public class AudioManager : MonoBehaviour
         //Debug.Log("Vol: " + audioSource.volume + " | Pitch: " + audioSource.pitch);
 
         AudioSourceExtended audioSourceExtended = audioSource.GetComponent<AudioSourceExtended>();
+		audioSourceExtended.Source = audioSource;
         audioSourceExtended.Duration = clip.length;
         audioSourceExtended.Loop = loop; // I don't like this code...
 
@@ -156,6 +180,8 @@ public class AudioManager : MonoBehaviour
         {
             _clipList.Add(new QueuedAudio { Name = clip.name, Position = position });
         }
+
+		audioSourceExtended.Run();
 
         return audioSource.gameObject;
     }
