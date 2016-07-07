@@ -339,6 +339,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1642525802}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -423,6 +427,11 @@ Prefab:
       propertyPath: m_Name
       value: Bread_Lvl4
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e054e9e0b40a64409e6b659df0cd997,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -599,6 +608,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1317626631}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -683,6 +696,11 @@ Prefab:
       propertyPath: m_Name
       value: Env_Lvl4
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 25d59a18b06997542b0571c99a2da754,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -1044,6 +1062,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1698418102}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1128,6 +1150,21 @@ Prefab:
       propertyPath: m_Name
       value: Man_Lvl2
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a73d18eb18281c441acc519b62ab6c6c,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 911152ae343095441bcc9da1557bb4c9,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: ceea689ef58c2ed48a637b5a7df9cb67,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -1235,6 +1272,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1698418102}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1319,6 +1360,11 @@ Prefab:
       propertyPath: m_Name
       value: Man_Lvl4
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 88c4843d159d5644081c5fa98f3511bd,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -1484,6 +1530,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1698418102}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1568,6 +1618,21 @@ Prefab:
       propertyPath: m_Name
       value: Man_Lvl3
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 22082134140040945a6342af9f4c9431,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: df7c675560b6b6b4392eee32ba9d24e3,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b7b0e59c75b9a944b5ed615969758b4,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -1873,6 +1938,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 174462194}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1949,6 +2018,11 @@ Prefab:
       propertyPath: m_Name
       value: FinalUpgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 470b1d8597c9584449d2ebb7972004fe,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -2558,6 +2632,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1317626631}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2642,6 +2720,21 @@ Prefab:
       propertyPath: m_Name
       value: Env_Lvl3
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 74b3655310d6a714797e5ff977befeb1,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 10165883f516b93418acd3548fd4e0f9,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 07b83c8ca9509e84b97ef1a5613b7dea,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -2657,6 +2750,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1317626631}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2741,6 +2838,21 @@ Prefab:
       propertyPath: m_Name
       value: Env_Lvl1
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ac080fb588a619246a6adc152ba64e6a,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ed866f7005ff8241bb7bb021d56343a,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: dc2d5c6c438894840ae58d1975721451,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -3144,6 +3256,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1317626631}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3228,6 +3344,21 @@ Prefab:
       propertyPath: m_Name
       value: Env_Lvl2
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f8a13ff6f537bdd4c93cac0fa6dd4be5,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 615078510ba22704188249f960b7bfbe,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4406166260a3ab14bb4a21ea4c6f2ca0,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -3243,6 +3374,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1698418102}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3327,6 +3462,21 @@ Prefab:
       propertyPath: m_Name
       value: Man_Lvl1
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c3279efefb1ded341baf86fb92e693d3,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: eac2386f6a3440e4ca23be6200d1e38b,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f89bf20266c5cca40abe1861edbde818,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -3342,6 +3492,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1642525802}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3426,6 +3580,21 @@ Prefab:
       propertyPath: m_Name
       value: Bread_Lvl2
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f366987ab36b59d479e8b0ab9128b067,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8dfcc2487adf7b44faaa7a233fe980c7,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: fe189eeb5e2a03b4d883898c8bc74154,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -3452,6 +3621,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1642525802}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3536,6 +3709,21 @@ Prefab:
       propertyPath: m_Name
       value: Bread_Lvl3
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c953e8d7453fc4247a97a76cb6f6cfe2,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: e9560089e7c514c4397e668ed084cc15,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: d9dca6a656d8b744b8171d5494c949bd,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
@@ -3927,7 +4115,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: upgradeLevels.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4016,12 +4204,17 @@ Prefab:
     - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: upgradeLevels.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 22ee2f61d8460fb459a6dcde23e27065,
+      objectReference: {fileID: 11400000, guid: 20f733abca61a5349830c3fbc02a3bd2,
         type: 2}
     - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: upgradeLevels.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 9dddc9848dd4adc459cabf815aa1a522,
+      objectReference: {fileID: 11400000, guid: 5ce4e0555e9cca24c9399466ca47c084,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ed5bd0cc137bcc4e9097101a946d6dc,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}

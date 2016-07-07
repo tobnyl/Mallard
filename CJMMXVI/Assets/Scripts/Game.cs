@@ -19,12 +19,11 @@ public class Game : MonoBehaviour
 	[SerializeField]
 	GameData initialGameData;
 
-	[SerializeField]
-	Upgrade[] upgrades;
-
 	[Header("Read-only")]
 	[SerializeField]
 	GameData currentGameData;
+
+	Upgrade[] upgrades;
 
 	bool loaded;
 	Coroutine loadRoutine;
@@ -51,6 +50,8 @@ public class Game : MonoBehaviour
 	{
 		sceneObjectsLookup = new Dictionary<string, GameObject>();
 		currentGameData = initialGameData;
+
+		this.upgrades = Resources.LoadAll<Upgrade>("Upgrades");
 
 		map = GetComponentInChildren<Map>();
 
@@ -150,6 +151,8 @@ public class Game : MonoBehaviour
 		OnGameDataChanged();
 
 		gui.OnUpgradeResearched(upgrade);
+
+		AudioManager.Instance.Play(upgrade.researchSound, Vector3.zero);
 	}
 
 	void OnMallardEat(Mallard mallard)
@@ -184,9 +187,12 @@ public class Game : MonoBehaviour
 		for(int i = 0; i < objs.Length; ++i)
 		{
 			Upgrade.SceneObject obj = objs[i];
-			GameObject go = sceneObjectsLookup[obj.scenePath];
-			if(go == null) { continue; }
+			if(!sceneObjectsLookup.ContainsKey(obj.scenePath))
+			{
+				continue;
+			}
 
+			GameObject go = sceneObjectsLookup[obj.scenePath];
 			go.SetActive(active);
 		}
 	}

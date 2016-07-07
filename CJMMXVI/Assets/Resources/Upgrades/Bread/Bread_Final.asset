@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8c96c281764cf4fbdf2a000c9dbead, type: 3}
+  m_Name: Bread_Final
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  upgradeName: Plutonium-Enhanced Bread
+  upgradeDescription: 
+  researchSound:
+    Clip: {fileID: 8300000, guid: a6c4b32127f1c4941b63e2eac6228cfc, type: 3}
+    Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
+    MinVolume: 1
+    MaxVolume: 1
+    MinPitch: 1
+    MaxPitch: 1
+    Loop: 0
+    Mute: 0
+  cost: 0
+  researchTime: 0
+  dependencies:
+  - {fileID: 11400000, guid: 7ed5bd0cc137bcc4e9097101a946d6dc, type: 2}
+  - {fileID: 11400000, guid: fe189eeb5e2a03b4d883898c8bc74154, type: 2}
+  - {fileID: 11400000, guid: d9dca6a656d8b744b8171d5494c949bd, type: 2}
+  man:
+    breadThrown: 0
+    throwCooldown: 0
+  mallard:
+    eatDuration: 0
+    count: 0
+  environment:
+    toActivate: []
+    toDeactivate: []
