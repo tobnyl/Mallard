@@ -67,6 +67,7 @@ public partial class EntityManager : MonoBehaviour
 		};
 		foodPool.onFree = (Food food) =>
 		{
+			food.Reset();
 			food.gameObject.SetActive(false);
 		};
 		foodPool.Grow(32);

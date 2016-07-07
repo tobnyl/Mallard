@@ -13,7 +13,9 @@ public class Mallard : Entity
 	public Food targetFood;
 	[SerializeField, ReadOnly]
 	public float eatTimer;
-    [SerializeField]
+	[SerializeField, ReadOnly]
+	public Feeder eatOrigin;
+    [SerializeField, ReadOnly]
     public Vector3 Velocity;
 
     private bool _isTurning;

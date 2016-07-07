@@ -15,9 +15,12 @@ public partial class EntityManager : MonoBehaviour
 
 			if(mallard.eatTimer <= 0.0f)
 			{
-				if(onMallardEat != null) { onMallardEat(mallard); }
-
 				PlayRandomAudioFromList(sfx.DuckSfx);
+
+				if(mallard.eatOrigin.playerControlled)
+				{
+					if(onMallardEat != null) { onMallardEat(mallard); }
+				}
 			}
 
 			return;
@@ -91,9 +94,12 @@ public partial class EntityManager : MonoBehaviour
 				{
 					//Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
 					// Reached food!
+					mallard.eatTimer = gameData.mallard.eatDuration;
+					mallard.eatOrigin = mallard.targetFood.originatedFrom;
+
 					RemoveEntity(mallard.targetFood);
 					foodPool.Return(mallard.targetFood);
-					mallard.eatTimer = gameData.mallard.eatDuration;
+					
 					mallard.targetFood = null;
 				}
 			}

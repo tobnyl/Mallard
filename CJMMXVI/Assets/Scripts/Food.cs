@@ -12,5 +12,15 @@ public class Food : Entity
 
 	[SerializeField, ReadOnly]
 	public float lifeTimer;
+	[SerializeField, ReadOnly]
+	public Feeder originatedFrom;
+	#endregion
+
+	#region Methods
+	public void Reset()
+	{
+		lifeTimer = 0.0f;
+		originatedFrom = null;
+	}
 	#endregion
 }

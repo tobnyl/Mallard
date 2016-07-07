@@ -57,6 +57,7 @@ public partial class EntityManager : MonoBehaviour
 				Vector3.right * UE.Random.Range(-2.0f, 2.0f) +
 				Vector3.forward * UE.Random.Range(0.0f, 4.0f);
 			food.lifeTimer = food.decayDuration;
+			food.originatedFrom = feeder;
 		}
 
 		feeder.feedTimer = feederData.throwCooldown;
