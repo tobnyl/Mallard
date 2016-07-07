@@ -229,28 +229,29 @@ public class EntityManager : MonoBehaviour
 		
 		Vector3 fromMallardToFood = targetPos - mallardPos;
 		Vector3 dir = fromMallardToFood.normalized;
+        
+	    var isAtRotationTarget = mallard.RotateToTarget(dir);
 
-		float angle = Mathf.Atan2(dir.x, -dir.y);
-		mallard.transform.rotation = Quaternion.Euler(0.0f, dir.ToAngleXZ(), 0.0f);
-		//mallard.transform.rotation = Quaternion.Euler(0.0f, angle * Mathf.Rad2Deg, 0.0f);
+	    if (isAtRotationTarget)
+	    {
+	        Vector3 vel = dir*gameData.mallard.speed;
+	        vel = Vector3.ClampMagnitude(vel, fromMallardToFood.magnitude);
+	        mallardTrans.position += vel;
 
-		Vector3 vel = dir * gameData.mallard.speed;
-		vel = Vector3.ClampMagnitude(vel, fromMallardToFood.magnitude);
-		mallardTrans.position += vel;
-
-		float finalDist = Vector3.Distance(mallardTrans.position, targetPos);
-		if(finalDist < 0.001f)
-		{
-			if(mallard.targetFood != null)
-			{
-				//Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
-				// Reached food!
-				RemoveEntity(mallard.targetFood);
-				foodPool.Return(mallard.targetFood);
-				mallard.eatTimer = gameData.mallard.eatDuration;
-				mallard.targetFood = null;
-			}
-		}
+	        float finalDist = Vector3.Distance(mallardTrans.position, targetPos);
+	        if (finalDist < 0.001f)
+	        {
+	            if (mallard.targetFood != null)
+	            {
+	                //Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
+	                // Reached food!
+	                RemoveEntity(mallard.targetFood);
+	                foodPool.Return(mallard.targetFood);
+	                mallard.eatTimer = gameData.mallard.eatDuration;
+	                mallard.targetFood = null;
+	            }
+	        }
+	    }
 	}
 
 	void UpdateFood(Food food)
