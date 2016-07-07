@@ -17,10 +17,7 @@ public partial class EntityManager : MonoBehaviour
 			{
 				if(onMallardEat != null) { onMallardEat(mallard); }
 
-				var duckSfxIndex = UE.Random.Range(0, sfx.DuckSfx.Length);
-
-				AudioManager.Instance.Play(sfx.DuckSfx[duckSfxIndex], Vector3.zero);
-				//Debug.Log("Quack");
+				PlayRandomAudioFromList(sfx.DuckSfx);
 			}
 
 			return;

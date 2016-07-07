@@ -15,9 +15,10 @@ public partial class EntityManager : MonoBehaviour
     [Serializable]
     private class Sounds
     {
+	    public Audio[] OldManSfx;
         public Audio[] DuckSfx;
     }
-
+	
 	[SerializeField]
 	Food foodPrefab;
 	[SerializeField]
@@ -160,5 +161,16 @@ public partial class EntityManager : MonoBehaviour
 			foodPool.Return(food);
 		}
 	}
+
+	private void PlayRandomAudioFromList(Audio[] audioList)
+	{
+		if (audioList.Length > 0)
+		{
+			var index = UE.Random.Range(0, audioList.Length);
+
+			AudioManager.Instance.Play(audioList[index], Vector3.zero);
+		}
+	}
+
 	#endregion
 }
