@@ -11,6 +11,14 @@ public partial class EntityManager : MonoBehaviour
 	#endregion
 
 	#region Methods
+	GameData.FeederData FeederDataForKind(Feeder.Kind kind)
+	{
+		return kind == Feeder.Kind.Player ? gameData.man :
+			kind == Feeder.Kind.Npc ? gameData.npcFeeders :
+			kind == Feeder.Kind.Auto ? gameData.autoFeeders :
+			gameData.manualFeeders;
+	}
+
 	void UpdateFeeder(Feeder feeder, bool wasSelected)
 	{
 		if(feeder.feedTimer > 0.0f)
@@ -19,15 +27,20 @@ public partial class EntityManager : MonoBehaviour
 			return;
 		}
 
-		GameData.FeederData feederData =
-			feeder.kind == Feeder.Kind.Player ? gameData.man :
-			feeder.kind == Feeder.Kind.Npc ? gameData.npcFeeders :
-			feeder.kind == Feeder.Kind.Auto ? gameData.autoFeeders :
-			gameData.manualFeeders;
+		GameData.FeederData feederData = FeederDataForKind(feeder.kind);
+
+		if(feeder.playerControlled && feeder.ammo == 0 && feeder.usesAmmo)
+		{
+			if(wasSelected)
+			{
+				feeder.ammo = feederData.ammo;
+			}
+		}
 
 		bool shouldFeed =
-			feeder.autoFeed ||
-			(feeder.playerControlled && wasSelected);
+			(!feeder.usesAmmo || feeder.ammo > 0) &&
+			(feeder.autoFeed ||
+			(feeder.playerControlled && wasSelected));
 
 		if(!shouldFeed) { return; }
 

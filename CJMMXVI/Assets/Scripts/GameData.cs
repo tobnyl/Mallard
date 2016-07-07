@@ -17,6 +17,8 @@ public struct GameData
 		public float throwCooldown;
 		[SerializeField]
 		public float airTime;
+		[SerializeField]
+		public int ammo;
 	}
 
 	[Serializable]
