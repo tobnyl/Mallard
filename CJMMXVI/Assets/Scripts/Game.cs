@@ -126,7 +126,7 @@ public class Game : MonoBehaviour
 	{
 		if(!loaded) { return; }
 
-		entityMan.DoUpdate();
+		entityMan.DoUpdate(updateInput: gui.currentPage == GameUi.Page.Main);
 		upgradeMan.DoUpdate();
 
 		// Temp

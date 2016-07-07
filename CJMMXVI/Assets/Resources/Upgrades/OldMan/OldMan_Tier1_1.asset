@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Fika Power I
-  upgradeDescription: 
+  upgradeDescription: Throw faster
   researchSound:
     Clip: {fileID: 8300000, guid: 8ba685f4a61e00a4ba90e7dcd71ea08e, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -28,7 +28,7 @@ MonoBehaviour:
   dependencies: []
   man:
     breadThrown: 0
-    throwCooldown: 0
+    throwCooldown: -0.5
   mallard:
     eatDuration: 0
     count: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Optics II
-  upgradeDescription: 
+  upgradeDescription: Range + Spread
   researchSound:
     Clip: {fileID: 8300000, guid: 5a43ba6ca217c274d8b977c41dbbf139, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}

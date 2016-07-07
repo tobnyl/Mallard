@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Smokey Bread II
-  upgradeDescription: 
+  upgradeDescription: Eats Faster
   researchSound:
     Clip: {fileID: 8300000, guid: 061ac20cae3c9654582a561281768812, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -31,7 +31,7 @@ MonoBehaviour:
     breadThrown: 0
     throwCooldown: 0
   mallard:
-    eatDuration: -0.1
+    eatDuration: -0.5
     count: 0
   environment:
     toActivate: []

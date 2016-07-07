@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Heart of Steel III
-  upgradeDescription: 
+  upgradeDescription: Less Airtime?
   researchSound:
-    Clip: {fileID: 8300000, guid: 8041c48b40193e141a2539cbef0a0694, type: 3}
+    Clip: {fileID: 8300000, guid: 2de0d2b585479e64fb8c224749454e11, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
     MinVolume: 1
     MaxVolume: 1

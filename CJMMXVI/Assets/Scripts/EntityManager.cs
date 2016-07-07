@@ -4,7 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public class EntityManager : MonoBehaviour
+public partial class EntityManager : MonoBehaviour
 {
 	#region Types
 	public delegate void MallardEatHandler(Mallard mallard);
@@ -42,6 +42,8 @@ public class EntityManager : MonoBehaviour
 	GameData gameData;
 
 	Transform objectsRoot;
+
+	bool mouseWasDown;
 	#endregion
 
 	#region Methods
@@ -111,11 +113,11 @@ public class EntityManager : MonoBehaviour
 		if(entity is Food) { foods.Remove((Food)entity); }
 	}
 	
-	public void DoUpdate()
+	public void DoUpdate(bool updateInput)
 	{
 		Feeder clickedFeeder = null;
 
-		if(Input.GetMouseButtonDown(0))
+		if(updateInput && Input.GetMouseButtonDown(0))
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hitInfo;
@@ -147,131 +149,6 @@ public class EntityManager : MonoBehaviour
 			Food food = foods[i];
 			UpdateFood(food);
 		}
-	}
-
-	void UpdateFeeder(Feeder feeder, bool wasSelected)
-	{
-		if(feeder.feedTimer > 0.0f)
-		{
-			feeder.feedTimer -= Time.deltaTime;
-			return;
-		}
-
-		bool shouldFeed =
-			feeder.autoFeed ||
-			(feeder.playerControlled && wasSelected);
-
-		if(!shouldFeed) { return; }
-
-		int thrown = Mathf.Max(1, gameData.man.breadThrown);
-		for(int i = 0; i < thrown; ++i)
-		{
-			var food = foodPool.Get();
-			AddEntity(food);
-			food.transform.position =
-				mallardSpawn.transform.position +
-				Vector3.right * UE.Random.Range(-2.0f, 2.0f) +
-				Vector3.forward * UE.Random.Range(0.0f, 4.0f);
-			food.lifeTimer = food.decayDuration;
-		}
-
-		feeder.feedTimer = gameData.man.throwCooldown;
-	}
-
-	void UpdateMallard(Mallard mallard)
-	{
-		if(mallard.eatTimer > 0.0f)
-		{
-			mallard.eatTimer -= Time.deltaTime;
-
-			if(mallard.eatTimer <= 0.0f)
-			{
-				if(onMallardEat != null) { onMallardEat(mallard); }
-
-                var duckSfxIndex = UE.Random.Range(0, sfx.DuckSfx.Length);
-
-                AudioManager.Instance.Play(sfx.DuckSfx[duckSfxIndex], Vector3.zero);
-				//Debug.Log("Quack");
-			}
-
-			return;
-		}
-
-		Transform mallardTrans = mallard.transform;
-		Vector3 mallardPos = mallardTrans.position;
-
-		bool targetFoodAlive = mallard.targetFood != null &&
-			foods.Contains(mallard.targetFood);
-
-		if(!targetFoodAlive)
-		{
-			Food closestFood = null;
-			float closestDist = Mathf.Infinity;
-
-			for(int i = 0; i < foods.Count; ++i)
-			{
-				Food food = foods[i];
-
-				float distSqr = (food.transform.position - mallardPos).sqrMagnitude;
-				if(distSqr < closestDist)
-				{
-					closestFood = food;
-					closestDist = distSqr;
-				}
-			}
-
-			mallard.targetFood = closestFood;
-		}
-
-		Vector3 targetPos = mallard.targetFood == null ?
-			mallard.defaultPosition :
-			mallard.targetFood.transform.position;
-
-		if (mallardTrans.position == targetPos)
-		{
-			return;
-		}
-		
-		Vector3 fromMallardToTarget = targetPos - mallardPos;
-		Vector3 dir = fromMallardToTarget.normalized;
-
-		var isAtRotationTarget = mallard.RotateToTarget(dir);
-
-		if (!isAtRotationTarget)
-		{
-			mallard.Velocity = Vector3.zero;
-		}
-		else
-	    {
-			// if vel < speed then vel += acc * dt
-			if (mallard.Velocity.normalized != dir || mallard.Velocity.magnitude < gameData.mallard.speed)
-			{
-				mallard.Velocity += dir * gameData.mallard.acceleration * Time.deltaTime;
-			}
-
-			//mallard.Velocity += -mallard.Velocity.normalized * mallard.decel
-
-			mallard.Velocity = Vector3.ClampMagnitude(mallard.Velocity, fromMallardToTarget.magnitude);
-
-			mallardTrans.position += mallard.Velocity;
-
-	        float finalDist = Vector3.Distance(mallardTrans.position, targetPos);
-						
-	        if (finalDist < 0.001f)
-	        {				
-				mallard.Velocity = Vector3.zero;
-
-	            if (mallard.targetFood != null)
-	            {
-	                //Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
-	                // Reached food!
-	                RemoveEntity(mallard.targetFood);
-	                foodPool.Return(mallard.targetFood);
-	                mallard.eatTimer = gameData.mallard.eatDuration;
-	                mallard.targetFood = null;
-	            }
-	        }
-	    }
 	}
 
 	void UpdateFood(Food food)
