@@ -326,6 +326,27 @@ MonoBehaviour:
       MaxPitch: 1.1
       Loop: 0
       Mute: 0
+  breadCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 4
+      outSlope: 4
+      tangentMode: 10
+    - time: 0.5
+      value: 2
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 10
+    - time: 1
+      value: 0
+      inSlope: -4
+      outSlope: -4
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11401336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -379,6 +400,7 @@ MonoBehaviour:
     man:
       breadThrown: 1
       throwCooldown: 2
+      airTime: 3
     mallard:
       count: 3
       eatDuration: 1
@@ -388,14 +410,17 @@ MonoBehaviour:
     npcFeeders:
       breadThrown: 1
       throwCooldown: 5
+      airTime: 3
     autoFeeders:
       breadThrown: 1
       throwCooldown: 5
+      airTime: 3
   currentGameData:
     points: 0
     man:
       breadThrown: 0
       throwCooldown: 0
+      airTime: 0
     mallard:
       count: 0
       eatDuration: 0
@@ -405,9 +430,11 @@ MonoBehaviour:
     npcFeeders:
       breadThrown: 0
       throwCooldown: 0
+      airTime: 0
     autoFeeders:
       breadThrown: 0
       throwCooldown: 0
+      airTime: 0
 --- !u!114 &11463072
 MonoBehaviour:
   m_ObjectHideFlags: 1
