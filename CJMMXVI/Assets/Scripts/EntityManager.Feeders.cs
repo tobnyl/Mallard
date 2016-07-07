@@ -62,6 +62,9 @@ public partial class EntityManager : MonoBehaviour
 			food.startPos = startPos;
 			food.targetPos = targetPos;
 
+			Vector3 dir = (targetPos - startPos).normalized;
+			food.transform.rotation = Quaternion.Euler(0.0f, dir.ToAngleXZ(), 0.0f);
+
 			food.lifeTimer = food.decayDuration;
 			food.originatedFrom = feeder;
 		}
