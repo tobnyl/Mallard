@@ -227,25 +227,45 @@ public class EntityManager : MonoBehaviour
 			mallard.defaultPosition :
 			mallard.targetFood.transform.position;
 		
-		Vector3 fromMallardToFood = targetPos - mallardPos;
-		Vector3 dir = fromMallardToFood.normalized;
-        
-	    var isAtRotationTarget = mallard.RotateToTarget(dir);
+		Vector3 fromMallardToTarget = targetPos - mallardPos;
+		Vector3 dir = fromMallardToTarget.normalized;
+
+		var isAtRotationTarget = mallard.RotateToTarget(dir);
 
 	    if (isAtRotationTarget)
-	    {            
-	        mallard.Velocity = Vector3.Lerp(Vector3.zero, dir*gameData.mallard.speed, Time.deltaTime * 10f);
-            mallard.Velocity = Vector3.ClampMagnitude(mallard.Velocity, fromMallardToFood.magnitude);
-            Debug.Log("Vel: " + mallard.Velocity);
+	    {
+			// --- NEW STUFF
 
+			var mallardAcc = 0.1f;
 
-            //Vector3 vel = dir*gameData.mallard.speed;
-            //vel = Vector3.ClampMagnitude(vel, fromMallardToFood.magnitude);
-            mallardTrans.position += mallard.Velocity;
+			// if vel < speed then vel += acc * dt
+			if (mallard.Velocity.magnitude < gameData.mallard.speed)
+			{
+				mallard.Velocity += dir * mallardAcc * Time.deltaTime;
+			}
+
+			mallard.Velocity = Vector3.ClampMagnitude(mallard.Velocity, fromMallardToTarget.magnitude);
+
+			// ---- END
+
+			//Debug.Log("x :" + mallard.Velocity.x + " | y: " + mallard.Velocity.y + " | z: " + mallard.Velocity.z);
+
+			// ---OLD
+
+			//mallard.Velocity = dir * gameData.mallard.speed;
+			//mallard.Velocity = Vector3.ClampMagnitude(mallard.Velocity, fromMallardToTarget.magnitude);
+
+			// ----
+
+			mallardTrans.position += mallard.Velocity;
 
 	        float finalDist = Vector3.Distance(mallardTrans.position, targetPos);
+			Debug.Log("FinalDist: " + finalDist);
 	        if (finalDist < 0.001f)
 	        {
+				Debug.Log("Reached distance target...");
+				mallard.Velocity = Vector3.zero;
+
 	            if (mallard.targetFood != null)
 	            {
 	                //Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
