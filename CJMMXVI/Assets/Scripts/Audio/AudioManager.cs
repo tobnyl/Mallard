@@ -15,7 +15,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource AudioSourcePrefab;
     public AudioMixerGroup Master;
     public bool AllowDuplicatesPerFrame;
-    public Audio Music;
+    public Audio[] GlobalSounds;
 
     public static AudioManager Instance
     {
@@ -41,11 +41,11 @@ public class AudioManager : MonoBehaviour
 		});
 		sourcePool.onGet = (AudioSource source) =>
 		{
-			source.gameObject.active = true;
+			source.gameObject.SetActive(true);
 		};
 		sourcePool.onFree = (AudioSource source) =>
 		{
-			source.gameObject.active = false;
+			source.gameObject.SetActive(false);
 		};
 		sourcePool.Grow(32);
 
@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
         _clipList = new List<QueuedAudio>();
         _audioSourceCollidingDistance = AudioSourcePrefab.minDistance * 2f;
 
-        InitializeMusic(Music);
+        InitializeGlobalSounds();
 
         if (_instance == null)
         {
@@ -61,25 +61,14 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void InitializeMusic(Audio music)
+    private void InitializeGlobalSounds()
     {
-        _musicAudioSource = gameObject.AddComponent<AudioSource>();
-        _musicAudioSource.clip = music.Clip;
-        _musicAudioSource.outputAudioMixerGroup = (music.Output != null ? music.Output : Master);
-        _musicAudioSource.loop = music.Loop;
-        _musicAudioSource.mute = music.Mute;
-        _musicAudioSource.Play();
+        foreach (var sound in GlobalSounds)
+        {
+            Play(sound, Vector3.zero);
+        }
     }
 
-    public void PlayMusic()
-    {
-        _musicAudioSource.Play();
-    }
-
-    public void StopMusic()
-    {
-        _musicAudioSource.Stop();
-    }
 
 
 
@@ -112,7 +101,7 @@ public class AudioManager : MonoBehaviour
         if (muteAllActiveSfx)
         {
             MuteAllSfx = muteAllActiveSfx;
-            _musicAudioSource.Stop();
+            //_musicAudioSource.Stop();
         }
 
         return _audioSource;
@@ -144,7 +133,7 @@ public class AudioManager : MonoBehaviour
         yield return new WaitForSeconds(length);
 
         MuteAllSfx = false;
-        _musicAudioSource.Play();
+        //_musicAudioSource.Play();
     }
 
     private GameObject Play(AudioClip clip, AudioMixerGroup group, Vector3 position, bool loop, float minVol = 1.0f, float maxVol = 1.0f, float minPitch = 1.0f, float maxPitch = 1.0f)

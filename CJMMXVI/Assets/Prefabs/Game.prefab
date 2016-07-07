@@ -344,10 +344,10 @@ MonoBehaviour:
   initialGameData:
     points: 0
     man:
-      breadThrown: 1
+      breadThrown: 1000
       throwCooldown: 2
     mallard:
-      count: 1
+      count: 1000
       eatDuration: 1
       speed: 0.1
   upgrades:
@@ -376,14 +376,40 @@ MonoBehaviour:
   AudioSourcePrefab: {fileID: 8216268, guid: 8dbe53359ac740c48bddc29c1edf5fdd, type: 2}
   Master: {fileID: 24300001, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
   AllowDuplicatesPerFrame: 0
-  Music:
-    Clip: {fileID: 8300000, guid: 8b29e63732c107247a1d3f797199e5ac, type: 3}
+  GlobalSounds:
+  - Clip: {fileID: 8300000, guid: bb9dd4e7b292a3644962dde9afabacc5, type: 3}
+    Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
+    MinVolume: 1
+    MaxVolume: 1
+    MinPitch: 1
+    MaxPitch: 1
+    Loop: 0
+    Mute: 0
+  - Clip: {fileID: 8300000, guid: 8b29e63732c107247a1d3f797199e5ac, type: 3}
     Output: {fileID: 24360614, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
     MinVolume: 1
     MaxVolume: 1
     MinPitch: 1
     MaxPitch: 1
     Loop: 1
+    Mute: 0
+  Music:
+    Clip: {fileID: 8300000, guid: bb9dd4e7b292a3644962dde9afabacc5, type: 3}
+    Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
+    MinVolume: 1
+    MaxVolume: 1
+    MinPitch: 1
+    MaxPitch: 1
+    Loop: 1
+    Mute: 0
+  Ambience:
+    Clip: {fileID: 8300000, guid: 8b29e63732c107247a1d3f797199e5ac, type: 3}
+    Output: {fileID: 24360614, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
+    MinVolume: 1
+    MaxVolume: 1
+    MinPitch: 1
+    MaxPitch: 1
+    Loop: 0
     Mute: 0
 --- !u!124 &12421514
 Behaviour:
