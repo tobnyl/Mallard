@@ -23,7 +23,15 @@ public partial class EntityManager : MonoBehaviour
 
 		int thrown = Mathf.Max(1, gameData.man.breadThrown);
 
-		PlayRandomAudioFromList(sfx.OldManSfx);
+		if (feeder.playerControlled)
+		{
+			var playSfx = UE.Random.Range(0, 4) == 0;
+
+			if (playSfx)
+			{
+				PlayRandomAudioFromList(sfx.OldManSfx);
+			}
+		}
 
 		for(int i = 0; i < thrown; ++i)
 		{
