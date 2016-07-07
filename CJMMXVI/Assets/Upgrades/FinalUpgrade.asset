@@ -14,6 +14,15 @@ MonoBehaviour:
   icon: {fileID: 0}
   upgradeName: Post-industrial Revolution
   upgradeDescription: 
+  researchSound:
+    Clip: {fileID: 0}
+    Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
+    MinVolume: 1
+    MaxVolume: 1
+    MinPitch: 1
+    MaxPitch: 1
+    Loop: 0
+    Mute: 0
   cost: 0
   researchTime: 0
   dependencies:

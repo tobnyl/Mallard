@@ -14,6 +14,15 @@ MonoBehaviour:
   icon: {fileID: 0}
   upgradeName: Military-Grade Feeding II
   upgradeDescription: 
+  researchSound:
+    Clip: {fileID: 8300000, guid: e7c4e561e6c921f4b8e5572119db3a8c, type: 3}
+    Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
+    MinVolume: 1
+    MaxVolume: 1
+    MinPitch: 1
+    MaxPitch: 1
+    Loop: 0
+    Mute: 0
   cost: 0
   researchTime: 0
   dependencies:

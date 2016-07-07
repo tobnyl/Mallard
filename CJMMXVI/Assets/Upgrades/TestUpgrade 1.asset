@@ -11,8 +11,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8c96c281764cf4fbdf2a000c9dbead, type: 3}
   m_Name: TestUpgrade 1
   m_EditorClassIdentifier: 
+  icon: {fileID: 0}
   upgradeName: Mallard Whistle
   upgradeDescription: 
+  researchSound:
+    Clip: {fileID: 0}
+    Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
+    MinVolume: 1
+    MaxVolume: 1
+    MinPitch: 1
+    MaxPitch: 1
+    Loop: 0
+    Mute: 0
   cost: 10
   researchTime: 5
   dependencies:
@@ -23,3 +33,6 @@ MonoBehaviour:
   mallard:
     eatDuration: 0
     count: 3
+  environment:
+    toActivate: []
+    toDeactivate: []
