@@ -45,6 +45,9 @@ public class Upgrade : ScriptableObject
 
 	#region Fields
 	[SerializeField]
+	public Sprite icon;
+
+	[SerializeField]
 	public string upgradeName;
 
 	[SerializeField]

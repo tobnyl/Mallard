@@ -14,7 +14,7 @@ MonoBehaviour:
   upgradeName: Fresh Bread
   upgradeDescription: Invest in some fresh bread which is easier to break into pieces.
     Twice the bread, half the effort!
-  cost: 0
+  cost: 1
   researchTime: 5
   dependencies: []
   man:
@@ -24,6 +24,5 @@ MonoBehaviour:
     eatDuration: 0
     count: 0
   environment:
-    toActivate:
-    - scenePath: Nested
+    toActivate: []
     toDeactivate: []
