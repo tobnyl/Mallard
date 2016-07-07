@@ -21,12 +21,12 @@ public class Mallard : Entity
 
     public bool RotateToTarget(Vector3 direction)
     {
-        if (!_isTurning && targetFood != null)
+        if (!_isTurning)
         {
             _targetRotation = Quaternion.Euler(0.0f, direction.ToAngleXZ(), 0.0f);
             _isTurning = true;
         }
-        else if (targetFood != null)
+        else
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, _targetRotation, Time.deltaTime * 10f);
 
