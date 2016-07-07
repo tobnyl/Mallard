@@ -382,8 +382,8 @@ MonoBehaviour:
     mallard:
       count: 3
       eatDuration: 1
-      speed: 0.3
-      acceleration: 0.5
+      speed: 2
+      acceleration: 5
   currentGameData:
     points: 0
     man:
