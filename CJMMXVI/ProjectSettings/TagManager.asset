@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Grass
   - Water
+  - Surface
+  - Radioactive
   layers:
   - Default
   - TransparentFX

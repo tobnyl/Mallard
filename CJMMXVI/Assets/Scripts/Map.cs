@@ -35,15 +35,22 @@ public class Map : MonoBehaviour
     [SerializeField]
     public GameObject WaterFallBackgroundPrefab;
     [SerializeField]
-    public GameObject WaterFallEdgePrefab;    
+    public GameObject WaterFallEdgePrefab;
+	[SerializeField]
+	public Material WaterMaterial;
+	[SerializeField]
+	public Material RadioactiveMaterial;
 
-    private int _gridSize;
+	private int _gridSize;
     private int _width;
     private int _height;
     private float _waterfallOffset;
     private float _waterfallPlaneOffset;
     private bool _isWaterFall;
     private Vector3 _mapCenter;
+
+	private List<WaterCube> _waterCubeList;
+	private List<MeshRenderer> _waterFallList; 
 
     #endregion
 
@@ -57,9 +64,12 @@ public class Map : MonoBehaviour
         _gridSize = 1;
         _waterfallOffset = 0.61f;
         _waterfallPlaneOffset = 0.5f;
-        
+		_waterCubeList = new List<WaterCube>();
+		_waterFallList = new List<MeshRenderer>();
 
-        if (SourceMap != null)
+
+
+		if (SourceMap != null)
 	    {
             var cubePosition = Vector3.zero;
             var currentOffset = Vector3.zero;
@@ -104,6 +114,30 @@ public class Map : MonoBehaviour
                 cubePosition = currentOffset;
             }
 	    }
+
+	    Debug.Log(_waterCubeList.Count);
+    }
+
+	public void DoUpdate()
+	{
+		if (Input.GetKeyDown(KeyCode.A))
+		{
+			EnableRadioactiveWater();
+		}
+	}
+
+	public void EnableRadioactiveWater()
+	{
+		foreach (var waterObject in _waterCubeList)
+		{
+			waterObject.SetMaterial(RadioactiveMaterial);
+			waterObject.EnableParticleSystem();
+		}
+
+		foreach (var waterFall in _waterFallList)
+		{
+			waterFall.material = RadioactiveMaterial;
+		}
 	}
 
     private int GetCubeHeight(float range)
@@ -153,7 +187,7 @@ public class Map : MonoBehaviour
         var relativePosition = position + relativeOffset;
 
         var waterFall = Instantiate(WaterFallPrefab, relativePosition, rotation) as GameObject;                
-        waterFall.transform.parent = parent;
+        waterFall.transform.parent = parent;		
 
         var waterFallParticleSystem = waterFall.GetComponent<ParticleSystem>();
         waterFallParticleSystem.startLifetime = WaterFallHeight - 2;
@@ -167,6 +201,7 @@ public class Map : MonoBehaviour
         var waterFall = Instantiate(prefab, position, rotation) as GameObject;
         waterFall.transform.position += relativeOffset + new Vector3(0, -WaterFallHeight/2f + _gridSize/2f, 0);
         waterFall.transform.parent = parent;
+		_waterFallList.Add(waterFall.GetComponent<MeshRenderer>());
 
         var scale = waterFall.transform.localScale;
         scale.x *= WaterFallHeight;
@@ -186,8 +221,9 @@ public class Map : MonoBehaviour
 
         cube = Instantiate(prefab, position, prefab.transform.rotation) as GameObject;
         cube.transform.parent = transform;
+		_waterCubeList.Add(cube.GetComponent<WaterCube>());
 
-        return cube;
+		return cube;
     }
 
     private void InstansiateGrassCube(GameObject prefab, GameObject dirtPrefab, Vector3 position, int height = 0)
