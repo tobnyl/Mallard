@@ -218,6 +218,22 @@ Prefab:
       propertyPath: currentGameData.mallard.pointsPerQuack
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: initialGameData.man.throwAnimSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: initialGameData.npcFeeders.throwAnimSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: initialGameData.manualFeeders.throwAnimSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: initialGameData.autoFeeders.throwAnimSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
   m_IsPrefabParent: 0
