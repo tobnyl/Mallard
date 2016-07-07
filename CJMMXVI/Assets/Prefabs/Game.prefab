@@ -412,6 +412,7 @@ MonoBehaviour:
       speed: 2
       acceleration: 5
       rotationSpeed: 10
+      pointsPerQuack: 1
     npcFeeders:
       breadThrown: 1
       throwCooldown: 5
@@ -448,6 +449,7 @@ MonoBehaviour:
       speed: 0
       acceleration: 0
       rotationSpeed: 0
+      pointsPerQuack: 0
     npcFeeders:
       breadThrown: 0
       throwCooldown: 0
