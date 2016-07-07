@@ -6,6 +6,10 @@ using System.Collections.Generic;
 
 public partial class EntityManager : MonoBehaviour
 {
+	#region Constants
+	static readonly int THROW_HASH = Animator.StringToHash("Throw");
+	#endregion
+
 	#region Methods
 	void UpdateFeeder(Feeder feeder, bool wasSelected)
 	{
@@ -26,9 +30,14 @@ public partial class EntityManager : MonoBehaviour
 
 		if(!shouldFeed) { return; }
 
+		if(feeder.animator != null)
+		{
+			feeder.animator.SetTrigger(THROW_HASH);
+		}
+
 		int thrown = Mathf.Max(1, feederData.breadThrown);
 
-		if (feeder.playerControlled)
+		if (feeder.playerControlled && feeder.kind == Feeder.Kind.Player)
 		{
 			var playSfx = UE.Random.Range(0, 4) == 0;
 

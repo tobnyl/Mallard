@@ -24,6 +24,8 @@ public class Feeder : Entity
 	public bool autoFeed;
 	[SerializeField]
 	public Transform feedOrigin;
+	[SerializeField]
+	public Animator animator;
 
 	[ReadOnly]
 	public float feedTimer;
