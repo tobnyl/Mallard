@@ -134,11 +134,19 @@ Prefab:
       objectReference: {fileID: 1473010933}
     - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
       propertyPath: initialGameData.mallard.count
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
       propertyPath: initialGameData.man.breadThrown
-      value: 1000
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401336, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: SourceMap
+      value: 
+      objectReference: {fileID: 2800000, guid: 2c1a5949926df8f4799d2e43679aa3d5, type: 3}
+    - target: {fileID: 11401336, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: WaterFallHeight
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
@@ -165,7 +173,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 242750461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.21, y: 0.5, z: 1.68}
+  m_LocalPosition: {x: 7.87, y: 0.5, z: 3.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
