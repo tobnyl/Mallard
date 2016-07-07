@@ -128,6 +128,7 @@ public class Game : MonoBehaviour
 
 		entityMan.DoUpdate(updateInput: gui.currentPage == GameUi.Page.Main);
 		upgradeMan.DoUpdate();
+		map.DoUpdate();
 
 		// Temp
 #if UNITY_EDITOR
