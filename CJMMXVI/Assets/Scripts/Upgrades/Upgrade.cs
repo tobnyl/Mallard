@@ -9,7 +9,7 @@ public class Upgrade : ScriptableObject
 {
 	#region Types
 	[Serializable]
-	public class ManData
+	public class FeederData
 	{
 		[SerializeField]
 		public int breadThrown;
@@ -24,6 +24,12 @@ public class Upgrade : ScriptableObject
 		public float eatDuration;
 		[SerializeField]
 		public int count;
+		[SerializeField]
+		public float speed;
+		[SerializeField]
+		public float acceleration;
+		[SerializeField]
+		public float rotationSpeed;
 	}
 
 	[Serializable]
@@ -67,7 +73,7 @@ public class Upgrade : ScriptableObject
 	public Upgrade[] dependencies;
 
 	[SerializeField]
-	public ManData man;
+	public FeederData man;
 
 	[SerializeField]
 	public MallardData mallard;
@@ -75,20 +81,34 @@ public class Upgrade : ScriptableObject
 	[SerializeField]
 	public EnvData environment;
 
-	//[SerializeField]
-	//public SceneData scene;
+	[SerializeField]
+	public FeederData autoFeeders;
 	#endregion
 
 	#region Methods
 	public GameData ApplyOn(GameData data)
 	{
 		data.points -= cost;
-		data.man.breadThrown += man.breadThrown;
-		data.man.throwCooldown += man.throwCooldown;
+		
+		data.man = ApplyFeederData(data.man, man);
+		data.autoFeeders = ApplyFeederData(data.autoFeeders, autoFeeders);
+
 		data.mallard.eatDuration += mallard.eatDuration;
 		data.mallard.count += mallard.count;
+		data.mallard.speed += mallard.speed;
+		
+		data.mallard.acceleration += mallard.acceleration;
+		data.mallard.rotationSpeed += mallard.rotationSpeed;
 		
 		return data;
+	}
+
+	GameData.FeederData ApplyFeederData(GameData.FeederData gameData, FeederData upgr)
+	{
+		gameData.breadThrown += upgr.breadThrown;
+		gameData.throwCooldown += upgr.throwCooldown;
+		
+		return gameData;
 	}
 	#endregion
 }

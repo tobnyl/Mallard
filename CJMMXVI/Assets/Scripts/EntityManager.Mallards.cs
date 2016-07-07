@@ -64,7 +64,7 @@ public partial class EntityManager : MonoBehaviour
 		Vector3 fromMallardToTarget = targetPos - mallardPos;
 		Vector3 dir = fromMallardToTarget.normalized;
 
-		var isAtRotationTarget = mallard.RotateToTarget(dir);
+		var isAtRotationTarget = mallard.RotateToTarget(dir, gameData.mallard.rotationSpeed);
 
 		if(!isAtRotationTarget)
 		{

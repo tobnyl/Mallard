@@ -22,7 +22,7 @@ public class Mallard : Entity
 
 	#endregion
 
-	public bool RotateToTarget(Vector3 direction)
+	public bool RotateToTarget(Vector3 direction, float rotationSpeed)
 	{
 		if (!_isTurning)
 		{
@@ -31,7 +31,7 @@ public class Mallard : Entity
 		}
 		else
 		{
-			transform.rotation = Quaternion.Lerp(transform.rotation, _targetRotation, Time.deltaTime * 10f);			
+			transform.rotation = Quaternion.Lerp(transform.rotation, _targetRotation, Time.deltaTime * rotationSpeed);			
 
 			if (Quaternion.Angle(transform.rotation, _targetRotation) < 5f)
 			{				

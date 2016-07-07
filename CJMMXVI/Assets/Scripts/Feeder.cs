@@ -6,7 +6,18 @@ using System.Collections.Generic;
 
 public class Feeder : Entity
 {
+	#region Types
+	public enum Kind
+	{
+		Player,
+		Npc,
+		Auto,
+	}
+	#endregion
+
 	#region Fields
+	[SerializeField]
+	public Kind kind;
 	[SerializeField]
 	public bool playerControlled;
 	[SerializeField]
