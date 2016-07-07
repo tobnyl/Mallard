@@ -60,6 +60,7 @@ public class Game : MonoBehaviour
 
 		sceneObjectsLookup = new Dictionary<string, GameObject>();
 		currentGameData = initialGameData;
+		currentGameData.Limit();
 
 		this.upgrades = Resources.LoadAll<Upgrade>("Upgrades");
 
@@ -184,6 +185,8 @@ public class Game : MonoBehaviour
 
 	void OnGameDataChanged()
 	{
+		currentGameData.Limit();
+
 		entityMan.OnGameDataChanged(currentGameData);
 		gui.OnGameDataChanged(currentGameData);
 	}
