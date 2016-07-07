@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeName: Hostile Takeover III
   upgradeDescription: 
   researchSound:
-    Clip: {fileID: 8300000, guid: 5ffea400666ad0747b182132486bf876, type: 3}
+    Clip: {fileID: 8300000, guid: 569016348448c08479d153f5ca11d9c5, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
     MinVolume: 1
     MaxVolume: 1
