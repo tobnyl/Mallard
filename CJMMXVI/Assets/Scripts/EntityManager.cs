@@ -10,6 +10,11 @@ public partial class EntityManager : MonoBehaviour
 	public delegate void MallardEatHandler(Mallard mallard);
 	#endregion
 
+	#region Static Fields
+	static EntityManager instance;
+	static readonly List<Entity> entitiesToRegister = new List<Entity>();
+	#endregion
+
 	#region Fields
 	// TODO: This differently
     [Serializable]
@@ -56,13 +61,53 @@ public partial class EntityManager : MonoBehaviour
 	#endregion
 
 	#region Methods
+	public static void RegisterEntity(Entity entity)
+	{
+		if(instance == null)
+		{
+			entitiesToRegister.Add(entity);
+		}
+		else
+		{
+			instance.AddEntity(entity);
+		}
+	}
+
+	public static void UnregisterEntity(Entity entity)
+	{
+		if(instance == null)
+		{
+			entitiesToRegister.Remove(entity);
+		}
+		else
+		{
+			instance.RemoveEntity(entity);
+		}
+	}
+
 	public void Setup(Transform mallardSpawn)
 	{
+		instance = this;
+
 		var go = new GameObject("Entities");
 		go.transform.parent = transform;
 		objectsRoot = go.transform;
 
-		feeders = new List<Feeder>(FindObjectsOfType<Feeder>());
+		// new List<Feeder>(FindObjectsOfType<Feeder>());
+
+		//for(int i = 0; i < feedersToRegister.Count; ++i)
+		//{
+		//	Feeder preRegistered = feedersToRegister[i];
+		//	if(!feeders.Contains(preRegistered))
+		//	{
+		//		feeders.Add(preRegistered);
+		//	}
+		//}
+
+		feeders = new List<Feeder>();
+		mallards = new List<Mallard>(FindObjectsOfType<Mallard>());
+		foods = new List<Food>();
+
 		foodPool = new Pool<Food>(() =>
 		{
 			var obj = Instantiate(foodPrefab);
@@ -79,14 +124,19 @@ public partial class EntityManager : MonoBehaviour
 			food.gameObject.SetActive(false);
 		};
 		foodPool.Grow(32);
-		mallards = new List<Mallard>(FindObjectsOfType<Mallard>());
-		foods = new List<Food>();
 
 		//var feeder = Instantiate<Feeder>(feederPrefab);
 		//AddEntity(feeder);
 		//feeder.transform.position = feederSpawn.position;
 
 		this.mallardSpawn = mallardSpawn;
+
+		for(int i = 0; i < entitiesToRegister.Count; ++i)
+		{
+			Entity preReg = entitiesToRegister[i];
+			AddEntity(preReg);
+		}
+		entitiesToRegister.Clear();
 	}
 
 	public void OnGameDataChanged(GameData gameData)

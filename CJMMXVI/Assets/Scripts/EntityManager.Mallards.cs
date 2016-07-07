@@ -41,6 +41,8 @@ public partial class EntityManager : MonoBehaviour
 			{
 				Food food = foods[i];
 
+				if(food.airTimeRemaining > 0.0f) { continue; }
+
 				float distSqr = (food.transform.position - mallardPos).sqrMagnitude;
 				if(distSqr < closestDist)
 				{

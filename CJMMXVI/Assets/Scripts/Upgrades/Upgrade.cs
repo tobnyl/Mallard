@@ -15,6 +15,8 @@ public class Upgrade : ScriptableObject
 		public int breadThrown;
 		[SerializeField]
 		public float throwCooldown;
+		[SerializeField]
+		public float airTime;
 	}
 
 	[Serializable]
@@ -82,6 +84,9 @@ public class Upgrade : ScriptableObject
 	public EnvData environment;
 
 	[SerializeField]
+	public FeederData manualFeeders;
+
+	[SerializeField]
 	public FeederData autoFeeders;
 	#endregion
 
@@ -91,6 +96,7 @@ public class Upgrade : ScriptableObject
 		data.points -= cost;
 		
 		data.man = ApplyFeederData(data.man, man);
+		data.manualFeeders = ApplyFeederData(data.manualFeeders, manualFeeders);
 		data.autoFeeders = ApplyFeederData(data.autoFeeders, autoFeeders);
 
 		data.mallard.eatDuration += mallard.eatDuration;
@@ -107,6 +113,7 @@ public class Upgrade : ScriptableObject
 	{
 		gameData.breadThrown += upgr.breadThrown;
 		gameData.throwCooldown += upgr.throwCooldown;
+		gameData.airTime += upgr.airTime;
 		
 		return gameData;
 	}

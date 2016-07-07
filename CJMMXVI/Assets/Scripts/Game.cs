@@ -48,6 +48,16 @@ public class Game : MonoBehaviour
 
 	IEnumerator Load()
 	{
+		var toDeactivate = new List<Transform>();
+
+		if(deactivateOnStart != null)
+		{
+			foreach(Transform child in deactivateOnStart)
+			{
+				toDeactivate.Add(child);
+			}
+		}
+
 		sceneObjectsLookup = new Dictionary<string, GameObject>();
 		currentGameData = initialGameData;
 
@@ -104,6 +114,11 @@ public class Game : MonoBehaviour
 			{
 				child.gameObject.SetActive(false);
 			}
+		}
+
+		foreach(Transform obj in toDeactivate)
+		{
+			obj.gameObject.SetActive(false);
 		}
 
 		loaded = true;

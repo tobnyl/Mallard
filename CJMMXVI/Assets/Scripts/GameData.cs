@@ -53,6 +53,8 @@ public struct GameData
 	[SerializeField]
 	public FeederData npcFeeders;
 	[SerializeField]
+	public FeederData manualFeeders;
+	[SerializeField]
 	public FeederData autoFeeders;
 	#endregion
 }

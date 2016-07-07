@@ -11,6 +11,7 @@ public class Feeder : Entity
 	{
 		Player,
 		Npc,
+		Manual,
 		Auto,
 	}
 	#endregion
@@ -29,5 +30,17 @@ public class Feeder : Entity
 
 	[ReadOnly]
 	public float feedTimer;
+	#endregion
+
+	#region Methods
+	void OnEnable()
+	{
+		EntityManager.RegisterEntity(this);
+	}
+
+	void OnDisable()
+	{
+		EntityManager.UnregisterEntity(this);
+	}
 	#endregion
 }

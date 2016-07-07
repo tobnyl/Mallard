@@ -22,7 +22,8 @@ public partial class EntityManager : MonoBehaviour
 		GameData.FeederData feederData =
 			feeder.kind == Feeder.Kind.Player ? gameData.man :
 			feeder.kind == Feeder.Kind.Npc ? gameData.npcFeeders :
-			gameData.autoFeeders;
+			feeder.kind == Feeder.Kind.Auto ? gameData.autoFeeders :
+			gameData.manualFeeders;
 
 		bool shouldFeed =
 			feeder.autoFeed ||
