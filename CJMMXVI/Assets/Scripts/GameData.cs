@@ -26,6 +26,8 @@ public struct GameData
 		public float eatDuration;
 		[SerializeField]
 		public float speed;
+		[SerializeField]
+		public float acceleration;
 	}
 
 	[Serializable]
