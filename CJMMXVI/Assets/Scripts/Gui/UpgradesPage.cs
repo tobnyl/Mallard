@@ -15,6 +15,7 @@ public class UpgradesPage : GuiPage
 	[SerializeField]
 	UpgradesListGui upgradesList;
 
+	List<UpgradeNodeGui> upgradeNodes;
 	UpgradeManager manager;
 	#endregion
 
@@ -29,6 +30,15 @@ public class UpgradesPage : GuiPage
 		upgradeInfo.Setup(manager);
 		upgradeInfo.onPressedBuyButton += OnBuyButtonSelected;
 		upgradeInfo.SetUpgrade(manager.Upgrades[0]);
+
+		upgradeNodes = new List<UpgradeNodeGui>();
+		GetComponentsInChildren<UpgradeNodeGui>(upgradeNodes);
+		for(int i = 0; i < upgradeNodes.Count; ++i)
+		{
+			UpgradeNodeGui node = upgradeNodes[i];
+			node.Setup(manager);
+			node.onSelection += OnUpgradeSelected;
+		}
 	}
 
 	public void DoUpdate()
@@ -44,11 +54,23 @@ public class UpgradesPage : GuiPage
 	public override void OnGameDataChanged(GameData gameData)
 	{
 		upgradeInfo.OnGameDataChanged(gameData);
+
+		for(int i = 0; i < upgradeNodes.Count; ++i)
+		{
+			UpgradeNodeGui node = upgradeNodes[i];
+			node.OnGameDataChanged(gameData);
+		}
 	}
 
 	public override void OnUpgradeResearched(Upgrade upgrade)
 	{
 		upgradesList.OnUpgradeResearched(upgrade);
+
+		for(int i = 0; i < upgradeNodes.Count; ++i)
+		{
+			UpgradeNodeGui node = upgradeNodes[i];
+			node.OnUpgradeResearched(upgrade);
+		}
 	}
 
 	void OnBuyButtonSelected(Upgrade upgrade)

@@ -134,11 +134,11 @@ Prefab:
       objectReference: {fileID: 1473010933}
     - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
       propertyPath: initialGameData.mallard.count
-      value: 3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
       propertyPath: initialGameData.man.breadThrown
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11401336, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
       propertyPath: SourceMap

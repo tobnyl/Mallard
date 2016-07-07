@@ -17,6 +17,8 @@ public class UpgradeNodeGui : MonoBehaviour
 	[SerializeField]
 	UI.Image iconImage;
 	[SerializeField]
+	Transform levelRoot;
+	[SerializeField]
 	UI.Text levelLabel;
 
 	[SerializeField]
@@ -41,6 +43,8 @@ public class UpgradeNodeGui : MonoBehaviour
 
 			onSelection(activeLevel);
 		});
+
+		Refresh();
 	}
 
 	public void OnGameDataChanged(GameData gameData)
@@ -50,11 +54,16 @@ public class UpgradeNodeGui : MonoBehaviour
 	public void OnUpgradeResearched(Upgrade upgrade)
 	{
 		Refresh();
-		if(onSelection != null) { onSelection(activeLevel); }
+		if(-1 != Array.IndexOf(upgradeLevels, upgrade))
+		{
+			if(onSelection != null) { onSelection(activeLevel); }
+		}
 	}
 
 	void Refresh()
 	{
+		iconButton.interactable = false;
+
 		int level = 0;
 		for(; level < upgradeLevels.Length; ++level)
 		{
@@ -70,11 +79,11 @@ public class UpgradeNodeGui : MonoBehaviour
 
 		if(upgradeLevels.Length <= 1)
 		{
-			levelLabel.gameObject.SetActive(false);
+			levelRoot.gameObject.SetActive(false);
 		}
 		else
 		{
-			levelLabel.gameObject.SetActive(true);
+			levelRoot.gameObject.SetActive(true);
 			levelLabel.text = level.ToString();
 		}
 
