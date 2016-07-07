@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8c96c281764cf4fbdf2a000c9dbead, type: 3}
+  m_Name: Bread_Tier3_3
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  upgradeName: Performance Enhancing III
+  upgradeDescription: 
+  cost: 0
+  researchTime: 0
+  dependencies:
+  - {fileID: 11400000, guid: e9560089e7c514c4397e668ed084cc15, type: 2}
+  man:
+    breadThrown: 0
+    throwCooldown: 0
+  mallard:
+    eatDuration: 0
+    count: 0
+  environment:
+    toActivate: []
+    toDeactivate: []
