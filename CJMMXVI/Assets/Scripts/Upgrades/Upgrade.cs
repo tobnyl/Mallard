@@ -48,6 +48,8 @@ public class Upgrade : ScriptableObject
 		public SceneObject[] toActivate;
 		[SerializeField]
 		public SceneObject[] toDeactivate;
+		[SerializeField]
+		public bool enableRadioactiveWater;
 	}
 	#endregion
 

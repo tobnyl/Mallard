@@ -169,6 +169,11 @@ public class Game : MonoBehaviour
 		gui.OnUpgradeResearched(upgrade);
 
 		AudioManager.Instance.Play(upgrade.researchSound, Vector3.zero);
+
+		if(upgrade.environment.enableRadioactiveWater)
+		{
+			map.EnableRadioactiveWater();
+		}
 	}
 
 	void OnMallardEat(Mallard mallard)
