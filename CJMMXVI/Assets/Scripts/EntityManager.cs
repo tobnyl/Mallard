@@ -30,6 +30,8 @@ public partial class EntityManager : MonoBehaviour
 	Mallard mallardPrefab;
 	[SerializeField]
 	Feeder feederPrefab;
+	[SerializeField]
+	GameObject WaterRingsPrefab;
 
     [SerializeField]
     Sounds sfx;

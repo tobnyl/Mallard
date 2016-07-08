@@ -100,8 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623ca1e125cad9c4387db5add3d4447a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultPosition: {x: 0, y: 0, z: 0}
   targetFood: {fileID: 0}
   eatTimer: 0
+  eatOrigin: {fileID: 0}
+  Velocity: {x: 0, y: 0, z: 0}
 --- !u!114 &11414498
 MonoBehaviour:
   m_ObjectHideFlags: 1

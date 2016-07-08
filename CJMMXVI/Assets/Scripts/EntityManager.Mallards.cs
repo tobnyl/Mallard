@@ -94,6 +94,9 @@ public partial class EntityManager : MonoBehaviour
 
 				if(mallard.targetFood != null)
 				{
+					var ps = Instantiate(WaterRingsPrefab, mallard.targetFood.transform.position, WaterRingsPrefab.transform.rotation) as GameObject;
+					ps.transform.parent = transform;
+
 					//Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
 					// Reached food!
 					mallard.eatTimer = gameData.mallard.eatDuration;
