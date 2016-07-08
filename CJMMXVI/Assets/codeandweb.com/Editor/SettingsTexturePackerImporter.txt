@@ -2,13 +2,10 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
-- Assets/Textures/Mallard/NorthMallard.tpsheet
-- Assets/Textures/Mallard/NorthWestMallard.tpsheet
+- Assets/Textures/Mallard/NewMallardAnim.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
-- Assets/Textures/Mallard/NorthMallard.png
-- Assets/Textures/Mallard/NorthWestMallard.png
+- Assets/Textures/Mallard/NewMallardAnim.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
-- 
 - 

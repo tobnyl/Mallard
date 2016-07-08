@@ -29,6 +29,8 @@ CJMMXVI/.vs
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
+Thumbs.db.meta
+ehthumbs.db.meta
 
 # Folder config file
 Desktop.ini

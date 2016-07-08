@@ -159,7 +159,11 @@ public partial class EntityManager : MonoBehaviour
 
 	public void AddEntity(Entity entity)
 	{
-		if(entity is Feeder) { feeders.Add((Feeder)entity); }
+		if(entity is Feeder)
+		{
+			feeders.Add((Feeder)entity);
+			((Feeder)entity).ammo = FeederDataForKind(((Feeder)entity).kind).ammo;
+		}
 		if(entity is Mallard) { mallards.Add((Mallard)entity); }
 		if(entity is Food) { foods.Add((Food)entity); }
 

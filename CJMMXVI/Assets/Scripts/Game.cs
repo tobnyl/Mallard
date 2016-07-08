@@ -60,6 +60,7 @@ public class Game : MonoBehaviour
 
 		sceneObjectsLookup = new Dictionary<string, GameObject>();
 		currentGameData = initialGameData;
+		currentGameData.Limit();
 
 		this.upgrades = Resources.LoadAll<Upgrade>("Upgrades");
 
@@ -178,12 +179,14 @@ public class Game : MonoBehaviour
 
 	void OnMallardEat(Mallard mallard)
 	{
-		++currentGameData.points;
+		currentGameData.points += Mathf.Max(1, currentGameData.mallard.pointsPerQuack);
 		OnGameDataChanged();
 	}
 
 	void OnGameDataChanged()
 	{
+		currentGameData.Limit();
+
 		entityMan.OnGameDataChanged(currentGameData);
 		gui.OnGameDataChanged(currentGameData);
 	}

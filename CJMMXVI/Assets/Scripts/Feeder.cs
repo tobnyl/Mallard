@@ -24,6 +24,10 @@ public class Feeder : Entity
 	[SerializeField]
 	public bool autoFeed;
 	[SerializeField]
+	public bool usesAmmo;
+	[SerializeField, ReadOnly]
+	public int ammo;
+	[SerializeField]
 	public Transform feedOrigin;
 	[SerializeField]
 	public Animator animator;

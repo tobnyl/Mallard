@@ -403,48 +403,74 @@ MonoBehaviour:
       breadThrown: 1
       throwCooldown: 2
       airTime: 3
+      ammo: 0
+      range: 3
+      spread: 10
     mallard:
       count: 3
       eatDuration: 1
       speed: 2
       acceleration: 5
       rotationSpeed: 10
+      pointsPerQuack: 1
     npcFeeders:
       breadThrown: 1
       throwCooldown: 5
       airTime: 3
+      ammo: 0
+      range: 3
+      spread: 90
     manualFeeders:
-      breadThrown: 0
-      throwCooldown: 0
-      airTime: 0
+      breadThrown: 3
+      throwCooldown: 5
+      airTime: 3
+      ammo: 10
+      range: 3
+      spread: 180
     autoFeeders:
       breadThrown: 1
       throwCooldown: 5
       airTime: 3
+      ammo: 0
+      range: 3
+      spread: 0
   currentGameData:
     points: 0
     man:
       breadThrown: 0
       throwCooldown: 0
       airTime: 0
+      ammo: 0
+      range: 0
+      spread: 0
     mallard:
       count: 0
       eatDuration: 0
       speed: 0
       acceleration: 0
       rotationSpeed: 0
+      pointsPerQuack: 0
     npcFeeders:
       breadThrown: 0
       throwCooldown: 0
       airTime: 0
+      ammo: 0
+      range: 0
+      spread: 0
     manualFeeders:
       breadThrown: 0
       throwCooldown: 0
       airTime: 0
+      ammo: 0
+      range: 0
+      spread: 0
     autoFeeders:
       breadThrown: 0
       throwCooldown: 0
       airTime: 0
+      ammo: 0
+      range: 0
+      spread: 0
 --- !u!114 &11463072
 MonoBehaviour:
   m_ObjectHideFlags: 1

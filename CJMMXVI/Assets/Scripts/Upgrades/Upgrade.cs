@@ -17,6 +17,12 @@ public class Upgrade : ScriptableObject
 		public float throwCooldown;
 		[SerializeField]
 		public float airTime;
+		[SerializeField]
+		public int ammo;
+		[SerializeField]
+		public float range;
+		[SerializeField]
+		public float spread;
 	}
 
 	[Serializable]
@@ -32,6 +38,8 @@ public class Upgrade : ScriptableObject
 		public float acceleration;
 		[SerializeField]
 		public float rotationSpeed;
+		[SerializeField]
+		public int pointsPerQuack;
 	}
 
 	[Serializable]
@@ -104,6 +112,9 @@ public class Upgrade : ScriptableObject
 		data.mallard.eatDuration += mallard.eatDuration;
 		data.mallard.count += mallard.count;
 		data.mallard.speed += mallard.speed;
+		data.mallard.acceleration += mallard.acceleration;
+		data.mallard.rotationSpeed += mallard.rotationSpeed;
+		data.mallard.pointsPerQuack += mallard.pointsPerQuack;
 		
 		data.mallard.acceleration += mallard.acceleration;
 		data.mallard.rotationSpeed += mallard.rotationSpeed;
@@ -116,6 +127,9 @@ public class Upgrade : ScriptableObject
 		gameData.breadThrown += upgr.breadThrown;
 		gameData.throwCooldown += upgr.throwCooldown;
 		gameData.airTime += upgr.airTime;
+		gameData.ammo += upgr.ammo;
+		gameData.range += upgr.range;
+		gameData.spread += upgr.spread;
 		
 		return gameData;
 	}
