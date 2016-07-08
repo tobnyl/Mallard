@@ -23,7 +23,7 @@ public class GameUi : MonoBehaviour
 	[SerializeField]
 	public UpgradesPage upgrades;
 	[SerializeField]
-	public RectTransform credits;
+	public CanvasGroup credits;
 
 	Page _currentPage;
 	List<GuiPage> pages;
@@ -128,6 +128,17 @@ public class GameUi : MonoBehaviour
 		const float fadeOutDur = 3.0f;
 
 		float timer = 0.0f;
+
+
+		timer = fadeInDur;
+		while(timer > 0.0f)
+		{
+			float t = Mathf.Clamp01(1.0f - (timer / fadeInDur));
+			credits.alpha = t;
+			timer -= Time.deltaTime;
+			yield return null;
+		}
+		credits.alpha = 1.0f;
 
 		foreach(var label in creditLabels)
 		{

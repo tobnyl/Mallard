@@ -49,22 +49,32 @@ public class Game : MonoBehaviour
 	class Sounds
 	{
 		[Serializable]
-		public class MusicTrack
+		public class Track
 		{
 			[SerializeField]
 			public Audio audio;
-			[SerializeField]
+			[SerializeField, Range(0.0f, 1.0f)]
 			public float stopsAt;
+			[SerializeField]
+			public bool distributeOver;
+			[SerializeField]
+			public bool inverse;
+			[SerializeField, ReadOnly]
+			public AudioSourceExtended source;
+			[SerializeField, ReadOnly]
+			public bool hasBeenStopped;
 		}
 
 		[SerializeField]
-		public MusicTrack[] tracks;
+		public Track[] tracks;
 	}
 	#endregion
 
 	#region Fields
 	[SerializeField]
 	Visuals visuals;
+	[SerializeField]
+	Sounds sounds;
 
 	[SerializeField, Space(5.0f)]
 	Transform mallardSpawnPoint;
@@ -181,6 +191,15 @@ public class Game : MonoBehaviour
 			obj.gameObject.SetActive(false);
 		}
 
+		foreach(var track in sounds.tracks)
+		{
+			track.source = AudioManager.Instance.Play(track.audio, Vector3.zero);
+			if(track.inverse)
+			{
+				track.source.Source.volume = 0.0f;
+			}
+		}
+
 		loaded = true;
 	}
 
@@ -240,6 +259,16 @@ public class Game : MonoBehaviour
 					cam.orthographicSize = visuals.cameraZoomRange.Lerp(fuckedUpOMeter);
 				}
 			}
+
+			foreach(var track in sounds.tracks)
+			{
+				if(track.distributeOver)
+				{
+					float t = track.inverse ? fuckedUpOMeter : 1.0f - fuckedUpOMeter;
+					t = Mathf.InverseLerp(0.0f, track.stopsAt, t);
+					track.source.Source.volume = t;
+				}
+			}
 		}
 	}
 	#endregion
@@ -285,6 +314,34 @@ public class Game : MonoBehaviour
 
 		entityMan.OnGameDataChanged(currentGameData);
 		gui.OnGameDataChanged(currentGameData);
+
+		foreach(var track in sounds.tracks)
+		{
+			if(track.distributeOver) { continue; }
+
+			if(currentGameData.fuckedUpOMeter >= track.stopsAt)
+			{
+				if(track.hasBeenStopped) { continue; }
+
+				StartCoroutine(FadeOut(track.source.Source, 5.0f));
+			}
+		}
+	}
+
+	IEnumerator FadeOut(AudioSource source, float duration)
+	{
+		float timer = duration;
+
+		float from = source.volume;
+
+		while(timer > 0.0f)
+		{
+			source.volume = Mathf.Lerp(from, 0.0f, timer / duration);
+			timer -= Time.deltaTime;
+			yield return null;
+		}
+
+		source.volume = 0.0f;
 	}
 
 	void CacheSceneObjects(Upgrade.SceneObject[] objs)

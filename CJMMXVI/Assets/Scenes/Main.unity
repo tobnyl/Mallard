@@ -186,6 +186,14 @@ Prefab:
       propertyPath: deactivateOnStart
       value: 
       objectReference: {fileID: 1473010933}
+    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sounds.tracks.Array.data[0].distributeOver
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: sounds.tracks.Array.data[1].distributeOver
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
   m_IsPrefabParent: 0

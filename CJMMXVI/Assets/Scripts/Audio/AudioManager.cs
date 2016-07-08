@@ -77,9 +77,9 @@ public class AudioManager : MonoBehaviour
         _clipList.Clear();
     }
 
-    public GameObject Play(Audio audio, Vector3 position, bool muteAllActiveSfx = false)
+    public AudioSourceExtended Play(Audio audio, Vector3 position, bool muteAllActiveSfx = false)
     {
-        GameObject _audioSource = null;
+		AudioSourceExtended _audioSource = null;
 
         if (muteAllActiveSfx)
         {
@@ -136,7 +136,7 @@ public class AudioManager : MonoBehaviour
         //_musicAudioSource.Play();
     }
 
-    private GameObject Play(AudioClip clip, AudioMixerGroup group, Vector3 position, bool loop, float minVol = 1.0f, float maxVol = 1.0f, float minPitch = 1.0f, float maxPitch = 1.0f)
+	private AudioSourceExtended Play(AudioClip clip, AudioMixerGroup group, Vector3 position, bool loop, float minVol = 1.0f, float maxVol = 1.0f, float minPitch = 1.0f, float maxPitch = 1.0f)
     {
 		AudioSource audioSource = sourcePool.Get();
      
@@ -172,6 +172,6 @@ public class AudioManager : MonoBehaviour
 
 		audioSourceExtended.Run();
 
-        return audioSource.gameObject;
+        return audioSourceExtended;
     }
 }

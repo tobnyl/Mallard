@@ -26,6 +26,7 @@ GameObject:
   - 224: {fileID: 22487430}
   - 222: {fileID: 22293946}
   - 114: {fileID: 11444816}
+  - 114: {fileID: 11466268}
   m_Layer: 5
   m_Name: PointsLabel
   m_TagString: Untagged
@@ -65,12 +66,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6d5f9874de8736643ba5fffa32039052, type: 3}
-    m_FontSize: 24
+    m_Font: {fileID: 12800000, guid: 984f345a2cfcae6459f13a105518ff97, type: 3}
+    m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 42
     m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -78,6 +79,20 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 0 Quacks
+--- !u!114 &11466268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!222 &22293946
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -100,7 +115,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20, y: -20}
+  m_AnchoredPosition: {x: -30, y: -20}
   m_SizeDelta: {x: 344.4, y: 65.3}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &22487430

@@ -437,6 +437,87 @@ MonoBehaviour:
     cameraZoomRange:
       min: 4
       max: 10
+    finalCamZoom: 0
+  sounds:
+    tracks:
+    - audio:
+        Clip: {fileID: 8300000, guid: 8b29e63732c107247a1d3f797199e5ac, type: 3}
+        Output: {fileID: 24360614, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
+        MinVolume: 1
+        MaxVolume: 1
+        MinPitch: 1
+        MaxPitch: 1
+        Loop: 1
+        Mute: 0
+      stopsAt: 1
+      distributeOver: 1
+      inverse: 0
+      source: {fileID: 0}
+    - audio:
+        Clip: {fileID: 8300000, guid: 51bd4df0dc160bf4985ea0abff63a660, type: 3}
+        Output: {fileID: 24360614, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
+        MinVolume: 1
+        MaxVolume: 1
+        MinPitch: 1
+        MaxPitch: 1
+        Loop: 1
+        Mute: 0
+      stopsAt: 1
+      distributeOver: 1
+      inverse: 1
+      source: {fileID: 0}
+    - audio:
+        Clip: {fileID: 8300000, guid: 93fa6af54274dd74f8e5da96bc833c16, type: 3}
+        Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
+        MinVolume: 1
+        MaxVolume: 1
+        MinPitch: 1
+        MaxPitch: 1
+        Loop: 1
+        Mute: 0
+      stopsAt: 0.25
+      distributeOver: 0
+      inverse: 0
+      source: {fileID: 0}
+    - audio:
+        Clip: {fileID: 8300000, guid: ae4f16b5beca08b45b4bf3c7150aa32d, type: 3}
+        Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
+        MinVolume: 1
+        MaxVolume: 1
+        MinPitch: 1
+        MaxPitch: 1
+        Loop: 1
+        Mute: 0
+      stopsAt: 0.5
+      distributeOver: 0
+      inverse: 0
+      source: {fileID: 0}
+    - audio:
+        Clip: {fileID: 8300000, guid: 51fffff0a2df3e04a8215e06c9190f3d, type: 3}
+        Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
+        MinVolume: 1
+        MaxVolume: 1
+        MinPitch: 1
+        MaxPitch: 1
+        Loop: 1
+        Mute: 0
+      stopsAt: 0.75
+      distributeOver: 0
+      inverse: 0
+      source: {fileID: 0}
+    - audio:
+        Clip: {fileID: 8300000, guid: e2f305082509b014eb01ba30329fc8fc, type: 3}
+        Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
+        MinVolume: 1
+        MaxVolume: 1
+        MinPitch: 1
+        MaxPitch: 1
+        Loop: 1
+        Mute: 0
+      stopsAt: 1
+      distributeOver: 0
+      inverse: 0
+      source: {fileID: 0}
   mallardSpawnPoint: {fileID: 0}
   deactivateOnStart: {fileID: 0}
   initialGameData:
@@ -538,23 +619,7 @@ MonoBehaviour:
   AudioSourcePrefab: {fileID: 8216268, guid: 8dbe53359ac740c48bddc29c1edf5fdd, type: 2}
   Master: {fileID: 24300001, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
   AllowDuplicatesPerFrame: 0
-  GlobalSounds:
-  - Clip: {fileID: 8300000, guid: bb9dd4e7b292a3644962dde9afabacc5, type: 3}
-    Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
-    MinVolume: 1
-    MaxVolume: 1
-    MinPitch: 1
-    MaxPitch: 1
-    Loop: 1
-    Mute: 0
-  - Clip: {fileID: 8300000, guid: 8b29e63732c107247a1d3f797199e5ac, type: 3}
-    Output: {fileID: 24360614, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
-    MinVolume: 1
-    MaxVolume: 1
-    MinPitch: 1
-    MaxPitch: 1
-    Loop: 1
-    Mute: 0
+  GlobalSounds: []
 --- !u!114 &11479910
 MonoBehaviour:
   m_ObjectHideFlags: 1
