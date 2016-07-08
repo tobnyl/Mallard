@@ -429,7 +429,7 @@ MonoBehaviour:
       max: 0.15
     vignette: {fileID: 11417070}
     vignetteRange:
-      min: 0.036
+      min: 0.1
       max: 0.4
     cameras:
     - {fileID: 2064744}
@@ -453,6 +453,7 @@ MonoBehaviour:
       distributeOver: 1
       inverse: 0
       source: {fileID: 0}
+      hasBeenStopped: 0
     - audio:
         Clip: {fileID: 8300000, guid: 51bd4df0dc160bf4985ea0abff63a660, type: 3}
         Output: {fileID: 24360614, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
@@ -466,6 +467,7 @@ MonoBehaviour:
       distributeOver: 1
       inverse: 1
       source: {fileID: 0}
+      hasBeenStopped: 0
     - audio:
         Clip: {fileID: 8300000, guid: 93fa6af54274dd74f8e5da96bc833c16, type: 3}
         Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
@@ -479,6 +481,7 @@ MonoBehaviour:
       distributeOver: 0
       inverse: 0
       source: {fileID: 0}
+      hasBeenStopped: 0
     - audio:
         Clip: {fileID: 8300000, guid: ae4f16b5beca08b45b4bf3c7150aa32d, type: 3}
         Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
@@ -492,6 +495,7 @@ MonoBehaviour:
       distributeOver: 0
       inverse: 0
       source: {fileID: 0}
+      hasBeenStopped: 0
     - audio:
         Clip: {fileID: 8300000, guid: 51fffff0a2df3e04a8215e06c9190f3d, type: 3}
         Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
@@ -505,6 +509,7 @@ MonoBehaviour:
       distributeOver: 0
       inverse: 0
       source: {fileID: 0}
+      hasBeenStopped: 0
     - audio:
         Clip: {fileID: 8300000, guid: e2f305082509b014eb01ba30329fc8fc, type: 3}
         Output: {fileID: 24390194, guid: 902a5e76d93c1fc4dbd6358818522202, type: 2}
@@ -518,6 +523,7 @@ MonoBehaviour:
       distributeOver: 0
       inverse: 0
       source: {fileID: 0}
+      hasBeenStopped: 0
   mallardSpawnPoint: {fileID: 0}
   deactivateOnStart: {fileID: 0}
   initialGameData:

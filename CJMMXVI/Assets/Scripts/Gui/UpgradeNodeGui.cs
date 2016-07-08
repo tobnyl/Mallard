@@ -72,7 +72,8 @@ public class UpgradeNodeGui : MonoBehaviour
 			bool researched = manager.IsResearched(activeLevel);
 			if(!researched)
 			{
-				iconButton.interactable = manager.Researchable(activeLevel);
+				iconButton.interactable = manager.AllDependenciesResearched(activeLevel);
+					//manager.Researchable(activeLevel);
 				break;
 			}
 		}
@@ -84,7 +85,15 @@ public class UpgradeNodeGui : MonoBehaviour
 		else
 		{
 			levelRoot.gameObject.SetActive(true);
-			levelLabel.text = level.ToString();
+
+
+			string no =
+				level == 0 ? "-" :
+				level == 1 ? "I" :
+				level == 2 ? "II" :
+				"III";
+
+			levelLabel.text = no;
 		}
 
 		if(activeLevel != null)
