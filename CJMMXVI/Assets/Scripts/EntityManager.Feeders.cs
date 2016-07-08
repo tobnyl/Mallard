@@ -32,7 +32,6 @@ public partial class EntityManager : MonoBehaviour
 		}
 	}
 
-
 	void UpdateFeeder(Feeder feeder, bool wasSelected)
 	{
 		Transform feederTrans = feeder.transform;
@@ -41,8 +40,10 @@ public partial class EntityManager : MonoBehaviour
 
 		if (feeder.playerControlled && feeder.ammo == 0 && feeder.usesAmmo)
 		{
-			if (wasSelected)
+			if (wasSelected || feeder.wasButtoned)
 			{
+				feeder.wasButtoned = false;
+
 				// TODO: TEmp
 				REND_BUFFER.Clear();
 				feeder.GetComponentsInChildren<MeshRenderer>(REND_BUFFER);
@@ -151,7 +152,7 @@ public partial class EntityManager : MonoBehaviour
 				}
 
 				if (feeder.ReloadCanvas != null)
-				{
+				{					
 					feeder.ReloadCanvas.gameObject.SetActive(true);
 				}
 			}

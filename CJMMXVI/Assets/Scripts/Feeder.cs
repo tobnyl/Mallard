@@ -3,6 +3,7 @@ using UE = UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UI = UnityEngine.UI;
 
 public class Feeder : Entity
 {
@@ -37,17 +38,28 @@ public class Feeder : Entity
 	public RectTransform Bar;
 	[SerializeField]
 	public Canvas ReloadCanvas;
+	public UI.Button ReloadButton;
 
 	[ReadOnly]
 	public float feedTimer;
 	[ReadOnly]
 	public float throwDelayTimer;
+
+	[ReadOnly] public bool wasButtoned;
 	#endregion
 
 	#region Methods
 	void OnEnable()
 	{
 		EntityManager.RegisterEntity(this);
+
+		if (ReloadButton != null)
+		{
+			ReloadButton.onClick.AddListener(() =>
+			{
+				wasButtoned = true;
+			});
+		}
 	}
 
 	void OnDisable()
