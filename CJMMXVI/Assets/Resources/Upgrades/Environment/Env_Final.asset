@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Name: Env_Final
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: "Fallwater\u2122"
-  upgradeDescription: 
+  upgradeName: "Fallwater\u2122 Buy Out"
+  upgradeDescription: An energy company that definitely has no connection to a nordic
+    government, wants to sell their coal factory. The extra energy would boost your
+    feeders quite a bit.
   researchSound:
     Clip: {fileID: 8300000, guid: 45c66a2ba33a178488c1d75bf1fe51fc, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -30,6 +32,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dc2d5c6c438894840ae58d1975721451, type: 2}
   - {fileID: 11400000, guid: 4406166260a3ab14bb4a21ea4c6f2ca0, type: 2}
   - {fileID: 11400000, guid: 07b83c8ca9509e84b97ef1a5613b7dea, type: 2}
+  endGame: 0
   man:
     breadThrown: 0
     throwCooldown: 0
@@ -38,6 +41,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   mallard:
     eatDuration: 0
     count: 10
@@ -58,6 +62,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: -0.25
@@ -66,3 +71,4 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Hostile Takeover I
-  upgradeDescription: 
+  upgradeDescription: Those little old ladies are competition you could do without.
+    Wouldn't it be swell if they... had an accident?
   researchSound:
     Clip: {fileID: 8300000, guid: 569016348448c08479d153f5ca11d9c5, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -25,7 +26,9 @@ MonoBehaviour:
     Mute: 0
   cost: 30
   researchTime: 0
+  fuckedUpLevel: 0
   dependencies: []
+  endGame: 0
   man:
     breadThrown: 0
     throwCooldown: 0
@@ -34,6 +37,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   mallard:
     eatDuration: 0
     count: 1
@@ -54,6 +58,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: 0
@@ -62,3 +67,4 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0

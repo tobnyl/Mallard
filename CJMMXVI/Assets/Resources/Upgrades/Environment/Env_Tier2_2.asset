@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Automaton II
-  upgradeDescription: 
+  upgradeDescription: 'Man''s greatest invention: the Mallard Feeder 3000. Requires
+    reloading, but greatly increases your quacks-per-minutes.'
   researchSound:
     Clip: {fileID: 8300000, guid: 39816e5a59c689142aee849dd91b6fe0, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -25,9 +26,11 @@ MonoBehaviour:
     Mute: 0
   cost: 100
   researchTime: 0
+  fuckedUpLevel: 0
   dependencies:
   - {fileID: 11400000, guid: f8a13ff6f537bdd4c93cac0fa6dd4be5, type: 2}
   - {fileID: 11400000, guid: 8ed866f7005ff8241bb7bb021d56343a, type: 2}
+  endGame: 0
   man:
     breadThrown: 0
     throwCooldown: 0
@@ -36,6 +39,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   mallard:
     eatDuration: 0
     count: 1
@@ -56,6 +60,7 @@ MonoBehaviour:
     range: 0
     spread: 5
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: -0.5
@@ -64,3 +69,4 @@ MonoBehaviour:
     range: 0
     spread: 5
     throwAnimSpeed: 0
+    throwDelayDuration: 0

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Bionic Commando
-  upgradeDescription: Removes throw cooldown
+  upgradeDescription: All these fleshy parts are holding you back. Rebuild yourself
+    and remove your throw cooldown entirely.
   researchSound:
     Clip: {fileID: 8300000, guid: 38eef2c324a90a747bfb98830c2c9a8c, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -39,6 +40,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   mallard:
     eatDuration: 0
     count: 10
@@ -60,6 +62,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: 0
@@ -68,3 +71,4 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0

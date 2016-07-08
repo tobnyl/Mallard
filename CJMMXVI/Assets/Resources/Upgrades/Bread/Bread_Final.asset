@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: Bread_Final
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: Plutonium-Enhanced Bread
-  upgradeDescription: 2 times the quacks
+  upgradeName: Plutonium-Laced Bread
+  upgradeDescription: The local power plant needs somewhere to dump their wastes and,
+    well, mutated mallards quack twice as much.
   researchSound:
     Clip: {fileID: 8300000, guid: a6c4b32127f1c4941b63e2eac6228cfc, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -30,6 +31,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7ed5bd0cc137bcc4e9097101a946d6dc, type: 2}
   - {fileID: 11400000, guid: fe189eeb5e2a03b4d883898c8bc74154, type: 2}
   - {fileID: 11400000, guid: d9dca6a656d8b744b8171d5494c949bd, type: 2}
+  endGame: 0
   man:
     breadThrown: 0
     throwCooldown: 0
@@ -38,6 +40,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   mallard:
     eatDuration: 0
     count: 10
@@ -57,6 +60,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: 0
@@ -65,3 +69,4 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0

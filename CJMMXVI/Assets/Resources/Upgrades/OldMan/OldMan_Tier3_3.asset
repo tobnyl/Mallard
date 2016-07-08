@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: OldMan_Tier3_3
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: Heart of Steel III
-  upgradeDescription: Less Airtime?
+  upgradeName: Overclocking III
+  upgradeDescription: Your pacemaker can easily run twice as fast, further enhancing
+    your throw speed.
   researchSound:
     Clip: {fileID: 8300000, guid: 2de0d2b585479e64fb8c224749454e11, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}

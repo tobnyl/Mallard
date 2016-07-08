@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Optics I
-  upgradeDescription: Range + Spread
+  upgradeDescription: When was the last time you visited the optician? Increase your
+    throwing speed and range with better eye-sight.
   researchSound:
     Clip: {fileID: 8300000, guid: 5a43ba6ca217c274d8b977c41dbbf139, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -25,8 +26,10 @@ MonoBehaviour:
     Mute: 0
   cost: 20
   researchTime: 0
+  fuckedUpLevel: 0
   dependencies:
   - {fileID: 11400000, guid: c3279efefb1ded341baf86fb92e693d3, type: 2}
+  endGame: 0
   man:
     breadThrown: 0
     throwCooldown: -0.35
@@ -35,6 +38,7 @@ MonoBehaviour:
     range: 0.5
     spread: 50
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   mallard:
     eatDuration: 0
     count: 1
@@ -54,6 +58,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: 0
@@ -62,3 +67,4 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0

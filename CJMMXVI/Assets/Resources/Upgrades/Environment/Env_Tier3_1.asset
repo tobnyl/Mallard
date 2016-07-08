@@ -13,7 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Military-Grade Feeding I
-  upgradeDescription: 
+  upgradeDescription: The Mallard-Feeder 3000 would look <i>awesome</i> with these
+    spare artillery cannons attached. Might as well fully automate it while you're
+    at it.
   researchSound:
     Clip: {fileID: 8300000, guid: e7c4e561e6c921f4b8e5572119db3a8c, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -25,8 +27,10 @@ MonoBehaviour:
     Mute: 0
   cost: 200
   researchTime: 0
+  fuckedUpLevel: 0
   dependencies:
   - {fileID: 11400000, guid: f8a13ff6f537bdd4c93cac0fa6dd4be5, type: 2}
+  endGame: 0
   man:
     breadThrown: 0
     throwCooldown: 0
@@ -35,6 +39,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   mallard:
     eatDuration: 0
     count: 1
@@ -56,6 +61,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: 0
@@ -64,3 +70,4 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0

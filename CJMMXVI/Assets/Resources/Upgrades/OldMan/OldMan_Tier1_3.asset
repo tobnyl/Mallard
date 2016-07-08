@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Fika III
-  upgradeDescription: Throw faster
+  upgradeDescription: Coffee is just the fuel for mallard feeding enthusiasts like
+    you. Makes you throw faster.
   researchSound:
     Clip: {fileID: 8300000, guid: 8ba685f4a61e00a4ba90e7dcd71ea08e, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -25,8 +26,10 @@ MonoBehaviour:
     Mute: 0
   cost: 30
   researchTime: 0
+  fuckedUpLevel: 0
   dependencies:
   - {fileID: 11400000, guid: eac2386f6a3440e4ca23be6200d1e38b, type: 2}
+  endGame: 0
   man:
     breadThrown: 0
     throwCooldown: -0.35
@@ -35,6 +38,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0.5
+    throwDelayDuration: 0
   mallard:
     eatDuration: 0
     count: 1
@@ -54,6 +58,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: 0
@@ -62,3 +67,4 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0

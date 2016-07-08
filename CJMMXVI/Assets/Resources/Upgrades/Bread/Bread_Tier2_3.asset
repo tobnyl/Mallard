@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: Bread_Tier2_3
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: Smokey Bread III
-  upgradeDescription: Eats Faster
+  upgradeName: Smoky Rye III
+  upgradeDescription: Whoever dropped their ashtray into this bread did you a favor.
+    Turns out Mallards are crazy for nicotine, increasing their eating speed.
   researchSound:
     Clip: {fileID: 8300000, guid: 061ac20cae3c9654582a561281768812, type: 3}
     Output: {fileID: 24311128, guid: 9128064bed47f964ea2c1feed5e68af4, type: 2}
@@ -25,8 +26,10 @@ MonoBehaviour:
     Mute: 0
   cost: 50
   researchTime: 0
+  fuckedUpLevel: 0
   dependencies:
   - {fileID: 11400000, guid: 8dfcc2487adf7b44faaa7a233fe980c7, type: 2}
+  endGame: 0
   man:
     breadThrown: 0
     throwCooldown: 0
@@ -35,6 +38,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   mallard:
     eatDuration: -0.5
     count: 0
@@ -54,6 +58,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: 0
@@ -62,3 +67,4 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
