@@ -172,7 +172,17 @@ public partial class EntityManager : MonoBehaviour
 
 			GameData.FeederData data = FeederDataForKind(feeder.kind);
 
-			feeder.animator.SetFloat(THROW_MULT_HASH, data.throwAnimSpeed);
+			if(feeder.animator.gameObject.activeInHierarchy)
+			{
+				feeder.animator.SetFloat(THROW_MULT_HASH, data.throwAnimSpeed);
+			}
+			if(feeder.additionalAnimator != null)
+			{
+				if(feeder.additionalAnimator.gameObject.activeInHierarchy)
+				{
+					feeder.additionalAnimator.SetFloat(THROW_MULT_HASH, data.throwAnimSpeed);
+				}
+			}
 		}
 	}
 

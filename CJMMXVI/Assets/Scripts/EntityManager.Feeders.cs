@@ -159,7 +159,18 @@ public partial class EntityManager : MonoBehaviour
 
 		if(feeder.animator != null)
 		{
-			feeder.animator.SetTrigger(THROW_HASH);
+			if(feeder.animator.gameObject.activeInHierarchy)
+			{
+				feeder.animator.SetTrigger(THROW_HASH);
+			}
+		}
+
+		if(feeder.additionalAnimator != null)
+		{
+			if(feeder.additionalAnimator.gameObject.activeInHierarchy)
+			{
+				feeder.additionalAnimator.SetTrigger(THROW_HASH);
+			}
 		}
 
 		feeder.throwDelayTimer = feederData.throwAnimSpeed == 0.0f ?

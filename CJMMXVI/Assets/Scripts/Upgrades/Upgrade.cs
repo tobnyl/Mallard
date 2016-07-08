@@ -25,6 +25,8 @@ public class Upgrade : ScriptableObject
 		public float spread;
 		[SerializeField]
 		public float throwAnimSpeed;
+		[SerializeField]
+		public float throwDelayDuration;
 	}
 
 	[Serializable]

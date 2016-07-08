@@ -32,6 +32,8 @@ public class Feeder : Entity
 	[SerializeField]
 	public Animator animator;
 	[SerializeField]
+	public Animator additionalAnimator;
+	[SerializeField]
 	public float throwDelayDuration;
 	[SerializeField]
 	public RectTransform Bar;
