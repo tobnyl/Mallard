@@ -28,7 +28,6 @@ public partial class EntityManager : MonoBehaviour
 			GameData.FeederData feederData = FeederDataForKind(feeder.kind);
 			var barScale = feeder.Bar.transform.localScale;
 			barScale.x = Mathf.Lerp(1, 0, feeder.feedTimer / feederData.throwCooldown);
-			Debug.Log(barScale.x);
 			feeder.Bar.transform.localScale = barScale;
 		}
 	}
