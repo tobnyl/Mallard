@@ -100,7 +100,7 @@ public class Game : MonoBehaviour
 
 	IEnumerator Load()
 	{
-		fuckedUpOMeter = 0.0f;
+		fuckedUpOMeter = -1.0f;
 
 		var toDeactivate = new List<Transform>();
 
