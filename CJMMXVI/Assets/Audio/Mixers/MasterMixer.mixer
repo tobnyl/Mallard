@@ -148,7 +148,7 @@ AudioMixerEffectController:
     m_GUID: 5f85cf2919573af4399fa4e0b0223309
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
-  m_Bypass: 0
+  m_Bypass: 1
 --- !u!244 &24415732
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -202,6 +202,7 @@ AudioMixerSnapshotController:
     5b807cd37fc5e0749b492b1172b6245b: -10.867776
     fe57ec342bf54a343acfe9497f15f33d: -2321
     5cf5a2675fe666e47ab252e0374e818e: 0
-    f76ee17752384074db61f40305787b02: -9.833286
+    f76ee17752384074db61f40305787b02: -15.421314
     9fc4ad2d2267161479b479d200b34870: 0.68
+    e347e0ee595e8c24da82cdfcb2f78c33: -0.02577656
   m_TransitionOverrides: {}
