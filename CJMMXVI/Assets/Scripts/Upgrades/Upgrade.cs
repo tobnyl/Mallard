@@ -84,6 +84,9 @@ public class Upgrade : ScriptableObject
 	public float researchTime;
 
 	[SerializeField]
+	public float fuckedUpLevel;
+
+	[SerializeField]
 	public Upgrade[] dependencies;
 
 	[SerializeField]
@@ -106,6 +109,7 @@ public class Upgrade : ScriptableObject
 	public GameData ApplyOn(GameData data)
 	{
 		data.points -= cost;
+		data.fuckedUpOMeter += fuckedUpLevel;
 		
 		data.man = ApplyFeederData(data.man, man);
 		data.manualFeeders = ApplyFeederData(data.manualFeeders, manualFeeders);

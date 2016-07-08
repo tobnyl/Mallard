@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UE = UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.ImageEffects;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,8 +12,59 @@ using System.Collections.Generic;
 )]
 public class Game : MonoBehaviour
 {
+	#region Types
+	[Serializable]
+	struct FloatRange
+	{
+		public float min;
+		public float max;
+
+		public float Lerp(float t)
+		{
+			return Mathf.Lerp(min, max, t);
+		}
+	}
+
+	[Serializable]
+	class Visuals
+	{
+		[SerializeField]
+		public ColorCorrectionCurves colorCurves;
+		[SerializeField]
+		public FloatRange saturationRange;
+		[SerializeField]
+		public VignetteAndChromaticAberration vignette;
+		[SerializeField]
+		public FloatRange vignetteRange;
+
+		[SerializeField]
+		public Camera[] cameras;
+		[SerializeField]
+		public FloatRange cameraZoomRange;
+	}
+
+	[Serializable]
+	class Sounds
+	{
+		[Serializable]
+		public class MusicTrack
+		{
+			[SerializeField]
+			public Audio audio;
+			[SerializeField]
+			public float stopsAt;
+		}
+
+		[SerializeField]
+		public MusicTrack[] tracks;
+	}
+	#endregion
+
 	#region Fields
 	[SerializeField]
+	Visuals visuals;
+
+	[SerializeField, Space(5.0f)]
 	Transform mallardSpawnPoint;
 	[SerializeField]
 	Transform deactivateOnStart;
@@ -22,6 +74,9 @@ public class Game : MonoBehaviour
 	[Header("Read-only")]
 	[SerializeField]
 	GameData currentGameData;
+
+	[SerializeField, Range(0.0f, 1.0f)]
+	float fuckedUpOMeter;
 
 	Upgrade[] upgrades;
 
@@ -48,6 +103,8 @@ public class Game : MonoBehaviour
 
 	IEnumerator Load()
 	{
+		fuckedUpOMeter = -1.0f;
+
 		var toDeactivate = new List<Transform>();
 
 		if(deactivateOnStart != null)
@@ -153,6 +210,35 @@ public class Game : MonoBehaviour
 		gui.main.points.SetPoints(currentGameData.points);
 
 		gui.DoUpdate();
+
+		if(fuckedUpOMeter != currentGameData.fuckedUpOMeter)
+		{
+			fuckedUpOMeter = Mathf.Lerp(fuckedUpOMeter, currentGameData.fuckedUpOMeter, Time.deltaTime);
+
+			if(Mathf.Abs(fuckedUpOMeter - currentGameData.fuckedUpOMeter) < 0.0001f)
+			{
+				fuckedUpOMeter = currentGameData.fuckedUpOMeter;
+			}
+
+			if(visuals.vignette != null)
+			{
+				visuals.vignette.intensity = visuals.vignetteRange.Lerp(fuckedUpOMeter);
+			}
+
+			if(visuals.colorCurves != null)
+			{
+				visuals.colorCurves.saturation = visuals.saturationRange.Lerp(fuckedUpOMeter);
+			}
+
+			for(int i = 0; i < visuals.cameras.Length; ++i)
+			{
+				Camera cam = visuals.cameras[i];
+				if(cam != null)
+				{
+					cam.orthographicSize = visuals.cameraZoomRange.Lerp(fuckedUpOMeter);
+				}
+			}
+		}
 	}
 	#endregion
 
