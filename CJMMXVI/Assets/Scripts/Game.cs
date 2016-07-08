@@ -23,6 +23,9 @@ public class Game : MonoBehaviour
 	[SerializeField]
 	GameData currentGameData;
 
+	[SerializeField, ReadOnly]
+	float fuckedUpOMeter;
+
 	Upgrade[] upgrades;
 
 	bool loaded;
@@ -48,6 +51,8 @@ public class Game : MonoBehaviour
 
 	IEnumerator Load()
 	{
+		fuckedUpOMeter = 0.0f;
+
 		var toDeactivate = new List<Transform>();
 
 		if(deactivateOnStart != null)
@@ -141,6 +146,16 @@ public class Game : MonoBehaviour
 	void Update()
 	{
 		if(!loaded) { return; }
+
+		if(fuckedUpOMeter != currentGameData.fuckedUpOMeter)
+		{
+			fuckedUpOMeter = Mathf.Lerp(fuckedUpOMeter, currentGameData.fuckedUpOMeter, 4.0f * Time.deltaTime);
+
+			if(Mathf.Abs(fuckedUpOMeter - currentGameData.fuckedUpOMeter) < 0.0001f)
+			{
+				fuckedUpOMeter = currentGameData.fuckedUpOMeter;
+			}
+		}
 
 		entityMan.DoUpdate(updateInput: gui.currentPage == GameUi.Page.Main);
 		upgradeMan.DoUpdate();

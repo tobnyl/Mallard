@@ -54,6 +54,8 @@ public struct GameData
 	[SerializeField]
 	public int points;
 	[SerializeField]
+	public float fuckedUpOMeter;
+	[SerializeField]
 	public FeederData man;
 	[SerializeField]
 	public MallardData mallard;
@@ -71,6 +73,8 @@ public struct GameData
 	#region Methods
 	public void Limit()
 	{
+		fuckedUpOMeter = Mathf.Clamp01(fuckedUpOMeter);
+
 		LimitFeederData(ref man);
 		LimitFeederData(ref npcFeeders);
 		LimitFeederData(ref manualFeeders);
