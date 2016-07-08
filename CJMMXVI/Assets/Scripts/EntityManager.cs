@@ -32,6 +32,8 @@ public partial class EntityManager : MonoBehaviour
 	Feeder feederPrefab;
 	[SerializeField]
 	GameObject WaterRingsPrefab;
+	[SerializeField]
+	GameObject WaterSplashPrefab;
 
     [SerializeField]
     Sounds sfx;
