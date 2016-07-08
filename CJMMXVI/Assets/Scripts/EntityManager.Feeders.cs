@@ -19,6 +19,8 @@ public partial class EntityManager : MonoBehaviour
 			gameData.manualFeeders;
 	}
 
+	static readonly List<MeshRenderer> REND_BUFFER = new List<MeshRenderer>();
+
 	void UpdateFeeder(Feeder feeder, bool wasSelected)
 	{
 		Transform feederTrans = feeder.transform;
@@ -90,6 +92,13 @@ public partial class EntityManager : MonoBehaviour
 		{
 			if(wasSelected)
 			{
+				// TODO: TEmp
+				REND_BUFFER.Clear();
+				feeder.GetComponentsInChildren<MeshRenderer>(REND_BUFFER);
+				foreach(var rend in REND_BUFFER)
+				{
+					rend.material.color = Color.white;
+				}
 				feeder.ammo = feederData.ammo;
 			}
 		}
@@ -100,6 +109,22 @@ public partial class EntityManager : MonoBehaviour
 			(feeder.playerControlled && wasSelected));
 
 		if(!shouldFeed) { return; }
+
+		if(feeder.usesAmmo)
+		{
+			--feeder.ammo;
+
+			// TODO: Temp!
+			if(feeder.ammo == 0)
+			{
+				REND_BUFFER.Clear();
+				feeder.GetComponentsInChildren<MeshRenderer>(REND_BUFFER);
+				foreach(var rend in REND_BUFFER)
+				{
+					rend.material.color = Color.red;
+				}
+			}
+		}
 
 		if(feeder.animator != null)
 		{
