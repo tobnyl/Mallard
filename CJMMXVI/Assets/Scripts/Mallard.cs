@@ -17,12 +17,19 @@ public class Mallard : Entity
 	public Feeder eatOrigin;
     [SerializeField, ReadOnly]
     public Vector3 Velocity;
+	[SerializeField]
+	public ParticleSystem WaterRings;
 
-    private bool _isTurning;
+	private bool _isTurning;
     private Quaternion _targetRotation;
     private float _speed;
 
 	#endregion
+
+	void OnEnable()
+	{
+		WaterRings.Stop();
+	}
 
 	public bool RotateToTarget(Vector3 direction, float rotationSpeed)
 	{
@@ -44,5 +51,10 @@ public class Mallard : Entity
 	}
 
         return false;
-    }	
+    }
+
+	public void PlayWaterRings()
+	{
+		WaterRings.Play();
+	}
 }
