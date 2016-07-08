@@ -259,6 +259,8 @@ MonoBehaviour:
   foodPrefab: {fileID: 11499206, guid: 4695e4eb8ef27f847898853139fe4e6a, type: 2}
   mallardPrefab: {fileID: 11401020, guid: 69e7b22bb515e1140b278c413f855604, type: 2}
   feederPrefab: {fileID: 11473726, guid: 756720756db3d2e40a7b46cc9773afb4, type: 2}
+  WaterRingsPrefab: {fileID: 138024, guid: df1cb998286f67e469b09a758378b91d, type: 2}
+  WaterSplashPrefab: {fileID: 124770, guid: 66cf776fc1d5de045b4eb96f7cd91b6c, type: 2}
   sfx:
     OldManSfx:
     - Clip: {fileID: 8300000, guid: 6978eb9fa09846a44b24e2b6c20f5575, type: 3}
@@ -433,7 +435,7 @@ MonoBehaviour:
       airTime: 3
       ammo: 0
       range: 3
-      spread: 0
+      spread: 180
   currentGameData:
     points: 0
     man:
@@ -449,7 +451,7 @@ MonoBehaviour:
       speed: 0
       acceleration: 0
       rotationSpeed: 0
-      pointsPerQuack: 0
+      pointsPerQuack: 1
     npcFeeders:
       breadThrown: 0
       throwCooldown: 0
