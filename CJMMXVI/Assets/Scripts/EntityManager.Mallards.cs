@@ -102,6 +102,8 @@ public partial class EntityManager : MonoBehaviour
 
 				if(mallard.targetFood != null)
 				{
+					mallard.PlayWaterRings();
+
 					//var ps = Instantiate(WaterRingsPrefab, mallard.targetFood.transform.position, WaterRingsPrefab.transform.rotation) as GameObject;
 					//ps.transform.parent = transform;
 

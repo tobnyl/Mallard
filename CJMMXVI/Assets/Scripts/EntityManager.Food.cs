@@ -22,6 +22,8 @@ public partial class EntityManager : MonoBehaviour
 			return;
 		}
 
+		food.PlayWaterRings();
+
 		food.lifeTimer -= Time.deltaTime;
 		if(food.lifeTimer <= 0.0f)
 		{
