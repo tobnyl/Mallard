@@ -23,6 +23,8 @@ public class Upgrade : ScriptableObject
 		public float range;
 		[SerializeField]
 		public float spread;
+		[SerializeField]
+		public float throwAnimSpeed;
 	}
 
 	[Serializable]
@@ -130,6 +132,7 @@ public class Upgrade : ScriptableObject
 		gameData.ammo += upgr.ammo;
 		gameData.range += upgr.range;
 		gameData.spread += upgr.spread;
+		gameData.throwAnimSpeed += upgr.throwAnimSpeed;
 		
 		return gameData;
 	}

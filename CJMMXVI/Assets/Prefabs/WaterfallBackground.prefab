@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3311984}
   - 64: {fileID: 6460656}
   - 23: {fileID: 2373422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WaterfallBackground
   m_TagString: Water
   m_Icon: {fileID: 0}

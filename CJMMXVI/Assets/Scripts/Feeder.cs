@@ -32,10 +32,14 @@ public class Feeder : Entity
 	[SerializeField]
 	public Animator animator;
 	[SerializeField]
+	public float throwDelayDuration;
+	[SerializeField]
 	public RectTransform Bar;
 
 	[ReadOnly]
 	public float feedTimer;
+	[ReadOnly]
+	public float throwDelayTimer;
 	#endregion
 
 	#region Methods

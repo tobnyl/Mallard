@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: OldMan_Tier1_1
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: Fika Power I
+  upgradeName: Fika I
   upgradeDescription: Throw faster
   researchSound:
     Clip: {fileID: 8300000, guid: 8ba685f4a61e00a4ba90e7dcd71ea08e, type: 3}
@@ -23,15 +23,41 @@ MonoBehaviour:
     MaxPitch: 1
     Loop: 0
     Mute: 0
-  cost: 0
+  cost: 5
   researchTime: 0
   dependencies: []
   man:
     breadThrown: 0
-    throwCooldown: -0.5
+    throwCooldown: -0.35
+    airTime: -0.25
+    ammo: 0
+    range: 0
+    spread: 0
+    throwAnimSpeed: 0.5
   mallard:
     eatDuration: 0
-    count: 0
+    count: 1
+    speed: 0
+    acceleration: 0
+    rotationSpeed: 0
+    pointsPerQuack: 0
   environment:
     toActivate: []
     toDeactivate: []
+    enableRadioactiveWater: 0
+  manualFeeders:
+    breadThrown: 0
+    throwCooldown: 0
+    airTime: 0
+    ammo: 0
+    range: 0
+    spread: 0
+    throwAnimSpeed: 0
+  autoFeeders:
+    breadThrown: 0
+    throwCooldown: 0
+    airTime: 0
+    ammo: 0
+    range: 0
+    spread: 0
+    throwAnimSpeed: 0

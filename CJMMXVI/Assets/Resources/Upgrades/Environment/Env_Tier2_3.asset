@@ -23,7 +23,7 @@ MonoBehaviour:
     MaxPitch: 1
     Loop: 0
     Mute: 0
-  cost: 0
+  cost: 200
   researchTime: 0
   dependencies:
   - {fileID: 11400000, guid: 615078510ba22704188249f960b7bfbe, type: 2}
@@ -31,10 +31,36 @@ MonoBehaviour:
   man:
     breadThrown: 0
     throwCooldown: 0
+    airTime: 0
+    ammo: 0
+    range: 0
+    spread: 0
+    throwAnimSpeed: 0
   mallard:
     eatDuration: 0
-    count: 0
+    count: 1
+    speed: 0
+    acceleration: 0
+    rotationSpeed: 0
+    pointsPerQuack: 0
   environment:
     toActivate:
     - scenePath: Feeder3
     toDeactivate: []
+    enableRadioactiveWater: 0
+  manualFeeders:
+    breadThrown: 1
+    throwCooldown: -1
+    airTime: -0.5
+    ammo: 5
+    range: 0
+    spread: 5
+    throwAnimSpeed: 0
+  autoFeeders:
+    breadThrown: 0
+    throwCooldown: -0.5
+    airTime: -0.5
+    ammo: 0
+    range: 0
+    spread: 5
+    throwAnimSpeed: 0

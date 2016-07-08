@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 474562}
   - 33: {fileID: 3393188}
   - 23: {fileID: 2317188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

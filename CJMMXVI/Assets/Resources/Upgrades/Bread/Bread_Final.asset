@@ -23,7 +23,7 @@ MonoBehaviour:
     MaxPitch: 1
     Loop: 0
     Mute: 0
-  cost: 0
+  cost: 1000
   researchTime: 0
   dependencies:
   - {fileID: 11400000, guid: 7ed5bd0cc137bcc4e9097101a946d6dc, type: 2}
@@ -36,9 +36,10 @@ MonoBehaviour:
     ammo: 0
     range: 0
     spread: 0
+    throwAnimSpeed: 0
   mallard:
     eatDuration: 0
-    count: 0
+    count: 10
     speed: 0
     acceleration: 0
     rotationSpeed: 0
@@ -54,6 +55,7 @@ MonoBehaviour:
     ammo: 0
     range: 0
     spread: 0
+    throwAnimSpeed: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: 0
@@ -61,3 +63,4 @@ MonoBehaviour:
     ammo: 0
     range: 0
     spread: 0
+    throwAnimSpeed: 0

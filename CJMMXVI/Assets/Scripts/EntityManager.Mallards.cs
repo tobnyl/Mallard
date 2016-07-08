@@ -8,8 +8,13 @@ public partial class EntityManager : MonoBehaviour
 {
 	#region Methods
 	void UpdateMallard(Mallard mallard)
-	{		
-		if(mallard.eatTimer > 0.0f)
+	{
+		bool targetFoodAlive = mallard.targetFood != null &&
+			idToEntity.ContainsKey(mallard.targetFood.id);
+
+		if(!targetFoodAlive) { mallard.targetFood = null; }
+
+		if(targetFoodAlive && mallard.eatTimer > 0.0f)
 		{
 			mallard.eatTimer -= Time.deltaTime;
 
@@ -29,10 +34,13 @@ public partial class EntityManager : MonoBehaviour
 		Transform mallardTrans = mallard.transform;
 		Vector3 mallardPos = mallardTrans.position;
 
-		bool targetFoodAlive = mallard.targetFood != null &&
-			foods.Contains(mallard.targetFood);
+		
 
-		if(!targetFoodAlive)
+		int every = 3;
+		int mod = mallard.id % every;
+		bool checkForNew = mod == (Time.frameCount % every);
+
+		if(checkForNew)
 		{
 			Food closestFood = null;
 			float closestDist = Mathf.Infinity;
@@ -82,7 +90,7 @@ public partial class EntityManager : MonoBehaviour
 
 			//mallard.Velocity += -mallard.Velocity.normalized * mallard.decel
 
-			mallard.Velocity = Vector3.ClampMagnitude(mallard.Velocity, fromMallardToTarget.magnitude);
+			mallard.Velocity = Vector3.ClampMagnitude(mallard.Velocity, Mathf.Min(fromMallardToTarget.magnitude, gameData.mallard.speed));
 
 			mallardTrans.position += mallard.Velocity;
 
@@ -94,8 +102,8 @@ public partial class EntityManager : MonoBehaviour
 
 				if(mallard.targetFood != null)
 				{
-					var ps = Instantiate(WaterRingsPrefab, mallard.targetFood.transform.position, WaterRingsPrefab.transform.rotation) as GameObject;
-					ps.transform.parent = transform;
+					//var ps = Instantiate(WaterRingsPrefab, mallard.targetFood.transform.position, WaterRingsPrefab.transform.rotation) as GameObject;
+					//ps.transform.parent = transform;
 
 					//Debug.Log(mallardTrans.gameObject.name + " reached target food", this);
 					// Reached food!
