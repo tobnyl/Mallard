@@ -19,6 +19,8 @@ public class UpgradeInfoGui : MonoBehaviour
 	[SerializeField]
 	UI.Button buyButton;
 	[SerializeField]
+	UI.Text buyLabel;
+	[SerializeField]
 	UI.Text costLabel;
 	[SerializeField]
 	UI.Text researchLabel;
@@ -81,7 +83,7 @@ public class UpgradeInfoGui : MonoBehaviour
 				buyButton.interactable = buyable;
 
 				var costColor = buyable ? Color.white : Color.red;
-				costLabel.color = costColor;
+				buyLabel.color = costColor;
 			}
 		}
 	}
