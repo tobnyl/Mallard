@@ -412,8 +412,8 @@ MonoBehaviour:
     mallard:
       count: 5
       eatDuration: 2
-      speed: 1
-      acceleration: 5
+      speed: 0.5
+      acceleration: 2.5
       rotationSpeed: 10
       pointsPerQuack: 1
     npcFeeders:

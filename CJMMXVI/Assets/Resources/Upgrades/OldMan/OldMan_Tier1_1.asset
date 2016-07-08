@@ -23,12 +23,12 @@ MonoBehaviour:
     MaxPitch: 1
     Loop: 0
     Mute: 0
-  cost: 0
+  cost: 10
   researchTime: 0
   dependencies: []
   man:
     breadThrown: 0
-    throwCooldown: -0.25
+    throwCooldown: -0.35
     airTime: -0.25
     ammo: 0
     range: 0

@@ -23,13 +23,13 @@ MonoBehaviour:
     MaxPitch: 1
     Loop: 0
     Mute: 0
-  cost: 0
+  cost: 30
   researchTime: 0
   dependencies:
   - {fileID: 11400000, guid: eac2386f6a3440e4ca23be6200d1e38b, type: 2}
   man:
     breadThrown: 0
-    throwCooldown: -0.25
+    throwCooldown: -0.35
     airTime: -0.25
     ammo: 0
     range: 0

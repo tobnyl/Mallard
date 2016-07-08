@@ -23,7 +23,7 @@ MonoBehaviour:
     MaxPitch: 1
     Loop: 0
     Mute: 0
-  cost: 0
+  cost: 50
   researchTime: 0
   dependencies:
   - {fileID: 11400000, guid: 615078510ba22704188249f960b7bfbe, type: 2}
