@@ -52,6 +52,7 @@ public partial class EntityManager : MonoBehaviour
 
 	Transform mallardSpawn;
 
+	Dictionary<int, Entity> idToEntity;
 	List<Entity> entities;
 
 	List<Feeder> feeders;
@@ -64,6 +65,8 @@ public partial class EntityManager : MonoBehaviour
 	Transform objectsRoot;
 
 	bool mouseWasDown;
+
+	int entityIdCounter;
 	#endregion
 
 	#region Methods
@@ -110,6 +113,7 @@ public partial class EntityManager : MonoBehaviour
 		//	}
 		//}
 
+		idToEntity = new Dictionary<int, Entity>();
 		feeders = new List<Feeder>();
 		mallards = new List<Mallard>(FindObjectsOfType<Mallard>());
 		foods = new List<Food>();
@@ -182,6 +186,10 @@ public partial class EntityManager : MonoBehaviour
 		if(entity is Mallard) { mallards.Add((Mallard)entity); }
 		if(entity is Food) { foods.Add((Food)entity); }
 
+		if(entity.id == 0) { entity.id = ++entityIdCounter; }
+
+		idToEntity[entity.id] = entity;
+
 		entity.transform.parent = objectsRoot;
 	}
 
@@ -190,6 +198,8 @@ public partial class EntityManager : MonoBehaviour
 		if(entity is Feeder) { feeders.Remove((Feeder)entity); }
 		if(entity is Mallard) { mallards.Remove((Mallard)entity); }
 		if(entity is Food) { foods.Remove((Food)entity); }
+
+		idToEntity.Remove(entity.id);
 	}
 	
 	public void DoUpdate(bool updateInput)
