@@ -37,7 +37,26 @@ public partial class EntityManager : MonoBehaviour
 	{
 		Transform feederTrans = feeder.transform;
 
-		if(feeder.feedTimer > 0.0f)
+		GameData.FeederData feederData = FeederDataForKind(feeder.kind);
+
+		if (feeder.playerControlled && feeder.ammo == 0 && feeder.usesAmmo)
+		{
+			if (wasSelected)
+			{
+				// TODO: TEmp
+				REND_BUFFER.Clear();
+				feeder.GetComponentsInChildren<MeshRenderer>(REND_BUFFER);
+				foreach (var rend in REND_BUFFER)
+				{
+					rend.material.color = Color.white;
+				}
+				feeder.ammo = feederData.ammo;
+
+				feeder.ReloadCanvas.gameObject.SetActive(false);
+			}
+		}
+
+		if (feeder.feedTimer > 0.0f)
 		{
 			feeder.feedTimer -= Time.deltaTime;
 
@@ -53,10 +72,7 @@ public partial class EntityManager : MonoBehaviour
 			feeder.Bar.transform.localScale = barScale;
 		}
 
-
-		GameData.FeederData feederData = FeederDataForKind(feeder.kind);
-
-		if(feeder.throwDelayTimer > 0.0f)
+		if (feeder.throwDelayTimer > 0.0f)
 		{
 			feeder.throwDelayTimer -= Time.deltaTime;
 
@@ -111,20 +127,7 @@ public partial class EntityManager : MonoBehaviour
 			return;
 		}
 
-		if(feeder.playerControlled && feeder.ammo == 0 && feeder.usesAmmo)
-		{
-			if(wasSelected)
-			{
-				// TODO: TEmp
-				REND_BUFFER.Clear();
-				feeder.GetComponentsInChildren<MeshRenderer>(REND_BUFFER);
-				foreach(var rend in REND_BUFFER)
-				{
-					rend.material.color = Color.white;
-				}
-				feeder.ammo = feederData.ammo;
-			}
-		}
+		
 
 		bool shouldFeed =
 			(!feeder.usesAmmo || feeder.ammo > 0) &&
@@ -145,6 +148,11 @@ public partial class EntityManager : MonoBehaviour
 				foreach(var rend in REND_BUFFER)
 				{
 					rend.material.color = Color.red;
+				}
+
+				if (feeder.ReloadCanvas != null)
+				{
+					feeder.ReloadCanvas.gameObject.SetActive(true);
 				}
 			}
 		}

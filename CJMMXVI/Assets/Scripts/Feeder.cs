@@ -35,6 +35,8 @@ public class Feeder : Entity
 	public float throwDelayDuration;
 	[SerializeField]
 	public RectTransform Bar;
+	[SerializeField]
+	public Canvas ReloadCanvas;
 
 	[ReadOnly]
 	public float feedTimer;
