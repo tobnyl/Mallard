@@ -31,6 +31,8 @@ public class Feeder : Entity
 	public Transform feedOrigin;
 	[SerializeField]
 	public Animator animator;
+	[SerializeField]
+	public RectTransform Bar;
 
 	[ReadOnly]
 	public float feedTimer;

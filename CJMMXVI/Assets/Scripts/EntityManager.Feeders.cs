@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public partial class EntityManager : MonoBehaviour
-{
+{	
 	#region Constants
 	static readonly int THROW_HASH = Animator.StringToHash("Throw");
 	#endregion
@@ -19,14 +19,36 @@ public partial class EntityManager : MonoBehaviour
 			gameData.manualFeeders;
 	}
 
+	private void UpdateBar(Feeder feeder)
+	{
+		if (feeder.Bar != null)
+		{
+			GameData.FeederData feederData = FeederDataForKind(feeder.kind);
+			var barScale = feeder.Bar.transform.localScale;
+			barScale.x = Mathf.Lerp(0, 1, feeder.feedTimer / feederData.throwCooldown);
+			Debug.Log(barScale.x);
+			feeder.Bar.transform.localScale = barScale;
+		}
+	}
+
 	void UpdateFeeder(Feeder feeder, bool wasSelected)
 	{
 		Transform feederTrans = feeder.transform;
 
-		if(feeder.feedTimer > 0.0f)
+		if (feeder.feedTimer > 0.0f)
 		{
 			feeder.feedTimer -= Time.deltaTime;
+
+			UpdateBar(feeder);
+
 			return;
+		}
+
+		if (feeder.Bar != null)
+		{
+			var barScale = feeder.Bar.transform.localScale;
+			barScale.x = 1;
+			feeder.Bar.transform.localScale = barScale;
 		}
 
 		GameData.FeederData feederData = FeederDataForKind(feeder.kind);
