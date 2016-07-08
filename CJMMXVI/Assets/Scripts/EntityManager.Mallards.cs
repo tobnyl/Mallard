@@ -84,8 +84,16 @@ public partial class EntityManager : MonoBehaviour
 
 			if (!_isSplashAdded)
 			{
-				var ps = Instantiate(WaterSplashPrefab, mallard.transform.position, Quaternion.Inverse(mallard.transform.rotation)) as GameObject;
-				ps.transform.parent = mallard.transform;
+				var xOffset = 0.1f;
+
+				var leftPos = mallard.transform.position - mallard.transform.right * xOffset;
+				var rightPos = mallard.transform.position + mallard.transform.right * xOffset;
+
+				var leftTrail = Instantiate(WaterSplashPrefab, leftPos, mallard.transform.rotation) as GameObject;
+				leftTrail.transform.parent = mallard.transform;
+
+				var rightTrail = Instantiate(WaterSplashPrefab, rightPos, mallard.transform.rotation) as GameObject;
+				rightTrail.transform.parent = mallard.transform;
 
 				_isSplashAdded = true;
 			}
