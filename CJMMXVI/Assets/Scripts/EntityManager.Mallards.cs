@@ -6,8 +6,6 @@ using System.Collections.Generic;
 
 public partial class EntityManager : MonoBehaviour
 {
-	private bool _isSplashAdded;
-
 	#region Methods
 	void UpdateMallard(Mallard mallard)
 	{		
@@ -80,22 +78,6 @@ public partial class EntityManager : MonoBehaviour
 			if(mallard.Velocity.normalized != dir || mallard.Velocity.magnitude < gameData.mallard.speed)
 			{
 				mallard.Velocity += dir * gameData.mallard.acceleration * Time.deltaTime;
-			}
-
-			if (!_isSplashAdded)
-			{
-				var xOffset = 0.1f;
-
-				var leftPos = mallard.transform.position - mallard.transform.right * xOffset;
-				var rightPos = mallard.transform.position + mallard.transform.right * xOffset;
-
-				var leftTrail = Instantiate(WaterSplashPrefab, leftPos, mallard.transform.rotation) as GameObject;
-				leftTrail.transform.parent = mallard.transform;
-
-				var rightTrail = Instantiate(WaterSplashPrefab, rightPos, mallard.transform.rotation) as GameObject;
-				rightTrail.transform.parent = mallard.transform;
-
-				_isSplashAdded = true;
 			}
 
 			//mallard.Velocity += -mallard.Velocity.normalized * mallard.decel

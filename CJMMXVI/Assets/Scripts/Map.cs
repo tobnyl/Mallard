@@ -114,8 +114,6 @@ public class Map : MonoBehaviour
                 cubePosition = currentOffset;
             }
 	    }
-
-	    Debug.Log(_waterCubeList.Count);
     }
 
 	public void DoUpdate()
