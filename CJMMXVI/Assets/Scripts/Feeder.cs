@@ -33,6 +33,8 @@ public class Feeder : Entity
 	public Animator animator;
 	[SerializeField]
 	public float throwDelayDuration;
+	[SerializeField]
+	public RectTransform Bar;
 
 	[ReadOnly]
 	public float feedTimer;

@@ -21,6 +21,19 @@ public partial class EntityManager : MonoBehaviour
 
 	static readonly List<MeshRenderer> REND_BUFFER = new List<MeshRenderer>();
 
+	private void UpdateBar(Feeder feeder)
+	{
+		if (feeder.Bar != null)
+		{
+			GameData.FeederData feederData = FeederDataForKind(feeder.kind);
+			var barScale = feeder.Bar.transform.localScale;
+			barScale.x = Mathf.Lerp(0, 1, feeder.feedTimer / feederData.throwCooldown);
+			Debug.Log(barScale.x);
+			feeder.Bar.transform.localScale = barScale;
+		}
+	}
+
+
 	void UpdateFeeder(Feeder feeder, bool wasSelected)
 	{
 		Transform feederTrans = feeder.transform;
@@ -28,8 +41,19 @@ public partial class EntityManager : MonoBehaviour
 		if(feeder.feedTimer > 0.0f)
 		{
 			feeder.feedTimer -= Time.deltaTime;
+
+			UpdateBar(feeder);
+
 			return;
 		}
+
+		if (feeder.Bar != null)
+		{
+			var barScale = feeder.Bar.transform.localScale;
+			barScale.x = 1;
+			feeder.Bar.transform.localScale = barScale;
+		}
+
 
 		GameData.FeederData feederData = FeederDataForKind(feeder.kind);
 

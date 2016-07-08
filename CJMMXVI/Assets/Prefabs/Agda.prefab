@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425130e3706f5874db8b3f20fac539f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   kind: 1
   playerControlled: 0
   autoFeed: 1
@@ -384,6 +385,7 @@ MonoBehaviour:
   feedOrigin: {fileID: 457206}
   animator: {fileID: 9549282}
   throwDelayDuration: 0.3
+  Bar: {fileID: 0}
   feedTimer: 0
   throwDelayTimer: 0
 --- !u!212 &21258636
