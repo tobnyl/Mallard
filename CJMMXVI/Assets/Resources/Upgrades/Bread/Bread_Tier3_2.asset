@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   upgradeName: Betty Ford Special II
-  upgradeDescription: Who would've guessed amphetamines and baguettes go so well together?
+  upgradeDescription: Who would've guessed steroids and baguettes go so well together?
     Makes mallards crazy fast.
   researchSound:
     Clip: {fileID: 8300000, guid: 0104daf0b23ad554ca0aec5e1e36f930, type: 3}

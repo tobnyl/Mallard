@@ -24,7 +24,7 @@ MonoBehaviour:
     MaxPitch: 1
     Loop: 0
     Mute: 0
-  cost: 10000
+  cost: 5000
   researchTime: 0
   fuckedUpLevel: 0.25
   dependencies:
