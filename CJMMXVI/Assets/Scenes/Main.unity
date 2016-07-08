@@ -187,32 +187,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1473010933}
     - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: initialGameData.man.throwCooldown
-      value: 3
+      propertyPath: visuals.saturationRange.min
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2064744, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: orthographic size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2045012, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: orthographic size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 413292, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 42.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 425390, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 42.29
+    - target: {fileID: 11479910, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
+      propertyPath: saturation
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: initialGameData.autoFeeders.throwCooldown
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11440590, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}
-      propertyPath: initialGameData.manualFeeders.throwCooldown
-      value: 5
+      propertyPath: visuals.saturationRange.max
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adb4bf46e18e694a903ebbb49f45cdf, type: 2}

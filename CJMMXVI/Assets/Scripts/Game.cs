@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UE = UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.ImageEffects;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,8 +12,56 @@ using System.Collections.Generic;
 )]
 public class Game : MonoBehaviour
 {
+	#region Types
+	[Serializable]
+	struct FloatRange
+	{
+		[Range(0.0f, 1.0f)]
+		public float min;
+		[Range(0.0f, 1.0f)]
+		public float max;
+
+		public float Lerp(float t)
+		{
+			return Mathf.Lerp(min, max, t);
+		}
+	}
+
+	[Serializable]
+	class Visuals
+	{
+		[SerializeField]
+		public ColorCorrectionCurves colorCurves;
+		[SerializeField]
+		public FloatRange saturationRange;
+		[SerializeField]
+		public VignetteAndChromaticAberration vignette;
+		[SerializeField]
+		public FloatRange vignetteRange;
+	}
+
+	[Serializable]
+	class Sounds
+	{
+		[Serializable]
+		public class MusicTrack
+		{
+			[SerializeField]
+			public Audio audio;
+			[SerializeField]
+			public float stopsAt;
+		}
+
+		[SerializeField]
+		public MusicTrack[] tracks;
+	}
+	#endregion
+
 	#region Fields
 	[SerializeField]
+	Visuals visuals;
+
+	[SerializeField, Space(5.0f)]
 	Transform mallardSpawnPoint;
 	[SerializeField]
 	Transform deactivateOnStart;
@@ -23,7 +72,7 @@ public class Game : MonoBehaviour
 	[SerializeField]
 	GameData currentGameData;
 
-	[SerializeField, ReadOnly]
+	[SerializeField, Range(0.0f, 1.0f)]
 	float fuckedUpOMeter;
 
 	Upgrade[] upgrades;
@@ -147,16 +196,6 @@ public class Game : MonoBehaviour
 	{
 		if(!loaded) { return; }
 
-		if(fuckedUpOMeter != currentGameData.fuckedUpOMeter)
-		{
-			fuckedUpOMeter = Mathf.Lerp(fuckedUpOMeter, currentGameData.fuckedUpOMeter, 4.0f * Time.deltaTime);
-
-			if(Mathf.Abs(fuckedUpOMeter - currentGameData.fuckedUpOMeter) < 0.0001f)
-			{
-				fuckedUpOMeter = currentGameData.fuckedUpOMeter;
-			}
-		}
-
 		entityMan.DoUpdate(updateInput: gui.currentPage == GameUi.Page.Main);
 		upgradeMan.DoUpdate();
 		map.DoUpdate();
@@ -168,6 +207,26 @@ public class Game : MonoBehaviour
 		gui.main.points.SetPoints(currentGameData.points);
 
 		gui.DoUpdate();
+
+		if(fuckedUpOMeter != currentGameData.fuckedUpOMeter)
+		{
+			fuckedUpOMeter = Mathf.Lerp(fuckedUpOMeter, currentGameData.fuckedUpOMeter, 4.0f * Time.deltaTime);
+
+			if(Mathf.Abs(fuckedUpOMeter - currentGameData.fuckedUpOMeter) < 0.0001f)
+			{
+				fuckedUpOMeter = currentGameData.fuckedUpOMeter;
+			}
+
+			if(visuals.vignette != null)
+			{
+				visuals.vignette.intensity = visuals.vignetteRange.Lerp(fuckedUpOMeter);
+			}
+
+			if(visuals.colorCurves != null)
+			{
+				visuals.colorCurves.saturation = visuals.saturationRange.Lerp(fuckedUpOMeter);
+			}
+		}
 	}
 	#endregion
 

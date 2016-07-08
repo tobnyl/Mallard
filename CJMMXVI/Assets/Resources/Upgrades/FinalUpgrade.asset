@@ -25,6 +25,7 @@ MonoBehaviour:
     Mute: 0
   cost: 10000
   researchTime: 0
+  fuckedUpLevel: 0.25
   dependencies:
   - {fileID: 11400000, guid: 1e054e9e0b40a64409e6b659df0cd997, type: 2}
   - {fileID: 11400000, guid: 25d59a18b06997542b0571c99a2da754, type: 2}

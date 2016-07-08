@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UE = UnityEngine;
+using UI = UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
