@@ -23,9 +23,11 @@ MonoBehaviour:
     MaxPitch: 1
     Loop: 0
     Mute: 0
-  cost: 5
+  cost: 0
   researchTime: 0
+  fuckedUpLevel: 0
   dependencies: []
+  endGame: 1
   man:
     breadThrown: 0
     throwCooldown: -0.35

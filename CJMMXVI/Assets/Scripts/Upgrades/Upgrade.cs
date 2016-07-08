@@ -90,6 +90,9 @@ public class Upgrade : ScriptableObject
 	public Upgrade[] dependencies;
 
 	[SerializeField]
+	public bool endGame;
+
+	[SerializeField]
 	public FeederData man;
 
 	[SerializeField]

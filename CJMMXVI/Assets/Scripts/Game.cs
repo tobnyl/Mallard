@@ -41,6 +41,8 @@ public class Game : MonoBehaviour
 		public Camera[] cameras;
 		[SerializeField]
 		public FloatRange cameraZoomRange;
+		[SerializeField]
+		public float finalCamZoom;
 	}
 
 	[Serializable]
@@ -260,6 +262,14 @@ public class Game : MonoBehaviour
 		if(upgrade.environment.enableRadioactiveWater)
 		{
 			map.EnableRadioactiveWater();
+		}
+
+		if(upgrade.endGame)
+		{
+			gui.currentPage = GameUi.Page.Main;
+			gui.upgrades.gameObject.SetActive(false);
+			gui.main.upgradesButton.gameObject.SetActive(false);
+			gui.ShowCredits();
 		}
 	}
 
