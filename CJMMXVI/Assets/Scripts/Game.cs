@@ -16,9 +16,7 @@ public class Game : MonoBehaviour
 	[Serializable]
 	struct FloatRange
 	{
-		[Range(0.0f, 1.0f)]
 		public float min;
-		[Range(0.0f, 1.0f)]
 		public float max;
 
 		public float Lerp(float t)
@@ -38,6 +36,11 @@ public class Game : MonoBehaviour
 		public VignetteAndChromaticAberration vignette;
 		[SerializeField]
 		public FloatRange vignetteRange;
+
+		[SerializeField]
+		public Camera[] cameras;
+		[SerializeField]
+		public FloatRange cameraZoomRange;
 	}
 
 	[Serializable]
@@ -210,7 +213,7 @@ public class Game : MonoBehaviour
 
 		if(fuckedUpOMeter != currentGameData.fuckedUpOMeter)
 		{
-			fuckedUpOMeter = Mathf.Lerp(fuckedUpOMeter, currentGameData.fuckedUpOMeter, 4.0f * Time.deltaTime);
+			fuckedUpOMeter = Mathf.Lerp(fuckedUpOMeter, currentGameData.fuckedUpOMeter, Time.deltaTime);
 
 			if(Mathf.Abs(fuckedUpOMeter - currentGameData.fuckedUpOMeter) < 0.0001f)
 			{
@@ -225,6 +228,15 @@ public class Game : MonoBehaviour
 			if(visuals.colorCurves != null)
 			{
 				visuals.colorCurves.saturation = visuals.saturationRange.Lerp(fuckedUpOMeter);
+			}
+
+			for(int i = 0; i < visuals.cameras.Length; ++i)
+			{
+				Camera cam = visuals.cameras[i];
+				if(cam != null)
+				{
+					cam.orthographicSize = visuals.cameraZoomRange.Lerp(fuckedUpOMeter);
+				}
 			}
 		}
 	}

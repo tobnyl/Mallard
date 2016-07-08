@@ -425,12 +425,18 @@ MonoBehaviour:
   visuals:
     colorCurves: {fileID: 11479910}
     saturationRange:
-      min: 0
-      max: 0
+      min: 1
+      max: 0.15
     vignette: {fileID: 11417070}
     vignetteRange:
-      min: 0
-      max: 0
+      min: 0.036
+      max: 0.4
+    cameras:
+    - {fileID: 2064744}
+    - {fileID: 2045012}
+    cameraZoomRange:
+      min: 4
+      max: 10
   mallardSpawnPoint: {fileID: 0}
   deactivateOnStart: {fileID: 0}
   initialGameData:
@@ -673,7 +679,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  saturation: 1
+  saturation: 0.34
   selectiveCc: 0
   selectiveFromColor: {r: 1, g: 1, b: 1, a: 1}
   selectiveToColor: {r: 1, g: 1, b: 1, a: 1}
