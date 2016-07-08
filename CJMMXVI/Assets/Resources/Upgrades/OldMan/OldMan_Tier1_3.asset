@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: OldMan_Tier1_3
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  upgradeName: Fika Power III
+  upgradeName: Fika III
   upgradeDescription: Throw faster
   researchSound:
     Clip: {fileID: 8300000, guid: 8ba685f4a61e00a4ba90e7dcd71ea08e, type: 3}
@@ -29,15 +29,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eac2386f6a3440e4ca23be6200d1e38b, type: 2}
   man:
     breadThrown: 0
-    throwCooldown: -0.5
-    airTime: 0
+    throwCooldown: -0.25
+    airTime: -0.25
     ammo: 0
     range: 0
     spread: 0
     throwAnimSpeed: 0.5
   mallard:
     eatDuration: 0
-    count: 0
+    count: 1
     speed: 0
     acceleration: 0
     rotationSpeed: 0

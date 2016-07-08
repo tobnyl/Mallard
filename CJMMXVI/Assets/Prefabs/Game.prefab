@@ -411,8 +411,8 @@ MonoBehaviour:
       throwAnimSpeed: 1
     mallard:
       count: 5
-      eatDuration: 1
-      speed: 2
+      eatDuration: 2
+      speed: 1
       acceleration: 5
       rotationSpeed: 10
       pointsPerQuack: 1

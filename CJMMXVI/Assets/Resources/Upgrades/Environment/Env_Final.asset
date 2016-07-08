@@ -32,10 +32,36 @@ MonoBehaviour:
   man:
     breadThrown: 0
     throwCooldown: 0
+    airTime: 0
+    ammo: 0
+    range: 0
+    spread: 0
+    throwAnimSpeed: 0
   mallard:
     eatDuration: 0
-    count: 0
+    count: 10
+    speed: 0
+    acceleration: 0
+    rotationSpeed: 0
+    pointsPerQuack: 0
   environment:
     toActivate:
     - scenePath: PowerPlant
     toDeactivate: []
+    enableRadioactiveWater: 0
+  manualFeeders:
+    breadThrown: 0
+    throwCooldown: 0
+    airTime: 0
+    ammo: 0
+    range: 0
+    spread: 0
+    throwAnimSpeed: 0
+  autoFeeders:
+    breadThrown: 0
+    throwCooldown: -0.25
+    airTime: -0.25
+    ammo: 0
+    range: 0
+    spread: 0
+    throwAnimSpeed: 0
