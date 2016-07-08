@@ -13,7 +13,7 @@ GameObject:
   - 124: {fileID: 12444712}
   - 81: {fileID: 8193924}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: BackgroundCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,7 +180,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 4294967039
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -214,7 +214,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294965247
+    m_Bits: 1280
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -408,8 +408,9 @@ MonoBehaviour:
       ammo: 0
       range: 3
       spread: 10
+      throwAnimSpeed: 1
     mallard:
-      count: 3
+      count: 5
       eatDuration: 1
       speed: 2
       acceleration: 5
@@ -421,21 +422,24 @@ MonoBehaviour:
       airTime: 3
       ammo: 0
       range: 3
-      spread: 90
+      spread: 60
+      throwAnimSpeed: 1
     manualFeeders:
       breadThrown: 3
       throwCooldown: 5
       airTime: 3
       ammo: 10
       range: 3
-      spread: 180
+      spread: 90
+      throwAnimSpeed: 10
     autoFeeders:
-      breadThrown: 1
-      throwCooldown: 5
+      breadThrown: 3
+      throwCooldown: 3
       airTime: 3
       ammo: 0
       range: 3
-      spread: 180
+      spread: 90
+      throwAnimSpeed: 10
   currentGameData:
     points: 0
     man:
@@ -445,6 +449,7 @@ MonoBehaviour:
       ammo: 0
       range: 0
       spread: 0
+      throwAnimSpeed: 0
     mallard:
       count: 0
       eatDuration: 0
@@ -459,6 +464,7 @@ MonoBehaviour:
       ammo: 0
       range: 0
       spread: 0
+      throwAnimSpeed: 0
     manualFeeders:
       breadThrown: 0
       throwCooldown: 0
@@ -466,6 +472,7 @@ MonoBehaviour:
       ammo: 0
       range: 0
       spread: 0
+      throwAnimSpeed: 0
     autoFeeders:
       breadThrown: 0
       throwCooldown: 0
@@ -473,6 +480,7 @@ MonoBehaviour:
       ammo: 0
       range: 0
       spread: 0
+      throwAnimSpeed: 0
 --- !u!114 &11463072
 MonoBehaviour:
   m_ObjectHideFlags: 1
