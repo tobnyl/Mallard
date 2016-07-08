@@ -28,7 +28,7 @@ public class Mallard : Entity
 
 	void OnEnable()
 	{
-		WaterRings.playOnAwake = false;
+		WaterRings.Stop();
 	}
 
 	public bool RotateToTarget(Vector3 direction, float rotationSpeed)
@@ -55,9 +55,6 @@ public class Mallard : Entity
 
 	public void PlayWaterRings()
 	{
-		if (!WaterRings.IsAlive())
-		{
-			WaterRings.Play();
-		}
+		WaterRings.Play();
 	}
 }
