@@ -38,7 +38,8 @@ MonoBehaviour:
     ammo: 0
     range: 0
     spread: 0
-    throwAnimSpeed: 0
+    throwAnimSpeed: 100
+    throwDelayDuration: 0
   mallard:
     eatDuration: 0
     count: 0
@@ -60,6 +61,7 @@ MonoBehaviour:
     range: 0
     spread: 0
     throwAnimSpeed: 0
+    throwDelayDuration: 0
   autoFeeders:
     breadThrown: 0
     throwCooldown: -0.5
@@ -68,3 +70,4 @@ MonoBehaviour:
     range: 1
     spread: 10
     throwAnimSpeed: 0
+    throwDelayDuration: 0

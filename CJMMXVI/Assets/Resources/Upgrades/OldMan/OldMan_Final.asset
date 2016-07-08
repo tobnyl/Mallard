@@ -30,6 +30,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f89bf20266c5cca40abe1861edbde818, type: 2}
   - {fileID: 11400000, guid: ceea689ef58c2ed48a637b5a7df9cb67, type: 2}
   - {fileID: 11400000, guid: 6b7b0e59c75b9a944b5ed615969758b4, type: 2}
+  endGame: 0
   man:
     breadThrown: 0
     throwCooldown: -10
@@ -46,8 +47,10 @@ MonoBehaviour:
     rotationSpeed: 0
     pointsPerQuack: 0
   environment:
-    toActivate: []
-    toDeactivate: []
+    toActivate:
+    - scenePath: OldManMechVisual
+    toDeactivate:
+    - scenePath: OldManVisualNode
     enableRadioactiveWater: 0
   manualFeeders:
     breadThrown: 0

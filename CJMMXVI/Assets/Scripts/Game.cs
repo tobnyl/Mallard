@@ -119,6 +119,13 @@ public class Game : MonoBehaviour
 
 		var toDeactivate = new List<Transform>();
 
+		var oldManMech = GameObject.Find("OldManMechVisual");
+
+		if(oldManMech != null)
+		{
+			toDeactivate.Add(oldManMech.transform);
+		}
+
 		if(deactivateOnStart != null)
 		{
 			foreach(Transform child in deactivateOnStart)
