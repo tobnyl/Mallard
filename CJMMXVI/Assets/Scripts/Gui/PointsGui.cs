@@ -20,7 +20,7 @@ public class PointsGui : MonoBehaviour
 	{
 		if(pointsLabel != null)
 		{
-			pointsLabel.text = string.Format("{0} Quacks", points);
+			pointsLabel.text = string.Format("{0}", points);
 		}
 	}
 	#endregion

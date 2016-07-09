@@ -50,7 +50,7 @@ public class UpgradeInfoGui : MonoBehaviour
 
 		titleLabel.text = upgrade.upgradeName;
 		descriptionLabel.text = upgrade.upgradeDescription;
-		costLabel.text = string.Format("{0} Q$", upgrade.cost);
+		costLabel.text = string.Format("{0}", upgrade.cost);
 	}
 
 	public void DoUpdate()
