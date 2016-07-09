@@ -30,6 +30,8 @@ public class GameUi : MonoBehaviour
 	public RectTransform creditsNameRoot;
 	[SerializeField]
 	public UI.Text finalPointsLabel;
+	[SerializeField]
+	public UI.Button exitButton;
 
 	Page _currentPage;
 	List<GuiPage> pages;
@@ -48,6 +50,8 @@ public class GameUi : MonoBehaviour
 			HideAllPages();
 			GuiPage page = GetPageGui(_currentPage);
 			page.Hidden = false;
+
+			upgrades.exitButton.gameObject.SetActive(_currentPage == Page.Upgrades);
 		}
 	}
 	#endregion
