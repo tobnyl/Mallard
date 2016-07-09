@@ -396,6 +396,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1642525802}
     m_Modifications:
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22480772, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -472,6 +476,21 @@ Prefab:
       propertyPath: m_Name
       value: Bread_Lvl4
       objectReference: {fileID: 0}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5ce4e0555e9cca24c9399466ca47c084,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ed5bd0cc137bcc4e9097101a946d6dc,
+        type: 2}
+    - target: {fileID: 11414250, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
+      propertyPath: upgradeLevels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e054e9e0b40a64409e6b659df0cd997,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009dd07ab7ff81d42ad83ade4c91b900, type: 2}
   m_IsPrefabParent: 0
