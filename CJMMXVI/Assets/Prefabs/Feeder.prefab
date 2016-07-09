@@ -59,7 +59,6 @@ GameObject:
   - 224: {fileID: 22430030}
   - 222: {fileID: 22222798}
   - 114: {fileID: 11400888}
-  - 114: {fileID: 11466040}
   m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
@@ -355,20 +354,6 @@ MonoBehaviour:
   feedTimer: 0
   throwDelayTimer: 0
   wasButtoned: 0
---- !u!114 &11466040
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
-  m_EffectDistance: {x: -0.07, y: -0.07}
-  m_UseGraphicAlpha: 1
 --- !u!114 &11474192
 MonoBehaviour:
   m_ObjectHideFlags: 1
