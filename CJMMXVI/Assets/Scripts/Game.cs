@@ -236,6 +236,7 @@ public class Game : MonoBehaviour
 		entityMan.OnGameDataChanged(currentGameData);
 #endif
 		gui.main.points.SetPoints(currentGameData.points);
+		gui.finalPointsLabel.text = string.Format("{0} Quacks", currentGameData.points);
 
 		gui.DoUpdate();
 

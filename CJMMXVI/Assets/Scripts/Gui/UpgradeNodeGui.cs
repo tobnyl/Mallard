@@ -78,6 +78,12 @@ public class UpgradeNodeGui : MonoBehaviour
 			}
 		}
 
+		// Enable last level
+		if(level == upgradeLevels.Length && manager.IsResearched(activeLevel))
+		{
+			iconButton.interactable = true;
+		}
+
 		if(upgradeLevels.Length <= 1)
 		{
 			levelRoot.gameObject.SetActive(false);

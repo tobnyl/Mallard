@@ -69,14 +69,14 @@ public class UpgradeInfoGui : MonoBehaviour
 				//researchLabel.gameObject.SetActive(true);
 				//buyButton.gameObject.SetActive(false);
 				//costLabel.gameObject.SetActive(false);
-				researchLabel.text = "Purchased";
+				buyLabel.text = "Max";
 			}
 			else
 			{
 				//researchLabel.gameObject.SetActive(false);
 				//buyButton.gameObject.SetActive(true);
 				//costLabel.gameObject.SetActive(true);
-
+				buyLabel.text = "Buy";
 
 				bool buyable = currentUpgrade.cost <= gameData.points &&
 					manager.Researchable(currentUpgrade); ;
