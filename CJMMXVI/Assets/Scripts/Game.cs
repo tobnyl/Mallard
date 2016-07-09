@@ -226,8 +226,10 @@ public class Game : MonoBehaviour
 	void Update()
 	{
 		if(!loaded) { return; }
+        if (Input.GetKeyDown(KeyCode.F9))
+            currentGameData.points += 100;
 
-		entityMan.DoUpdate(updateInput: gui.currentPage == GameUi.Page.Main);
+        entityMan.DoUpdate(updateInput: gui.currentPage == GameUi.Page.Main);
 		upgradeMan.DoUpdate();
 		map.DoUpdate();
 
@@ -312,7 +314,9 @@ public class Game : MonoBehaviour
 
 	void OnMallardEat(Mallard mallard)
 	{
-		currentGameData.points += Mathf.Max(1, currentGameData.mallard.pointsPerQuack);
+      
+
+        currentGameData.points += Mathf.Max(1, currentGameData.mallard.pointsPerQuack);
 		OnGameDataChanged();
 	}
 
