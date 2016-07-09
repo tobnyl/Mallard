@@ -24,6 +24,12 @@ public class GameUi : MonoBehaviour
 	public UpgradesPage upgrades;
 	[SerializeField]
 	public CanvasGroup credits;
+	[SerializeField]
+	public CanvasGroup creditsLogo;
+	[SerializeField]
+	public RectTransform creditsNameRoot;
+	[SerializeField]
+	public UI.Text finalPointsLabel;
 
 	Page _currentPage;
 	List<GuiPage> pages;
@@ -75,7 +81,7 @@ public class GameUi : MonoBehaviour
 		});
 
 		creditLabels = new List<UI.Text>();
-		credits.GetComponentsInChildren<UI.Text>(creditLabels);
+		creditsNameRoot.GetComponentsInChildren<UI.Text>(creditLabels);
 
 		foreach(var label in creditLabels)
 		{
@@ -88,6 +94,11 @@ public class GameUi : MonoBehaviour
 	public void DoUpdate()
 	{
 		upgrades.DoUpdate();
+
+		if(currentPage == Page.Upgrades && Input.GetKeyDown(KeyCode.Escape))
+		{
+			currentPage = Page.Main;
+		}
 	}
 
 	public void OnGameDataChanged(GameData gameData)
@@ -125,11 +136,13 @@ public class GameUi : MonoBehaviour
 		const float fadeInDur = 2.0f;
 		const float wait = 1.0f;
 		const float finalWait = 5.0f;
-		const float fadeOutDur = 3.0f;
+		const float fadeOutDur = 2.0f;
+
+		
 
 		float timer = 0.0f;
 
-
+		// Fade in credits (title)
 		timer = fadeInDur;
 		while(timer > 0.0f)
 		{
@@ -140,6 +153,7 @@ public class GameUi : MonoBehaviour
 		}
 		credits.alpha = 1.0f;
 
+		// Fade in names
 		foreach(var label in creditLabels)
 		{
 			yield return new WaitForSeconds(wait);
@@ -157,7 +171,7 @@ public class GameUi : MonoBehaviour
 
 		yield return new WaitForSeconds(finalWait);
 
-		
+		// Fade out names
 		timer = fadeOutDur;
 		while(timer > 0.0f)
 		{
@@ -167,6 +181,43 @@ public class GameUi : MonoBehaviour
 			{
 				SetAlpha(label, t);	
 			}
+			timer -= Time.deltaTime;
+			yield return null;
+		}
+
+		// Fade in logo
+		timer = fadeInDur;
+		while(timer > 0.0f)
+		{
+			float t = Mathf.Clamp01(timer / fadeInDur);
+
+			creditsLogo.alpha = 1.0f - t;
+			timer -= Time.deltaTime;
+			yield return null;
+		}
+
+		yield return new WaitForSeconds(finalWait);
+
+		// Fade out logo
+		timer = fadeOutDur;
+		while(timer > 0.0f)
+		{
+			float t = Mathf.Clamp01(timer / fadeInDur);
+
+			creditsLogo.alpha = t;
+			timer -= Time.deltaTime;
+			yield return null;
+		}
+
+		// Crossfade points
+		finalPointsLabel.gameObject.SetActive(true);
+		timer = fadeInDur;
+		while(timer > 0.0f)
+		{
+			float t = Mathf.Clamp01(timer / fadeInDur);
+
+			SetAlpha(main.points.pointsLabel, t);
+			SetAlpha(finalPointsLabel, 1.0f - t);
 			timer -= Time.deltaTime;
 			yield return null;
 		}

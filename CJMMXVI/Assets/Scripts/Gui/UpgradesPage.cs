@@ -14,6 +14,8 @@ public class UpgradesPage : GuiPage
 	UpgradeInfoGui upgradeInfo;
 	[SerializeField]
 	UpgradesListGui upgradesList;
+	[SerializeField, Space(5.0f)]
+	Upgrade initialSelection;
 
 	List<UpgradeNodeGui> upgradeNodes;
 	UpgradeManager manager;
@@ -29,7 +31,10 @@ public class UpgradesPage : GuiPage
 
 		upgradeInfo.Setup(manager);
 		upgradeInfo.onPressedBuyButton += OnBuyButtonSelected;
-		upgradeInfo.SetUpgrade(manager.Upgrades[0]);
+		if(initialSelection != null)
+		{
+			upgradeInfo.SetUpgrade(initialSelection);
+		}
 
 		upgradeNodes = new List<UpgradeNodeGui>();
 		GetComponentsInChildren<UpgradeNodeGui>(upgradeNodes);

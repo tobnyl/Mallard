@@ -209,7 +209,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 218bbd684bd84e347b475f57406bfc32, type: 3}
-    m_FontSize: 42
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -220,7 +220,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Post-industrial revolution
+  m_Text: Post-industrial Revolution
 --- !u!114 &11461336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -361,6 +361,7 @@ MonoBehaviour:
   buyLabel: {fileID: 11428912}
   costLabel: {fileID: 11477590}
   researchLabel: {fileID: 11430372}
+  initialSelection: {fileID: 11400000, guid: c3279efefb1ded341baf86fb92e693d3, type: 2}
 --- !u!114 &11489714
 MonoBehaviour:
   m_ObjectHideFlags: 1

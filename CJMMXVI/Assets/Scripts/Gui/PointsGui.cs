@@ -9,7 +9,7 @@ public class PointsGui : MonoBehaviour
 {
 	#region Fields
 	[SerializeField]
-	UI.Text pointsLabel;
+	public UI.Text pointsLabel;
 	#endregion
 	
 	#region Properties	
