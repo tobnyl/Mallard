@@ -556,7 +556,7 @@ MonoBehaviour:
       breadThrown: 3
       throwCooldown: 5
       airTime: 3
-      ammo: 10
+      ammo: 5
       range: 3
       spread: 90
       throwAnimSpeed: 10
