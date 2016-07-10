@@ -1,2 +1,3 @@
-# CJMMXVI
-A repository in preparation for Castle Jam 2016
+# Mallard
+
+#### Made at Castle Game Jam at Örebro castle.
