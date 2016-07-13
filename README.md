@@ -6,6 +6,6 @@
 
 **Link:** http://www.castlegamejam.com/en/2016/teams/good-advice/
 
-![alt tag](https://raw.githubusercontent.com/tobnyl/Mallard/master/CJMMXVI/Assets/Textures/mallard.png)
+![alt tag](https://raw.githubusercontent.com/tobnyl/Mallard/master/CJMMXVI/Assets/Textures/mallardLogo.png)
 
 ![alt tag](https://raw.githubusercontent.com/tobnyl/Mallard/master/CJMMXVI/Assets/Textures/mallardScreenshot.png)
